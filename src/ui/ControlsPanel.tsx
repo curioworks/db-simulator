@@ -81,6 +81,37 @@ export function ControlsPanel({ scenario, onChange }: Props) {
       </section>
 
       <section>
+        <h2>Partitions</h2>
+        <SliderField
+          label="Partitions"
+          value={Math.log10(scenario.partitionCount)}
+          min={1}
+          max={8}
+          step={0.05}
+          display={formatPartitionCount(scenario.partitionCount)}
+          onChange={(log) => set({ partitionCount: roundPartitionCount(10 ** log) })}
+        />
+        <SliderField
+          label="Write skew"
+          value={scenario.skewExponent}
+          min={0}
+          max={2}
+          step={0.05}
+          display={formatSkew(scenario.skewExponent)}
+          onChange={(skewExponent) => set({ skewExponent })}
+        />
+        <SliderField
+          label="Nodes"
+          value={scenario.nodes}
+          min={scenario.replicationFactor}
+          max={48}
+          step={1}
+          display={`${scenario.nodes} nodes`}
+          onChange={(nodes) => set({ nodes })}
+        />
+      </section>
+
+      <section>
         <h2>Cluster</h2>
         <label className="field">
           <span className="field-label">Replication factor</span>
@@ -224,6 +255,37 @@ export function formatQueryWindow(hours: number): string {
   if (hours === 24) return '1 day';
   if (hours % 24 === 0) return `${hours / 24} days`;
   return `${hours} h`;
+}
+
+/**
+ * The partition slider is logarithmic — the interesting range spans 10 to
+ * 100M — so snap to one or two significant digits and keep the label short.
+ */
+function roundPartitionCount(raw: number): number {
+  const magnitude = 10 ** Math.floor(Math.log10(raw));
+  const step = magnitude >= 100 ? magnitude / 10 : 1;
+  return Math.max(1, Math.round(raw / step) * step);
+}
+
+export function formatPartitionCount(n: number): string {
+  if (n >= 1_000_000) return `${parseFloat((n / 1_000_000).toFixed(1))}M keys`;
+  if (n >= 1_000) return `${parseFloat((n / 1_000).toFixed(1))}K keys`;
+  return `${n} keys`;
+}
+
+/** Zipf exponent → what it means for the hot end of the key distribution. */
+export function formatSkew(exponent: number): string {
+  const label =
+    exponent < 0.05
+      ? 'uniform'
+      : exponent < 0.5
+        ? 'mild'
+        : exponent < 0.9
+          ? 'moderate'
+          : exponent < 1.3
+            ? 'hot keys'
+            : 'severe';
+  return `${exponent.toFixed(2)} · ${label}`;
 }
 
 interface SliderFieldProps {

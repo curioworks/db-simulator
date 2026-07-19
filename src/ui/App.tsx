@@ -2,8 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { buildSizeModel } from '../engine/profiler/rowSize.ts';
 import { presets, sensorBaseline } from '../presets/index.ts';
 import { clampScenario, toSimConfig, type ScenarioConfig } from '../presets/scenario.ts';
-import { ControlsPanel, formatQueryWindow } from './ControlsPanel.tsx';
+import { ControlsPanel, formatPartitionCount, formatQueryWindow } from './ControlsPanel.tsx';
 import { GrowthChart } from './GrowthChart.tsx';
+import { NodeChart } from './NodeChart.tsx';
 import { ReadAmpChart } from './ReadAmpChart.tsx';
 import { formatBytes, formatCount, formatDate } from './format.ts';
 import { useSimulation } from './useSimulation.ts';
@@ -41,9 +42,14 @@ export function App() {
     [scenario],
   );
   const simConfig = useMemo(() => toSimConfig(scenario, sizeModel), [scenario, sizeModel]);
-  const { snapshots, running, elapsedMs } = useSimulation(simConfig);
+  const { snapshots, skew, running, elapsedMs } = useSimulation(simConfig);
 
   const last = snapshots.at(-1);
+  // Both figures must come from the same simulation: while a re-sim is in
+  // flight the worker's node count still trails the slider, and mixing the
+  // two renders a "fullest node" below the average.
+  const simNodes = skew?.nodeShare.length ?? 0;
+  const avgNodeBytes = last && simNodes > 0 ? last.diskBytes / simNodes : 0;
   const ingestPerDay =
     scenario.writeRatePerSec * 86_400 * sizeModel.onDiskRowBytes +
     scenario.deleteRatePerSec * 86_400 * sizeModel.tombstoneRowBytes;
@@ -58,7 +64,9 @@ export function App() {
             How a table grows on disk given a schema, write rate, TTL and compaction strategy.
             Try TWCS on a TTL'd table: a window sized to the TTL drops whole expired windows
             daily, while a 30-day window strands weeks of expired data on disk. The read
-            amplification panel counts the SSTables one time-bounded read has to touch.
+            amplification panel counts the SSTables one time-bounded read has to touch. Turn
+            up write skew and watch the hottest partition swell while the fullest node pulls
+            away from a cluster average that still looks healthy.
           </p>
         </header>
         <label className="field preset-field">
@@ -120,6 +128,20 @@ export function App() {
             value={last ? formatCount(last.readSstables) : '—'}
             sub={`SSTables per read, last ${formatQueryWindow(scenario.queryWindowHours)}`}
           />
+          <StatTile
+            label="Hottest partition"
+            value={last ? formatBytes(last.maxPartitionBytes) : '—'}
+            sub={`per replica, of ${formatPartitionCount(scenario.partitionCount)}`}
+          />
+          <StatTile
+            label="Fullest node"
+            value={last ? formatBytes(last.hotNodeBytes) : '—'}
+            sub={
+              last && avgNodeBytes > 0
+                ? `${(last.hotNodeBytes / avgNodeBytes).toFixed(2)}× the ${simNodes}-node average`
+                : `${scenario.nodes}-node ring`
+            }
+          />
         </div>
 
         <div className="chart-card">
@@ -140,6 +162,21 @@ export function App() {
             </span>
           </div>
           <ReadAmpChart snapshots={snapshots} theme={theme} running={running} />
+        </div>
+
+        <div className="chart-card">
+          <div className="chart-title">
+            <h2>Disk per node</h2>
+            <span className="chart-meta">
+              at the horizon · RF {scenario.replicationFactor} over {scenario.nodes} nodes
+            </span>
+          </div>
+          <NodeChart
+            diskBytes={last?.diskBytes ?? 0}
+            skew={skew}
+            theme={theme}
+            running={running}
+          />
         </div>
 
         <details className="table-view">
@@ -183,6 +220,8 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
           <th>Total on disk</th>
           <th>SSTables</th>
           <th>Read amp</th>
+          <th>Hot partition</th>
+          <th>Fullest node</th>
           <th>Memtable</th>
         </tr>
       </thead>
@@ -196,6 +235,8 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
             <td>{formatBytes(s.diskBytes)}</td>
             <td>{formatCount(s.sstableCount)}</td>
             <td>{formatCount(s.readSstables)}</td>
+            <td>{formatBytes(s.maxPartitionBytes)}</td>
+            <td>{formatBytes(s.hotNodeBytes)}</td>
             <td>{formatBytes(s.memtableBytes)}</td>
           </tr>
         ))}

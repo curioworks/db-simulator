@@ -9,7 +9,7 @@ import {
   YAxis,
 } from 'recharts';
 import type { MetricsSnapshot } from '../engine/types.ts';
-import { spansYears, useChartPoints, useXTicks } from './chartData.ts';
+import { byteTicks, spansYears, useChartPoints, useXTicks } from './chartData.ts';
 import { formatBytes, formatCount, formatDate, formatShortDate } from './format.ts';
 import type { Theme } from './theme.ts';
 
@@ -52,13 +52,10 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
 
   // Clean Y ticks: round steps in binary byte units (…, 32, 64, 128 GiB) so
   // labels come out as "64 GB", never "79.2 GB".
-  const yTicks = useMemo(() => {
-    const max = data.reduce((m, s) => Math.max(m, s.diskBytes), 0);
-    if (max <= 0) return undefined;
-    const step = niceByteStep(max / 5);
-    const count = Math.ceil(max / step);
-    return Array.from({ length: count + 1 }, (_, i) => i * step);
-  }, [data]);
+  const yTicks = useMemo(
+    () => byteTicks(data.reduce((m, s) => Math.max(m, s.diskBytes), 0)),
+    [data],
+  );
 
   const yearly = spansYears(data);
 
@@ -124,18 +121,6 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
       </ResponsiveContainer>
     </div>
   );
-}
-
-const BIN_STEPS = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512];
-
-/** Smallest "round" byte step (1/2/4/…/512 × 1024ᵏ) that is ≥ rough. */
-function niceByteStep(rough: number): number {
-  let base = 1;
-  while (rough >= base * 1024) base *= 1024;
-  for (const s of BIN_STEPS) {
-    if (s * base >= rough) return s * base;
-  }
-  return base * 1024;
 }
 
 interface TooltipProps {

@@ -36,3 +36,26 @@ export function useXTicks(data: MetricsSnapshot[]): number[] | undefined {
 export function spansYears(data: MetricsSnapshot[]): boolean {
   return data.length > 1 && data[data.length - 1].t - data[0].t > 200 * 86_400_000;
 }
+
+const BIN_STEPS = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512];
+
+/** Smallest "round" byte step (1/2/4/…/512 × 1024ᵏ) that is ≥ rough. */
+export function niceByteStep(rough: number): number {
+  let base = 1;
+  while (rough >= base * 1024) base *= 1024;
+  for (const s of BIN_STEPS) {
+    if (s * base >= rough) return s * base;
+  }
+  return base * 1024;
+}
+
+/**
+ * Byte-axis ticks on round binary steps, so labels read "64 GB" rather than
+ * "79.2 GB". Returns undefined for an empty axis (recharts then auto-ticks).
+ */
+export function byteTicks(max: number, targetCount = 5): number[] | undefined {
+  if (max <= 0) return undefined;
+  const step = niceByteStep(max / targetCount);
+  const count = Math.ceil(max / step);
+  return Array.from({ length: count + 1 }, (_, i) => i * step);
+}

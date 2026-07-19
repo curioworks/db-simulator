@@ -2,6 +2,7 @@ import { mulberry32 } from './prng.ts';
 import { noCompaction, type CompactionStrategy } from './compaction/strategy.ts';
 import { createStcs } from './compaction/stcs.ts';
 import { createTwcs } from './compaction/twcs.ts';
+import { buildSkewModel } from './skew.ts';
 import type { MetricsSnapshot, SimConfig, SimResult, SSTable } from './types.ts';
 
 /**
@@ -52,6 +53,12 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   if (queryWindowMs <= 0) throw new RangeError(`queryWindowMs must be > 0, got ${queryWindowMs}`);
 
   const rng = mulberry32(config.seed);
+  // Skew (M6): with constant write shares and one uniform TTL, every
+  // partition holds exactly its share of the totals at all times, so the
+  // per-tick figures are two fixed fractions of diskBytes (see SkewModel).
+  const skew = config.skew ? buildSkewModel(config.skew, config.seed) : undefined;
+  const maxPartitionFrac = skew && config.skew ? skew.hotWeights[0] / config.skew.replicationFactor : 0;
+  const hotNodeFrac = skew ? Math.max(...skew.nodeShare) : 0;
   const dataPerMs = (writeRatePerSec * onDiskRowBytes) / 1000;
   const tombPerMs = (deleteRatePerSec * tombstoneRowBytes) / 1000;
   const bytesPerMs = dataPerMs + tombPerMs;
@@ -174,17 +181,20 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     const queryCutoff = tickEnd - queryWindowMs;
     while (queryPtr < maxTsSorted.length && maxTsSorted[queryPtr] < queryCutoff) queryPtr++;
 
+    const diskBytes = liveBytes + expiredBytes + tombstoneBytes;
     snapshots.push({
       t: tickEnd,
       liveBytes,
       expiredBytes,
       tombstoneBytes,
-      diskBytes: liveBytes + expiredBytes + tombstoneBytes,
+      diskBytes,
       memtableBytes,
       sstableCount: sstables.length,
       readSstables: maxTsSorted.length - queryPtr,
+      maxPartitionBytes: maxPartitionFrac * diskBytes,
+      hotNodeBytes: hotNodeFrac * diskBytes,
     });
   }
 
-  return { snapshots, sstables };
+  return { snapshots, sstables, skew };
 }

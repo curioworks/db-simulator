@@ -28,6 +28,9 @@ export const sensorBaseline: ScenarioConfig = {
   twcsWindowDays: 1,
   gcGraceDays: 10,
   queryWindowHours: 24,
+  partitionCount: 100_000,
+  skewExponent: 0.3,
+  nodes: 6,
   seed: 42,
 };
 
@@ -53,6 +56,9 @@ export const ttlNoCompaction: ScenarioConfig = {
   twcsWindowDays: 1,
   gcGraceDays: 10,
   queryWindowHours: 24,
+  partitionCount: 100_000,
+  skewExponent: 0.3,
+  nodes: 6,
   seed: 42,
 };
 
@@ -95,10 +101,28 @@ export const ttlTwcsTuned: ScenarioConfig = {
   twcsWindowDays: 1,
 };
 
+/**
+ * The M6 mistake: a partition key too coarse for the data volume. Same tuned
+ * TWCS workload — disk is flat and healthy at the cluster level — but the
+ * writes land on only 500 partitions with a Zipf 1.4 head, so the hottest
+ * partition alone carries a multi-GB slab (Cassandra warns past 100 MB), and
+ * the 8 tracked partitions pin two thirds of the bytes onto whichever nodes
+ * own their token ranges. Cluster average looks fine; the fullest node
+ * doesn't.
+ */
+export const hotPartitions: ScenarioConfig = {
+  ...ttlTwcsTuned,
+  name: 'Hot partitions (key too coarse)',
+  partitionCount: 500,
+  skewExponent: 1.4,
+  nodes: 6,
+};
+
 export const presets: ScenarioConfig[] = [
   sensorBaseline,
   ttlNoCompaction,
   ttlStcs,
   ttlTwcsWide,
   ttlTwcsTuned,
+  hotPartitions,
 ];

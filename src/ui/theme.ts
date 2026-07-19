@@ -13,6 +13,7 @@ export interface Theme {
   series2: string;
   series3: string;
   series4: string;
+  series5: string;
   border: string;
 }
 
@@ -28,6 +29,7 @@ export const lightTheme: Theme = {
   series2: '#008300',
   series3: '#e87ba4',
   series4: '#eda100',
+  series5: '#1baf7a',
   border: 'rgba(11,11,11,0.10)',
 };
 
@@ -43,6 +45,7 @@ export const darkTheme: Theme = {
   series2: '#008300',
   series3: '#d55181',
   series4: '#c98500',
+  series5: '#199e70',
   border: 'rgba(255,255,255,0.10)',
 };
 

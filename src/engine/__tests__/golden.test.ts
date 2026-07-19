@@ -43,6 +43,18 @@ const m5Config: SimConfig = {
   queryWindowMs: 3 * 86_400_000, // read amp over a 3d query window
 };
 
+const m6Config: SimConfig = {
+  ...m5Config,
+  // Zipf 1.1 over 10K partitions, 8 tracked individually, on a 6-node RF-3 ring.
+  skew: {
+    partitionCount: 10_000,
+    zipfExponent: 1.1,
+    topK: 8,
+    nodes: 6,
+    replicationFactor: 3,
+  },
+};
+
 function checkGolden(name: string, config: SimConfig) {
   const goldenPath = fileURLToPath(new URL(`./golden/${name}.json`, import.meta.url));
   const actual = simulate(config);
@@ -58,6 +70,7 @@ function checkGolden(name: string, config: SimConfig) {
   // with round-trip precision.
   expect(actual.snapshots).toEqual(golden.snapshots);
   expect(actual.sstables).toEqual(golden.sstables);
+  expect(actual.skew).toEqual(golden.skew);
 }
 
 describe('golden time series (fixed seed + config → exact committed output)', () => {
@@ -79,5 +92,9 @@ describe('golden time series (fixed seed + config → exact committed output)', 
 
   it('M5: same TWCS run with a 3d query window for read amplification', () => {
     checkGolden('m5-readamp', m5Config);
+  });
+
+  it('M6: same run with Zipf 1.1 skew over 10K partitions on a 6-node RF-3 ring', () => {
+    checkGolden('m6-skew', m6Config);
   });
 });

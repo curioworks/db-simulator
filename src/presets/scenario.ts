@@ -33,8 +33,21 @@ export interface ScenarioConfig {
   gcGraceDays: number;
   /** How far back a typical read scans, in hours; drives the read-amp metric (M5). */
   queryWindowHours: number;
+  /** Distinct partitions the workload writes to (M6). */
+  partitionCount: number;
+  /** Zipf exponent for write skew (M6): 0 = uniform, ~1 = classic hot-key. */
+  skewExponent: number;
+  /** Nodes on the token ring (M6); always ≥ replicationFactor. */
+  nodes: number;
   seed: number;
 }
+
+/**
+ * Hot partitions tracked individually (M6); everything past them is one
+ * aggregate tail bucket. Fixed rather than exposed — 8 is enough to show the
+ * head of any Zipf curve, and the tail carries the rest exactly.
+ */
+export const TOP_K_PARTITIONS = 8;
 
 /**
  * Clamp every field into engine-legal ranges. URL-decoded scenarios are
@@ -44,11 +57,12 @@ export interface ScenarioConfig {
 export function clampScenario(s: ScenarioConfig): ScenarioConfig {
   const num = (v: number, lo: number, hi: number, fallback: number) =>
     Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : fallback;
+  const replicationFactor = Math.round(num(s.replicationFactor, 1, 10, 3));
   return {
     ...s,
     name: s.name || 'Custom scenario',
     compressionRatio: num(s.compressionRatio, 0, 0.95, 0.5),
-    replicationFactor: Math.round(num(s.replicationFactor, 1, 10, 3)),
+    replicationFactor,
     writeRatePerSec: num(s.writeRatePerSec, 0, 10_000_000, 100),
     tickMs: s.tickMs === HOUR_MS ? HOUR_MS : DAY_MS,
     days: Math.round(num(s.days, 1, 3650, 365)),
@@ -63,6 +77,12 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
     gcGraceDays: num(s.gcGraceDays, 0, 365, 10),
     // Pre-M5 links lack this; default to a day-long query.
     queryWindowHours: Math.round(num(s.queryWindowHours, 1, 168, 24)),
+    // Pre-M6 links lack these; default to a mildly skewed 100K-partition
+    // workload on a 6-node ring. A ring smaller than RF cannot place a
+    // replica set, so nodes is floored at RF rather than rejected.
+    partitionCount: Math.round(num(s.partitionCount, 1, 100_000_000, 100_000)),
+    skewExponent: num(s.skewExponent, 0, 2, 0.3),
+    nodes: Math.max(replicationFactor, Math.round(num(s.nodes, 1, 64, 6))),
     seed: Math.round(num(s.seed, 0, 2 ** 31, 42)),
     schema: {
       columns: s.schema.columns.slice(0, 32).map((c, i) => ({
@@ -97,6 +117,13 @@ export function toSimConfig(
     tombstoneRowBytes: sizeModel.tombstoneRowBytes,
     gcGraceMs: s.gcGraceDays * DAY_MS,
     queryWindowMs: s.queryWindowHours * HOUR_MS,
+    skew: {
+      partitionCount: s.partitionCount,
+      zipfExponent: s.skewExponent,
+      topK: TOP_K_PARTITIONS,
+      nodes: s.nodes,
+      replicationFactor: Math.min(s.replicationFactor, s.nodes),
+    },
     compaction:
       s.compaction === 'twcs'
         ? { strategy: 'twcs', windowMs: s.twcsWindowDays * DAY_MS }

@@ -64,6 +64,50 @@ export interface SimConfig {
    * the rest via SSTable min/max timestamp metadata). Absent = 1 day.
    */
   queryWindowMs?: number;
+  /**
+   * Partition-skew model (M6). Absent = no skew accounting: the skew fields
+   * in every snapshot are 0 and `SimResult.skew` is undefined.
+   */
+  skew?: SkewConfig;
+}
+
+/**
+ * Skew model (M6): writes spread across partitions on a Zipf curve — the
+ * top-K hottest partitions are tracked individually, everything past them
+ * pools into one aggregate tail bucket. Each hot partition hashes to a token
+ * that lands in one node's range; that node plus the next RF−1 clockwise
+ * hold its replicas, so hot partitions concentrate on specific nodes while
+ * the tail spreads evenly.
+ */
+export interface SkewConfig {
+  /** Distinct partitions the workload writes to (≥ 1). */
+  partitionCount: number;
+  /** Zipf exponent: 0 = uniform, ≈ 1 = classic hot-key skew. */
+  zipfExponent: number;
+  /** Hottest partitions tracked individually (clamped to partitionCount). */
+  topK: number;
+  /** Nodes on the token ring. */
+  nodes: number;
+  /** Replicas per partition; must be ≤ nodes. */
+  replicationFactor: number;
+}
+
+/**
+ * What "simulating the top-K partitions individually" collapses to: with a
+ * constant per-partition share of writes and one uniform TTL, every
+ * partition's on-disk bytes are exactly its share of the cluster totals at
+ * all times — so the per-partition state is the weights and replica
+ * assignments, and per-tick figures are share × running totals.
+ */
+export interface SkewModel {
+  /** Zipf write share of each of the top-K partitions, hottest first. */
+  hotWeights: number[];
+  /** Combined write share of every partition past the top K. */
+  tailWeight: number;
+  /** Node ids holding each hot partition — RF ring-consecutive entries each. */
+  hotReplicas: number[][];
+  /** Fraction of cluster-wide disk bytes on each node; sums to 1. */
+  nodeShare: number[];
 }
 
 /** STCS knobs, mirroring Cassandra's defaults; all optional. */
@@ -109,10 +153,16 @@ export interface MetricsSnapshot {
   sstableCount: number;
   /** SSTables whose time span overlaps the trailing query window (M5 read amp). */
   readSstables: number;
+  /** Per-replica on-disk bytes of the single hottest partition (M6). 0 without a skew config. */
+  maxPartitionBytes: number;
+  /** On-disk bytes on the fullest node (M6). 0 without a skew config. */
+  hotNodeBytes: number;
 }
 
 export interface SimResult {
   snapshots: MetricsSnapshot[];
   /** Final SSTable set, mostly for tests and debugging views. */
   sstables: SSTable[];
+  /** Resolved skew model — weights and replica placement (M6); undefined without a skew config. */
+  skew?: SkewModel;
 }

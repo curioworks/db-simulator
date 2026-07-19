@@ -50,6 +50,8 @@ describe('simulate — TTL expiry + tombstones', () => {
       memtableBytes: 0,
       sstableCount: 1,
       readSstables: 1,
+      maxPartitionBytes: 0,
+      hotNodeBytes: 0,
     });
 
     expect(snapshots[1].expiredBytes).toBe(172_800_000);

@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
-import type { MetricsSnapshot, SimConfig } from '../engine/types.ts';
+import type { MetricsSnapshot, SimConfig, SkewModel } from '../engine/types.ts';
 import type { SimRequest, SimResponse } from '../worker/protocol.ts';
 
 export interface SimulationState {
   snapshots: MetricsSnapshot[];
+  /** Zipf weights + replica placement behind the per-node view (M6). */
+  skew?: SkewModel;
   /** True while a newer config is being simulated; keep the previous frame. */
   running: boolean;
   elapsedMs: number | null;
@@ -30,7 +32,12 @@ export function useSimulation(config: SimConfig): SimulationState {
     });
     worker.onmessage = (e: MessageEvent<SimResponse>) => {
       if (e.data.id !== requestId.current) return; // stale
-      setState({ snapshots: e.data.snapshots, running: false, elapsedMs: e.data.elapsedMs });
+      setState({
+        snapshots: e.data.snapshots,
+        skew: e.data.skew,
+        running: false,
+        elapsedMs: e.data.elapsedMs,
+      });
     };
     workerRef.current = worker;
     return () => {
