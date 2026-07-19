@@ -1,6 +1,7 @@
 import { mulberry32 } from './prng.ts';
 import { noCompaction, type CompactionStrategy } from './compaction/strategy.ts';
 import { createStcs } from './compaction/stcs.ts';
+import { createTwcs } from './compaction/twcs.ts';
 import type { MetricsSnapshot, SimConfig, SimResult, SSTable } from './types.ts';
 
 /**
@@ -27,7 +28,12 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   const gcGraceMs = config.gcGraceMs ?? 0;
   // An explicit strategy argument (tests, custom strategies) wins over the
   // serializable spec that arrives through the worker boundary.
-  strategy ??= config.compaction?.strategy === 'stcs' ? createStcs(config.compaction) : noCompaction;
+  strategy ??=
+    config.compaction?.strategy === 'stcs'
+      ? createStcs(config.compaction)
+      : config.compaction?.strategy === 'twcs'
+        ? createTwcs(config.compaction)
+        : noCompaction;
 
   if (tickMs <= 0) throw new RangeError(`tickMs must be > 0, got ${tickMs}`);
   if (!Number.isInteger(ticks) || ticks < 0) {

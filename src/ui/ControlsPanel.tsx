@@ -112,8 +112,20 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           >
             <option value="none">None</option>
             <option value="stcs">STCS (size-tiered)</option>
+            <option value="twcs">TWCS (time-window)</option>
           </select>
         </label>
+        {scenario.compaction === 'twcs' && (
+          <SliderField
+            label="TWCS window"
+            value={scenario.twcsWindowDays}
+            min={1}
+            max={60}
+            step={1}
+            display={scenario.twcsWindowDays === 1 ? '1 day' : `${scenario.twcsWindowDays} days`}
+            onChange={(twcsWindowDays) => set({ twcsWindowDays })}
+          />
+        )}
         {scenario.compaction !== 'none' && (
           <SliderField
             label="gc_grace"

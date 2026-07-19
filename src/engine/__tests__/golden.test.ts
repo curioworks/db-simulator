@@ -33,6 +33,11 @@ const m3Config: SimConfig = {
   compaction: { strategy: 'stcs' },
 };
 
+const m4Config: SimConfig = {
+  ...m3Config,
+  compaction: { strategy: 'twcs', windowMs: 7 * 86_400_000 }, // 7d windows
+};
+
 function checkGolden(name: string, config: SimConfig) {
   const goldenPath = fileURLToPath(new URL(`./golden/${name}.json`, import.meta.url));
   const actual = simulate(config);
@@ -61,5 +66,9 @@ describe('golden time series (fixed seed + config → exact committed output)', 
 
   it('M3: 30d TTL + deletes + STCS with 10d gc_grace, daily ticks × 365', () => {
     checkGolden('m3-stcs-ttl', m3Config);
+  });
+
+  it('M4: 30d TTL + deletes + TWCS 7d windows with 10d gc_grace, daily ticks × 365', () => {
+    checkGolden('m4-twcs-ttl', m4Config);
   });
 });

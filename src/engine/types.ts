@@ -73,7 +73,21 @@ export interface StcsTuning {
   minSstableSizeBytes?: number;
 }
 
-export type CompactionSpec = { strategy: 'none' } | ({ strategy: 'stcs' } & StcsTuning);
+/**
+ * TWCS knobs. Time windows bucket SSTables by their newest data (maxTs);
+ * the current window compacts with STCS using the inherited tuning, closed
+ * windows compact to one SSTable each, and fully-expired SSTables are
+ * dropped whole.
+ */
+export interface TwcsTuning extends StcsTuning {
+  /** Time window size in ms (Cassandra: compaction_window_unit × size; default 1 day). */
+  windowMs?: number;
+}
+
+export type CompactionSpec =
+  | { strategy: 'none' }
+  | ({ strategy: 'stcs' } & StcsTuning)
+  | ({ strategy: 'twcs' } & TwcsTuning);
 
 /** Emitted once per tick, at the end of the tick. */
 export interface MetricsSnapshot {

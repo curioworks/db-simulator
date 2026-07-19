@@ -25,6 +25,7 @@ export const sensorBaseline: ScenarioConfig = {
   ttlDays: 0,
   deleteRatePerSec: 0,
   compaction: 'none',
+  twcsWindowDays: 1,
   gcGraceDays: 10,
   seed: 42,
 };
@@ -46,6 +47,7 @@ export const ttlNoCompaction: ScenarioConfig = {
   ttlDays: 7,
   deleteRatePerSec: 25,
   compaction: 'none',
+  twcsWindowDays: 1,
   gcGraceDays: 10,
   seed: 42,
 };
@@ -62,4 +64,37 @@ export const ttlStcs: ScenarioConfig = {
   compaction: 'stcs',
 };
 
-export const presets: ScenarioConfig[] = [sensorBaseline, ttlNoCompaction, ttlStcs];
+/**
+ * The M4 flagship mistake: TWCS with a window that dwarfs the TTL. Each 30d
+ * window compacts once when it closes and then sits there, expired bytes and
+ * all, until the whole window ages past TTL + gc_grace. The disk line goes
+ * flat — but as a sawtooth between ~73 and ~146 GiB (avg 3.5× the 29.5 GiB
+ * live), shedding a whole ~72 GiB window at a time, and it never comes down
+ * to the live line.
+ */
+export const ttlTwcsWide: ScenarioConfig = {
+  ...ttlNoCompaction,
+  name: 'TTL 7d + TWCS 30d window (window ≫ TTL)',
+  compaction: 'twcs',
+  twcsWindowDays: 30,
+};
+
+/**
+ * The fix: 1-day windows, so whole windows expire and drop daily. Disk goes
+ * genuinely flat at TTL + gc_grace + 1 = 18 days of data (~75 GiB, 2.6×
+ * live). The remaining gap above the live line is gc_grace: slide it to 0
+ * and disk hugs live at 1.07×.
+ */
+export const ttlTwcsTuned: ScenarioConfig = {
+  ...ttlTwcsWide,
+  name: 'TTL 7d + TWCS 1d window (the fix)',
+  twcsWindowDays: 1,
+};
+
+export const presets: ScenarioConfig[] = [
+  sensorBaseline,
+  ttlNoCompaction,
+  ttlStcs,
+  ttlTwcsWide,
+  ttlTwcsTuned,
+];

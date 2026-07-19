@@ -55,7 +55,8 @@ export function App() {
           <h1>Cassandra growth simulator</h1>
           <p>
             How a table grows on disk given a schema, write rate, TTL and compaction strategy.
-            Try STCS on a TTL'd table and watch how late — and how lumpily — disk is reclaimed.
+            Try TWCS on a TTL'd table: a window sized to the TTL drops whole expired windows
+            daily, while a 30-day window strands weeks of expired data on disk.
           </p>
         </header>
         <label className="field preset-field">
@@ -104,7 +105,13 @@ export function App() {
           <StatTile
             label="SSTables"
             value={last ? formatCount(last.sstableCount) : '—'}
-            sub={scenario.compaction === 'stcs' ? 'STCS compaction' : 'no compaction'}
+            sub={
+              scenario.compaction === 'stcs'
+                ? 'STCS compaction'
+                : scenario.compaction === 'twcs'
+                  ? `TWCS ${scenario.twcsWindowDays}d windows`
+                  : 'no compaction'
+            }
           />
         </div>
 
