@@ -45,7 +45,35 @@ export interface SimConfig {
   deleteRatePerSec?: number;
   /** Cluster-wide on-disk bytes per tombstone, from the size profiler. */
   tombstoneRowBytes?: number;
+  /**
+   * gc_grace_seconds as ms; 0 or absent = purge as soon as compaction touches
+   * the data. Expired data and tombstones survive compaction until gc_grace
+   * has passed on top of the TTL/deletion timestamp.
+   */
+  gcGraceMs?: number;
+  /**
+   * Which compaction strategy the engine should run. Serializable (crosses the
+   * worker boundary), resolved to a CompactionStrategy inside the engine.
+   * Absent = no compaction.
+   */
+  compaction?: CompactionSpec;
 }
+
+/** STCS knobs, mirroring Cassandra's defaults; all optional. */
+export interface StcsTuning {
+  /** Fewest same-bucket SSTables that trigger a merge (Cassandra: 4). */
+  minThreshold?: number;
+  /** Most SSTables merged at once (Cassandra: 32). */
+  maxThreshold?: number;
+  /** Bucket membership: size ≥ avg × bucketLow (Cassandra: 0.5). */
+  bucketLow?: number;
+  /** Bucket membership: size ≤ avg × bucketHigh (Cassandra: 1.5). */
+  bucketHigh?: number;
+  /** Tables below this size share one bucket regardless of ratio (Cassandra: 50 MiB). */
+  minSstableSizeBytes?: number;
+}
+
+export type CompactionSpec = { strategy: 'none' } | ({ strategy: 'stcs' } & StcsTuning);
 
 /** Emitted once per tick, at the end of the tick. */
 export interface MetricsSnapshot {

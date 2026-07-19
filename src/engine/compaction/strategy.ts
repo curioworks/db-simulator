@@ -4,6 +4,10 @@ import type { SSTable } from '../types.ts';
 export interface CompactionContext {
   /** Epoch ms at the end of the current tick. */
   now: number;
+  /** Row TTL in ms; 0 = no TTL (nothing self-expires). */
+  ttlMs: number;
+  /** gc_grace in ms; gates purging of expired data and tombstones. */
+  gcGraceMs: number;
   rng: PRNG;
 }
 

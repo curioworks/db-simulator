@@ -104,6 +104,27 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           display={`${scenario.memtableFlushMiB} MiB`}
           onChange={(memtableFlushMiB) => set({ memtableFlushMiB })}
         />
+        <label className="field">
+          <span className="field-label">Compaction</span>
+          <select
+            value={scenario.compaction}
+            onChange={(e) => set({ compaction: e.target.value as ScenarioConfig['compaction'] })}
+          >
+            <option value="none">None</option>
+            <option value="stcs">STCS (size-tiered)</option>
+          </select>
+        </label>
+        {scenario.compaction !== 'none' && (
+          <SliderField
+            label="gc_grace"
+            value={scenario.gcGraceDays}
+            min={0}
+            max={30}
+            step={1}
+            display={scenario.gcGraceDays === 0 ? 'purge immediately' : `${scenario.gcGraceDays} days`}
+            onChange={(gcGraceDays) => set({ gcGraceDays })}
+          />
+        )}
       </section>
 
       <section>

@@ -64,4 +64,4 @@ Compaction bugs must show up as diffs. Engine tests run in Node via vitest, no D
 - Engine must stay importable without a browser (no `window`, no React imports)
 - All randomness through one seeded PRNG passed into the engine
 - Time is `number` (epoch ms) internally; formatting only in UI
-- Sim currently in-progress: **M1–M2 done** (size model, write-only growth, TTL expiry + tombstone accounting, stacked chart, golden tests, UI + worker); next is **M3** (STCS). Live demo: https://curioworks.github.io/db-simulator/
+- Sim currently in-progress: **M1–M3 done** (size model, growth line, TTL expiry + tombstone accounting, stacked chart, STCS via the strategy interface with gc_grace-gated purging at merge, golden tests, UI + worker); next is **M4** (TWCS + preset scenarios). Live demo: https://curioworks.github.io/db-simulator/

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm run build 2>$null)",
+      "PowerShell(node \"C:\\\\Users\\\\sandh\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--projects-db-simulator\\\\fb662b20-567b-4a0c-bdbf-fc2a08b4955a\\\\scratchpad\\\\drive-m3.mjs\")",
+      "PowerShell(git commit -F \"C:\\\\Users\\\\sandh\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--projects-db-simulator\\\\fb662b20-567b-4a0c-bdbf-fc2a08b4955a\\\\scratchpad\\\\m3-commit-msg.txt\")",
+      "PowerShell(git push origin main)"
+    ]
+  }
+}

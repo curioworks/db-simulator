@@ -54,8 +54,8 @@ export function App() {
         <header className="brand">
           <h1>Cassandra growth simulator</h1>
           <p>
-            How a table grows on disk given a schema, write rate, TTL and flush policy. No
-            compaction yet (M3) — expired data and tombstones never get dropped.
+            How a table grows on disk given a schema, write rate, TTL and compaction strategy.
+            Try STCS on a TTL'd table and watch how late — and how lumpily — disk is reclaimed.
           </p>
         </header>
         <label className="field preset-field">
@@ -104,7 +104,7 @@ export function App() {
           <StatTile
             label="SSTables"
             value={last ? formatCount(last.sstableCount) : '—'}
-            sub="no compaction yet"
+            sub={scenario.compaction === 'stcs' ? 'STCS compaction' : 'no compaction'}
           />
         </div>
 

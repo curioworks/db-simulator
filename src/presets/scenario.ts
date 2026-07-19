@@ -25,6 +25,10 @@ export interface ScenarioConfig {
   ttlDays: number;
   /** Row deletions per second, cluster-wide (each writes a tombstone). */
   deleteRatePerSec: number;
+  /** Compaction strategy; STCS runs with Cassandra-default tuning (M3). */
+  compaction: 'none' | 'stcs';
+  /** gc_grace in days; gates purging of expired data and tombstones. */
+  gcGraceDays: number;
   seed: number;
 }
 
@@ -48,6 +52,9 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
     // M1-era shared links lack these fields; default them to "off".
     ttlDays: num(s.ttlDays, 0, 3650, 0),
     deleteRatePerSec: num(s.deleteRatePerSec, 0, 1_000_000, 0),
+    // Pre-M3 links lack these; gc_grace defaults to Cassandra's 10 days.
+    compaction: s.compaction === 'stcs' ? 'stcs' : 'none',
+    gcGraceDays: num(s.gcGraceDays, 0, 365, 10),
     seed: Math.round(num(s.seed, 0, 2 ** 31, 42)),
     schema: {
       columns: s.schema.columns.slice(0, 32).map((c, i) => ({
@@ -80,5 +87,7 @@ export function toSimConfig(
     ttlMs: s.ttlDays * DAY_MS,
     deleteRatePerSec: s.deleteRatePerSec,
     tombstoneRowBytes: sizeModel.tombstoneRowBytes,
+    gcGraceMs: s.gcGraceDays * DAY_MS,
+    compaction: { strategy: s.compaction },
   };
 }

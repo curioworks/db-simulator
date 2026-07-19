@@ -24,6 +24,8 @@ export const sensorBaseline: ScenarioConfig = {
   memtableFlushMiB: 64,
   ttlDays: 0,
   deleteRatePerSec: 0,
+  compaction: 'none',
+  gcGraceDays: 10,
   seed: 42,
 };
 
@@ -43,7 +45,21 @@ export const ttlNoCompaction: ScenarioConfig = {
   memtableFlushMiB: 64,
   ttlDays: 7,
   deleteRatePerSec: 25,
+  compaction: 'none',
+  gcGraceDays: 10,
   seed: 42,
 };
 
-export const presets: ScenarioConfig[] = [sensorBaseline, ttlNoCompaction];
+/**
+ * Same workload with STCS turned on (M3): the disk line finally comes back
+ * down — but late and in lumps. Small tiers merge and reclaim a slice every
+ * few days; the big tier holds weeks of expired data hostage until its
+ * 4-table merge finally fires. Sets up TWCS (M4) as the fix.
+ */
+export const ttlStcs: ScenarioConfig = {
+  ...ttlNoCompaction,
+  name: 'TTL 7d + STCS (late, lumpy reclaim)',
+  compaction: 'stcs',
+};
+
+export const presets: ScenarioConfig[] = [sensorBaseline, ttlNoCompaction, ttlStcs];
