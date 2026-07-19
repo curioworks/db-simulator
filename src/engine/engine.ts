@@ -26,6 +26,7 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   const deleteRatePerSec = config.deleteRatePerSec ?? 0;
   const tombstoneRowBytes = config.tombstoneRowBytes ?? 0;
   const gcGraceMs = config.gcGraceMs ?? 0;
+  const queryWindowMs = config.queryWindowMs ?? 86_400_000;
   // An explicit strategy argument (tests, custom strategies) wins over the
   // serializable spec that arrives through the worker boundary.
   strategy ??=
@@ -48,6 +49,7 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   if (deleteRatePerSec < 0) throw new RangeError(`deleteRatePerSec must be ≥ 0, got ${deleteRatePerSec}`);
   if (tombstoneRowBytes < 0) throw new RangeError(`tombstoneRowBytes must be ≥ 0, got ${tombstoneRowBytes}`);
   if (gcGraceMs < 0) throw new RangeError(`gcGraceMs must be ≥ 0, got ${gcGraceMs}`);
+  if (queryWindowMs <= 0) throw new RangeError(`queryWindowMs must be > 0, got ${queryWindowMs}`);
 
   const rng = mulberry32(config.seed);
   const dataPerMs = (writeRatePerSec * onDiskRowBytes) / 1000;
@@ -69,6 +71,17 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   let liveBytes = 0;
   let expiredBytes = 0;
   let tombstoneBytes = 0;
+  // Read amp (M5): a table is touched by a query over [now − window, now] iff
+  // its maxTs ≥ the cutoff (minTs ≤ now always holds). The list is minTs-
+  // sorted, and STCS can leave maxTs non-monotone in it (a merged table can
+  // hold newer data than an unmerged neighbour after it), so the count runs
+  // over a sorted mirror of maxTs values instead: flushes append in maxTs
+  // order (flush moments only move forward, and no compacted table can exceed
+  // a past `now`), the cutoff only advances, so a pointer sweeps the mirror
+  // once — amortized O(1) per tick. Compaction-change ticks rebuild the
+  // mirror; those ticks are already O(n) by the strategy contract.
+  let maxTsSorted: number[] = [];
+  let queryPtr = 0;
   const snapshots: MetricsSnapshot[] = [];
 
   for (let i = 0; i < ticks; i++) {
@@ -94,6 +107,7 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
       });
       liveBytes += flushLive;
       tombstoneBytes += flushTomb;
+      maxTsSorted.push(flushAt);
       remaining -= needed;
       cursor = flushAt;
       memtableBytes = 0;
@@ -153,7 +167,12 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
         // must keep the list minTs-sorted.
         if (s.liveBytes > 0) agePtr = j;
       }
+      maxTsSorted = sstables.map((s) => s.maxTs).sort((a, b) => a - b);
+      queryPtr = 0;
     }
+
+    const queryCutoff = tickEnd - queryWindowMs;
+    while (queryPtr < maxTsSorted.length && maxTsSorted[queryPtr] < queryCutoff) queryPtr++;
 
     snapshots.push({
       t: tickEnd,
@@ -163,6 +182,7 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
       diskBytes: liveBytes + expiredBytes + tombstoneBytes,
       memtableBytes,
       sstableCount: sstables.length,
+      readSstables: maxTsSorted.length - queryPtr,
     });
   }
 

@@ -14,7 +14,8 @@
     "compaction": {
       "strategy": "twcs",
       "windowMs": 604800000
-    }
+    },
+    "queryWindowMs": 259200000
   },
   "snapshots": [
     {
@@ -35,7 +36,7 @@
       "diskBytes": 1946157055.9999995,
       "memtableBytes": 23762944,
       "sstableCount": 2,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1767484800000,
@@ -45,7 +46,7 @@
       "diskBytes": 2952790015.999999,
       "memtableBytes": 2089984,
       "sstableCount": 3,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1767571200000,
@@ -65,7 +66,7 @@
       "diskBytes": 4898947071.999999,
       "memtableBytes": 25852928,
       "sstableCount": 2,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1767744000000,
@@ -75,7 +76,7 @@
       "diskBytes": 5905580031.999998,
       "memtableBytes": 4179968,
       "sstableCount": 3,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1767830400000,
@@ -95,7 +96,7 @@
       "diskBytes": 7851737087.999996,
       "memtableBytes": 27942912,
       "sstableCount": 2,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1768003200000,
@@ -105,7 +106,7 @@
       "diskBytes": 8858370047.999996,
       "memtableBytes": 6269952,
       "sstableCount": 3,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1768089600000,
@@ -115,7 +116,7 @@
       "diskBytes": 9797894143.999996,
       "memtableBytes": 51705856,
       "sstableCount": 4,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1768176000000,
@@ -135,7 +136,7 @@
       "diskBytes": 11811160063.999994,
       "memtableBytes": 8359936,
       "sstableCount": 3,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1768348800000,
@@ -145,7 +146,7 @@
       "diskBytes": 12750684159.999994,
       "memtableBytes": 53795840,
       "sstableCount": 4,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1768435200000,
@@ -165,7 +166,7 @@
       "diskBytes": 14763950079.999992,
       "memtableBytes": 10449920,
       "sstableCount": 3,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1768608000000,
@@ -175,7 +176,7 @@
       "diskBytes": 15703474175.999992,
       "memtableBytes": 55885824,
       "sstableCount": 4,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1768694400000,
@@ -185,7 +186,7 @@
       "diskBytes": 16710107135.999992,
       "memtableBytes": 34212864,
       "sstableCount": 5,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1768780800000,
@@ -205,7 +206,7 @@
       "diskBytes": 18656264191.999992,
       "memtableBytes": 57975808,
       "sstableCount": 4,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1768953600000,
@@ -215,7 +216,7 @@
       "diskBytes": 19662897151.999992,
       "memtableBytes": 36302848,
       "sstableCount": 5,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1769040000000,
@@ -235,7 +236,7 @@
       "diskBytes": 21609054207.99999,
       "memtableBytes": 60065792,
       "sstableCount": 4,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1769212800000,
@@ -245,7 +246,7 @@
       "diskBytes": 22615687167.99999,
       "memtableBytes": 38392832,
       "sstableCount": 5,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1769299200000,
@@ -255,7 +256,7 @@
       "diskBytes": 23622320127.99999,
       "memtableBytes": 16719872,
       "sstableCount": 6,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1769385600000,
@@ -275,7 +276,7 @@
       "diskBytes": 25568477183.99999,
       "memtableBytes": 40482816,
       "sstableCount": 5,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1769558400000,
@@ -285,7 +286,7 @@
       "diskBytes": 26575110143.999985,
       "memtableBytes": 18809856,
       "sstableCount": 6,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1769644800000,
@@ -305,7 +306,7 @@
       "diskBytes": 28521267199.999985,
       "memtableBytes": 42572800,
       "sstableCount": 5,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1769817600000,
@@ -315,7 +316,7 @@
       "diskBytes": 29527900159.99998,
       "memtableBytes": 20899840,
       "sstableCount": 6,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1769904000000,
@@ -325,7 +326,7 @@
       "diskBytes": 30467424255.99998,
       "memtableBytes": 66335744,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1769990400000,
@@ -345,7 +346,7 @@
       "diskBytes": 32480690175.999985,
       "memtableBytes": 22989824,
       "sstableCount": 6,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1770163200000,
@@ -355,7 +356,7 @@
       "diskBytes": 33487323135.999985,
       "memtableBytes": 1316864,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1770249600000,
@@ -375,7 +376,7 @@
       "diskBytes": 35433480191.999985,
       "memtableBytes": 25079808,
       "sstableCount": 6,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1770422400000,
@@ -385,7 +386,7 @@
       "diskBytes": 36440113151.999985,
       "memtableBytes": 3406848,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1770508800000,
@@ -395,7 +396,7 @@
       "diskBytes": 37379637247.999985,
       "memtableBytes": 48842752,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1770595200000,
@@ -415,7 +416,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 5496832,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1770768000000,
@@ -425,7 +426,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 50932736,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1770854400000,
@@ -445,7 +446,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 7586816,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1771027200000,
@@ -455,7 +456,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 53022720,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1771113600000,
@@ -465,7 +466,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 31349760,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1771200000000,
@@ -485,7 +486,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 55112704,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1771372800000,
@@ -495,7 +496,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 33439744,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1771459200000,
@@ -515,7 +516,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 57202688,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1771632000000,
@@ -525,7 +526,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 35529728,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1771718400000,
@@ -535,7 +536,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 13856768,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1771804800000,
@@ -555,7 +556,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 37619712,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1771977600000,
@@ -565,7 +566,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 15946752,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1772064000000,
@@ -585,7 +586,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 39709696,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1772236800000,
@@ -595,7 +596,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 18036736,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1772323200000,
@@ -605,7 +606,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 63472640,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1772409600000,
@@ -625,7 +626,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 20126720,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1772582400000,
@@ -635,7 +636,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 65562624,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1772668800000,
@@ -655,7 +656,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 22216704,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1772841600000,
@@ -665,7 +666,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 543744,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1772928000000,
@@ -675,7 +676,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 45979648,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1773014400000,
@@ -695,7 +696,7 @@
       "diskBytes": 39460012031.99998,
       "memtableBytes": 2633728,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1773187200000,
@@ -705,7 +706,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 48069632,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1773273600000,
@@ -725,7 +726,7 @@
       "diskBytes": 42412802047.99998,
       "memtableBytes": 4723712,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1773446400000,
@@ -735,7 +736,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 50159616,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1773532800000,
@@ -745,7 +746,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 28486656,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1773619200000,
@@ -765,7 +766,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 52249600,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1773792000000,
@@ -775,7 +776,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 30576640,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1773878400000,
@@ -795,7 +796,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 54339584,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1774051200000,
@@ -805,7 +806,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 32666624,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1774137600000,
@@ -815,7 +816,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 10993664,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1774224000000,
@@ -835,7 +836,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 34756608,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1774396800000,
@@ -845,7 +846,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 13083648,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1774483200000,
@@ -865,7 +866,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 36846592,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1774656000000,
@@ -875,7 +876,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 15173632,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1774742400000,
@@ -885,7 +886,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 60609536,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1774828800000,
@@ -905,7 +906,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 17263616,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1775001600000,
@@ -915,7 +916,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 62699520,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1775088000000,
@@ -935,7 +936,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 19353600,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1775260800000,
@@ -945,7 +946,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 64789504,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1775347200000,
@@ -955,7 +956,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 43116544,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1775433600000,
@@ -975,7 +976,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 66879488,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1775606400000,
@@ -985,7 +986,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 45206528,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1775692800000,
@@ -1005,7 +1006,7 @@
       "diskBytes": 42412802047.99998,
       "memtableBytes": 1860608,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1775865600000,
@@ -1015,7 +1016,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 47296512,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1775952000000,
@@ -1025,7 +1026,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 25623552,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1776038400000,
@@ -1045,7 +1046,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 49386496,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1776211200000,
@@ -1055,7 +1056,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 27713536,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1776297600000,
@@ -1075,7 +1076,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 51476480,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1776470400000,
@@ -1085,7 +1086,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 29803520,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1776556800000,
@@ -1095,7 +1096,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 8130560,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1776643200000,
@@ -1115,7 +1116,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 31893504,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1776816000000,
@@ -1125,7 +1126,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 10220544,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1776902400000,
@@ -1145,7 +1146,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 33983488,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1777075200000,
@@ -1155,7 +1156,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 12310528,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1777161600000,
@@ -1165,7 +1166,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 57746432,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1777248000000,
@@ -1185,7 +1186,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 14400512,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1777420800000,
@@ -1195,7 +1196,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 59836416,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1777507200000,
@@ -1215,7 +1216,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 16490496,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1777680000000,
@@ -1225,7 +1226,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 61926400,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1777766400000,
@@ -1235,7 +1236,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 40253440,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1777852800000,
@@ -1255,7 +1256,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 64016384,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1778025600000,
@@ -1265,7 +1266,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 42343424,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1778112000000,
@@ -1285,7 +1286,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 66106368,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1778284800000,
@@ -1295,7 +1296,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 44433408,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1778371200000,
@@ -1305,7 +1306,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 22760448,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1778457600000,
@@ -1325,7 +1326,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 46523392,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1778630400000,
@@ -1335,7 +1336,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 24850432,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1778716800000,
@@ -1355,7 +1356,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 48613376,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1778889600000,
@@ -1365,7 +1366,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 26940416,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1778976000000,
@@ -1375,7 +1376,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 5267456,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1779062400000,
@@ -1395,7 +1396,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 29030400,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1779235200000,
@@ -1405,7 +1406,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 7357440,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1779321600000,
@@ -1425,7 +1426,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 31120384,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1779494400000,
@@ -1435,7 +1436,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 9447424,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1779580800000,
@@ -1445,7 +1446,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 54883328,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1779667200000,
@@ -1465,7 +1466,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 11537408,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1779840000000,
@@ -1475,7 +1476,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 56973312,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1779926400000,
@@ -1495,7 +1496,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 13627392,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1780099200000,
@@ -1505,7 +1506,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 59063296,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1780185600000,
@@ -1515,7 +1516,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 37390336,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1780272000000,
@@ -1535,7 +1536,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 61153280,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1780444800000,
@@ -1545,7 +1546,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 39480320,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1780531200000,
@@ -1565,7 +1566,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 63243264,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1780704000000,
@@ -1575,7 +1576,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 41570304,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1780790400000,
@@ -1585,7 +1586,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 19897344,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1780876800000,
@@ -1605,7 +1606,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 43660288,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1781049600000,
@@ -1615,7 +1616,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 21987328,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1781136000000,
@@ -1635,7 +1636,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 45750272,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1781308800000,
@@ -1645,7 +1646,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 24077312,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1781395200000,
@@ -1655,7 +1656,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 2404352,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1781481600000,
@@ -1675,7 +1676,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 26167296,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1781654400000,
@@ -1685,7 +1686,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 4494336,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1781740800000,
@@ -1705,7 +1706,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 28257280,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1781913600000,
@@ -1715,7 +1716,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 6584320,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1782000000000,
@@ -1725,7 +1726,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 52020224,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1782086400000,
@@ -1745,7 +1746,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 8674304,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1782259200000,
@@ -1755,7 +1756,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 54110208,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1782345600000,
@@ -1775,7 +1776,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 10764288,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1782518400000,
@@ -1785,7 +1786,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 56200192,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1782604800000,
@@ -1795,7 +1796,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 34527232,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1782691200000,
@@ -1815,7 +1816,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 58290176,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1782864000000,
@@ -1825,7 +1826,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 36617216,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1782950400000,
@@ -1845,7 +1846,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 60380160,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1783123200000,
@@ -1855,7 +1856,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 38707200,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1783209600000,
@@ -1865,7 +1866,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 17034240,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1783296000000,
@@ -1885,7 +1886,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 40797184,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1783468800000,
@@ -1895,7 +1896,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 19124224,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1783555200000,
@@ -1915,7 +1916,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 42887168,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1783728000000,
@@ -1925,7 +1926,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 21214208,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1783814400000,
@@ -1935,7 +1936,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 66650112,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1783900800000,
@@ -1955,7 +1956,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 23304192,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1784073600000,
@@ -1965,7 +1966,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 1631232,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1784160000000,
@@ -1985,7 +1986,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 25394176,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1784332800000,
@@ -1995,7 +1996,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 3721216,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1784419200000,
@@ -2005,7 +2006,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 49157120,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1784505600000,
@@ -2025,7 +2026,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 5811200,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1784678400000,
@@ -2035,7 +2036,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 51247104,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1784764800000,
@@ -2055,7 +2056,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 7901184,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1784937600000,
@@ -2065,7 +2066,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 53337088,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1785024000000,
@@ -2075,7 +2076,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 31664128,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1785110400000,
@@ -2095,7 +2096,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 55427072,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1785283200000,
@@ -2105,7 +2106,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 33754112,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1785369600000,
@@ -2125,7 +2126,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 57517056,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1785542400000,
@@ -2135,7 +2136,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 35844096,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1785628800000,
@@ -2145,7 +2146,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 14171136,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1785715200000,
@@ -2165,7 +2166,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 37934080,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1785888000000,
@@ -2175,7 +2176,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 16261120,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1785974400000,
@@ -2195,7 +2196,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 40024064,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1786147200000,
@@ -2205,7 +2206,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 18351104,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1786233600000,
@@ -2215,7 +2216,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 63787008,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1786320000000,
@@ -2235,7 +2236,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 20441088,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1786492800000,
@@ -2245,7 +2246,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 65876992,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1786579200000,
@@ -2265,7 +2266,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 22531072,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1786752000000,
@@ -2275,7 +2276,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 858112,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1786838400000,
@@ -2285,7 +2286,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 46294016,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1786924800000,
@@ -2305,7 +2306,7 @@
       "diskBytes": 39460012031.99998,
       "memtableBytes": 2948096,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1787097600000,
@@ -2315,7 +2316,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 48384000,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1787184000000,
@@ -2335,7 +2336,7 @@
       "diskBytes": 42412802047.99998,
       "memtableBytes": 5038080,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1787356800000,
@@ -2345,7 +2346,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 50473984,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1787443200000,
@@ -2355,7 +2356,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 28801024,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1787529600000,
@@ -2375,7 +2376,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 52563968,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1787702400000,
@@ -2385,7 +2386,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 30891008,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1787788800000,
@@ -2405,7 +2406,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 54653952,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1787961600000,
@@ -2415,7 +2416,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 32980992,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1788048000000,
@@ -2425,7 +2426,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 11308032,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1788134400000,
@@ -2445,7 +2446,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 35070976,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1788307200000,
@@ -2455,7 +2456,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 13398016,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1788393600000,
@@ -2475,7 +2476,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 37160960,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1788566400000,
@@ -2485,7 +2486,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 15488000,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1788652800000,
@@ -2495,7 +2496,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 60923904,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1788739200000,
@@ -2515,7 +2516,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 17577984,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1788912000000,
@@ -2525,7 +2526,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 63013888,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1788998400000,
@@ -2545,7 +2546,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 19667968,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1789171200000,
@@ -2555,7 +2556,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 65103872,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1789257600000,
@@ -2565,7 +2566,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 43430912,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1789344000000,
@@ -2585,7 +2586,7 @@
       "diskBytes": 39460012031.99998,
       "memtableBytes": 84992,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1789516800000,
@@ -2595,7 +2596,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 45520896,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1789603200000,
@@ -2615,7 +2616,7 @@
       "diskBytes": 42412802047.99998,
       "memtableBytes": 2174976,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1789776000000,
@@ -2625,7 +2626,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 47610880,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1789862400000,
@@ -2635,7 +2636,7 @@
       "diskBytes": 44358959103.999985,
       "memtableBytes": 25937920,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1789948800000,
@@ -2655,7 +2656,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 49700864,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1790121600000,
@@ -2665,7 +2666,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 28027904,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1790208000000,
@@ -2685,7 +2686,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 51790848,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1790380800000,
@@ -2695,7 +2696,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 30117888,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1790467200000,
@@ -2705,7 +2706,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 8444928,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1790553600000,
@@ -2725,7 +2726,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 32207872,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1790726400000,
@@ -2735,7 +2736,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 10534912,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1790812800000,
@@ -2755,7 +2756,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 34297856,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1790985600000,
@@ -2765,7 +2766,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 12624896,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1791072000000,
@@ -2775,7 +2776,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 58060800,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1791158400000,
@@ -2795,7 +2796,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 14714880,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1791331200000,
@@ -2805,7 +2806,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 60150784,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1791417600000,
@@ -2825,7 +2826,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 16804864,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1791590400000,
@@ -2835,7 +2836,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 62240768,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1791676800000,
@@ -2845,7 +2846,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 40567808,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1791763200000,
@@ -2865,7 +2866,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 64330752,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1791936000000,
@@ -2875,7 +2876,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 42657792,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1792022400000,
@@ -2895,7 +2896,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 66420736,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1792195200000,
@@ -2905,7 +2906,7 @@
       "diskBytes": 43352326143.99998,
       "memtableBytes": 44747776,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1792281600000,
@@ -2915,7 +2916,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 23074816,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1792368000000,
@@ -2935,7 +2936,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 46837760,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1792540800000,
@@ -2945,7 +2946,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 25164800,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1792627200000,
@@ -2965,7 +2966,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 48927744,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1792800000000,
@@ -2975,7 +2976,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 27254784,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1792886400000,
@@ -2985,7 +2986,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 5581824,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1792972800000,
@@ -3005,7 +3006,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 29344768,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1793145600000,
@@ -3015,7 +3016,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 7671808,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1793232000000,
@@ -3035,7 +3036,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 31434752,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1793404800000,
@@ -3045,7 +3046,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 9761792,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1793491200000,
@@ -3055,7 +3056,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 55197696,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1793577600000,
@@ -3075,7 +3076,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 11851776,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1793750400000,
@@ -3085,7 +3086,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 57287680,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1793836800000,
@@ -3105,7 +3106,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 13941760,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1794009600000,
@@ -3115,7 +3116,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 59377664,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1794096000000,
@@ -3125,7 +3126,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 37704704,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1794182400000,
@@ -3145,7 +3146,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 61467648,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1794355200000,
@@ -3155,7 +3156,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 39794688,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1794441600000,
@@ -3175,7 +3176,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 63557632,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1794614400000,
@@ -3185,7 +3186,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 41884672,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1794700800000,
@@ -3195,7 +3196,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 20211712,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1794787200000,
@@ -3215,7 +3216,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 43974656,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1794960000000,
@@ -3225,7 +3226,7 @@
       "diskBytes": 40399536127.99998,
       "memtableBytes": 22301696,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1795046400000,
@@ -3245,7 +3246,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 46064640,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1795219200000,
@@ -3255,7 +3256,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 24391680,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1795305600000,
@@ -3265,7 +3266,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 2718720,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1795392000000,
@@ -3285,7 +3286,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 26481664,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1795564800000,
@@ -3295,7 +3296,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 4808704,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1795651200000,
@@ -3315,7 +3316,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 28571648,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1795824000000,
@@ -3325,7 +3326,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 6898688,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1795910400000,
@@ -3335,7 +3336,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 52334592,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1795996800000,
@@ -3355,7 +3356,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 8988672,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1796169600000,
@@ -3365,7 +3366,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 54424576,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1796256000000,
@@ -3385,7 +3386,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 11078656,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1796428800000,
@@ -3395,7 +3396,7 @@
       "diskBytes": 43285217279.99998,
       "memtableBytes": 56514560,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1796515200000,
@@ -3405,7 +3406,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 34841600,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1796601600000,
@@ -3425,7 +3426,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 58604544,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1796774400000,
@@ -3435,7 +3436,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 36931584,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1796860800000,
@@ -3455,7 +3456,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 60694528,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1797033600000,
@@ -3465,7 +3466,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 39021568,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1797120000000,
@@ -3475,7 +3476,7 @@
       "diskBytes": 44358959103.99998,
       "memtableBytes": 17348608,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1797206400000,
@@ -3495,7 +3496,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 41111552,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1797379200000,
@@ -3505,7 +3506,7 @@
       "diskBytes": 40399536127.99998,
       "memtableBytes": 19438592,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1797465600000,
@@ -3525,7 +3526,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 43201536,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1797638400000,
@@ -3535,7 +3536,7 @@
       "diskBytes": 43352326143.99997,
       "memtableBytes": 21528576,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1797724800000,
@@ -3545,7 +3546,7 @@
       "diskBytes": 44291850239.99998,
       "memtableBytes": 66964480,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1797811200000,
@@ -3565,7 +3566,7 @@
       "diskBytes": 39392903167.999985,
       "memtableBytes": 23618560,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1797984000000,
@@ -3575,7 +3576,7 @@
       "diskBytes": 40399536127.999985,
       "memtableBytes": 1945600,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1798070400000,
@@ -3595,7 +3596,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 25708544,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1798243200000,
@@ -3605,7 +3606,7 @@
       "diskBytes": 43352326143.999985,
       "memtableBytes": 4035584,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1798329600000,
@@ -3615,7 +3616,7 @@
       "diskBytes": 44291850239.999985,
       "memtableBytes": 49471488,
       "sstableCount": 9,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1798416000000,
@@ -3635,7 +3636,7 @@
       "diskBytes": 39392903167.99998,
       "memtableBytes": 6125568,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     },
     {
       "t": 1798588800000,
@@ -3645,7 +3646,7 @@
       "diskBytes": 40332427263.999985,
       "memtableBytes": 51561472,
       "sstableCount": 8,
-      "readSstables": 1
+      "readSstables": 3
     },
     {
       "t": 1798675200000,
@@ -3665,7 +3666,7 @@
       "diskBytes": 42345693183.99998,
       "memtableBytes": 8215552,
       "sstableCount": 7,
-      "readSstables": 1
+      "readSstables": 2
     }
   ],
   "sstables": [

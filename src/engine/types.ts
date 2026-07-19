@@ -57,6 +57,13 @@ export interface SimConfig {
    * Absent = no compaction.
    */
   compaction?: CompactionSpec;
+  /**
+   * Read-amplification probe (M5): each snapshot counts the SSTables a
+   * time-bounded query over [now − queryWindowMs, now] would touch — every
+   * table whose [minTs, maxTs] span overlaps the window (Cassandra can skip
+   * the rest via SSTable min/max timestamp metadata). Absent = 1 day.
+   */
+  queryWindowMs?: number;
 }
 
 /** STCS knobs, mirroring Cassandra's defaults; all optional. */
@@ -100,6 +107,8 @@ export interface MetricsSnapshot {
   diskBytes: number;
   memtableBytes: number;
   sstableCount: number;
+  /** SSTables whose time span overlaps the trailing query window (M5 read amp). */
+  readSstables: number;
 }
 
 export interface SimResult {

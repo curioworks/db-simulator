@@ -16,7 +16,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 872415232,
       "memtableBytes": 34784768,
-      "sstableCount": 13
+      "sstableCount": 13,
+      "readSstables": 13
     },
     {
       "t": 1767398400000,
@@ -25,7 +26,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 1811939328,
       "memtableBytes": 2460672,
-      "sstableCount": 27
+      "sstableCount": 27,
+      "readSstables": 14
     },
     {
       "t": 1767484800000,
@@ -34,7 +36,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 2684354560,
       "memtableBytes": 37245440,
-      "sstableCount": 40
+      "sstableCount": 40,
+      "readSstables": 13
     },
     {
       "t": 1767571200000,
@@ -43,7 +46,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 3623878656,
       "memtableBytes": 4921344,
-      "sstableCount": 54
+      "sstableCount": 54,
+      "readSstables": 14
     },
     {
       "t": 1767657600000,
@@ -52,7 +56,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 4496293888,
       "memtableBytes": 39706112,
-      "sstableCount": 67
+      "sstableCount": 67,
+      "readSstables": 13
     },
     {
       "t": 1767744000000,
@@ -61,7 +66,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 5435817984,
       "memtableBytes": 7382016,
-      "sstableCount": 81
+      "sstableCount": 81,
+      "readSstables": 14
     },
     {
       "t": 1767830400000,
@@ -70,7 +76,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 6308233216,
       "memtableBytes": 42166784,
-      "sstableCount": 94
+      "sstableCount": 94,
+      "readSstables": 13
     },
     {
       "t": 1767916800000,
@@ -79,7 +86,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 7247757312,
       "memtableBytes": 9842688,
-      "sstableCount": 108
+      "sstableCount": 108,
+      "readSstables": 14
     },
     {
       "t": 1768003200000,
@@ -88,7 +96,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 8120172544,
       "memtableBytes": 44627456,
-      "sstableCount": 121
+      "sstableCount": 121,
+      "readSstables": 13
     },
     {
       "t": 1768089600000,
@@ -97,7 +106,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 9059696640,
       "memtableBytes": 12303360,
-      "sstableCount": 135
+      "sstableCount": 135,
+      "readSstables": 14
     },
     {
       "t": 1768176000000,
@@ -106,7 +116,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 9932111872,
       "memtableBytes": 47088128,
-      "sstableCount": 148
+      "sstableCount": 148,
+      "readSstables": 13
     },
     {
       "t": 1768262400000,
@@ -115,7 +126,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 10871635968,
       "memtableBytes": 14764032,
-      "sstableCount": 162
+      "sstableCount": 162,
+      "readSstables": 14
     },
     {
       "t": 1768348800000,
@@ -124,7 +136,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 11744051200,
       "memtableBytes": 49548800,
-      "sstableCount": 175
+      "sstableCount": 175,
+      "readSstables": 13
     },
     {
       "t": 1768435200000,
@@ -133,7 +146,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 12683575296,
       "memtableBytes": 17224704,
-      "sstableCount": 189
+      "sstableCount": 189,
+      "readSstables": 14
     },
     {
       "t": 1768521600000,
@@ -142,7 +156,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 13555990528,
       "memtableBytes": 52009472,
-      "sstableCount": 202
+      "sstableCount": 202,
+      "readSstables": 13
     },
     {
       "t": 1768608000000,
@@ -151,7 +166,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 14495514624,
       "memtableBytes": 19685376,
-      "sstableCount": 216
+      "sstableCount": 216,
+      "readSstables": 14
     },
     {
       "t": 1768694400000,
@@ -160,7 +176,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 15367929856,
       "memtableBytes": 54470144,
-      "sstableCount": 229
+      "sstableCount": 229,
+      "readSstables": 13
     },
     {
       "t": 1768780800000,
@@ -169,7 +186,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 16307453952,
       "memtableBytes": 22146048,
-      "sstableCount": 243
+      "sstableCount": 243,
+      "readSstables": 14
     },
     {
       "t": 1768867200000,
@@ -178,7 +196,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 17179869184,
       "memtableBytes": 56930816,
-      "sstableCount": 256
+      "sstableCount": 256,
+      "readSstables": 13
     },
     {
       "t": 1768953600000,
@@ -187,7 +206,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 18119393280,
       "memtableBytes": 24606720,
-      "sstableCount": 270
+      "sstableCount": 270,
+      "readSstables": 14
     },
     {
       "t": 1769040000000,
@@ -196,7 +216,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 18991808512,
       "memtableBytes": 59391488,
-      "sstableCount": 283
+      "sstableCount": 283,
+      "readSstables": 13
     },
     {
       "t": 1769126400000,
@@ -205,7 +226,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 19931332608,
       "memtableBytes": 27067392,
-      "sstableCount": 297
+      "sstableCount": 297,
+      "readSstables": 14
     },
     {
       "t": 1769212800000,
@@ -214,7 +236,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 20803747840,
       "memtableBytes": 61852160,
-      "sstableCount": 310
+      "sstableCount": 310,
+      "readSstables": 13
     },
     {
       "t": 1769299200000,
@@ -223,7 +246,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 21743271936,
       "memtableBytes": 29528064,
-      "sstableCount": 324
+      "sstableCount": 324,
+      "readSstables": 14
     },
     {
       "t": 1769385600000,
@@ -232,7 +256,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 22615687168,
       "memtableBytes": 64312832,
-      "sstableCount": 337
+      "sstableCount": 337,
+      "readSstables": 13
     },
     {
       "t": 1769472000000,
@@ -241,7 +266,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 23555211264,
       "memtableBytes": 31988736,
-      "sstableCount": 351
+      "sstableCount": 351,
+      "readSstables": 14
     },
     {
       "t": 1769558400000,
@@ -250,7 +276,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 24427626496,
       "memtableBytes": 66773504,
-      "sstableCount": 364
+      "sstableCount": 364,
+      "readSstables": 13
     },
     {
       "t": 1769644800000,
@@ -259,7 +286,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 25367150592,
       "memtableBytes": 34449408,
-      "sstableCount": 378
+      "sstableCount": 378,
+      "readSstables": 14
     },
     {
       "t": 1769731200000,
@@ -268,7 +296,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 26306674688,
       "memtableBytes": 2125312,
-      "sstableCount": 392
+      "sstableCount": 392,
+      "readSstables": 14
     },
     {
       "t": 1769817600000,
@@ -277,7 +306,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 27179089920,
       "memtableBytes": 36910080,
-      "sstableCount": 405
+      "sstableCount": 405,
+      "readSstables": 13
     },
     {
       "t": 1769904000000,
@@ -286,7 +316,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 28118614016,
       "memtableBytes": 4585984,
-      "sstableCount": 419
+      "sstableCount": 419,
+      "readSstables": 14
     },
     {
       "t": 1769990400000,
@@ -295,7 +326,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 28991029248,
       "memtableBytes": 39370752,
-      "sstableCount": 432
+      "sstableCount": 432,
+      "readSstables": 13
     },
     {
       "t": 1770076800000,
@@ -304,7 +336,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 29930553344,
       "memtableBytes": 7046656,
-      "sstableCount": 446
+      "sstableCount": 446,
+      "readSstables": 14
     },
     {
       "t": 1770163200000,
@@ -313,7 +346,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 30802968576,
       "memtableBytes": 41831424,
-      "sstableCount": 459
+      "sstableCount": 459,
+      "readSstables": 13
     },
     {
       "t": 1770249600000,
@@ -322,7 +356,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 31742492672,
       "memtableBytes": 9507328,
-      "sstableCount": 473
+      "sstableCount": 473,
+      "readSstables": 14
     },
     {
       "t": 1770336000000,
@@ -331,7 +366,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 32614907904,
       "memtableBytes": 44292096,
-      "sstableCount": 486
+      "sstableCount": 486,
+      "readSstables": 13
     },
     {
       "t": 1770422400000,
@@ -340,7 +376,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 33554432000,
       "memtableBytes": 11968000,
-      "sstableCount": 500
+      "sstableCount": 500,
+      "readSstables": 14
     },
     {
       "t": 1770508800000,
@@ -349,7 +386,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 34426847232,
       "memtableBytes": 46752768,
-      "sstableCount": 513
+      "sstableCount": 513,
+      "readSstables": 13
     },
     {
       "t": 1770595200000,
@@ -358,7 +396,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 35366371328,
       "memtableBytes": 14428672,
-      "sstableCount": 527
+      "sstableCount": 527,
+      "readSstables": 14
     },
     {
       "t": 1770681600000,
@@ -367,7 +406,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 36238786560,
       "memtableBytes": 49213440,
-      "sstableCount": 540
+      "sstableCount": 540,
+      "readSstables": 13
     },
     {
       "t": 1770768000000,
@@ -376,7 +416,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 37178310656,
       "memtableBytes": 16889344,
-      "sstableCount": 554
+      "sstableCount": 554,
+      "readSstables": 14
     },
     {
       "t": 1770854400000,
@@ -385,7 +426,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 38050725888,
       "memtableBytes": 51674112,
-      "sstableCount": 567
+      "sstableCount": 567,
+      "readSstables": 13
     },
     {
       "t": 1770940800000,
@@ -394,7 +436,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 38990249984,
       "memtableBytes": 19350016,
-      "sstableCount": 581
+      "sstableCount": 581,
+      "readSstables": 14
     },
     {
       "t": 1771027200000,
@@ -403,7 +446,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 39862665216,
       "memtableBytes": 54134784,
-      "sstableCount": 594
+      "sstableCount": 594,
+      "readSstables": 13
     },
     {
       "t": 1771113600000,
@@ -412,7 +456,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 40802189312,
       "memtableBytes": 21810688,
-      "sstableCount": 608
+      "sstableCount": 608,
+      "readSstables": 14
     },
     {
       "t": 1771200000000,
@@ -421,7 +466,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 41674604544,
       "memtableBytes": 56595456,
-      "sstableCount": 621
+      "sstableCount": 621,
+      "readSstables": 13
     },
     {
       "t": 1771286400000,
@@ -430,7 +476,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 42614128640,
       "memtableBytes": 24271360,
-      "sstableCount": 635
+      "sstableCount": 635,
+      "readSstables": 14
     },
     {
       "t": 1771372800000,
@@ -439,7 +486,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 43486543872,
       "memtableBytes": 59056128,
-      "sstableCount": 648
+      "sstableCount": 648,
+      "readSstables": 13
     },
     {
       "t": 1771459200000,
@@ -448,7 +496,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 44426067968,
       "memtableBytes": 26732032,
-      "sstableCount": 662
+      "sstableCount": 662,
+      "readSstables": 14
     },
     {
       "t": 1771545600000,
@@ -457,7 +506,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 45298483200,
       "memtableBytes": 61516800,
-      "sstableCount": 675
+      "sstableCount": 675,
+      "readSstables": 13
     },
     {
       "t": 1771632000000,
@@ -466,7 +516,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 46238007296,
       "memtableBytes": 29192704,
-      "sstableCount": 689
+      "sstableCount": 689,
+      "readSstables": 14
     },
     {
       "t": 1771718400000,
@@ -475,7 +526,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 47110422528,
       "memtableBytes": 63977472,
-      "sstableCount": 702
+      "sstableCount": 702,
+      "readSstables": 13
     },
     {
       "t": 1771804800000,
@@ -484,7 +536,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 48049946624,
       "memtableBytes": 31653376,
-      "sstableCount": 716
+      "sstableCount": 716,
+      "readSstables": 14
     },
     {
       "t": 1771891200000,
@@ -493,7 +546,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 48922361856,
       "memtableBytes": 66438144,
-      "sstableCount": 729
+      "sstableCount": 729,
+      "readSstables": 13
     },
     {
       "t": 1771977600000,
@@ -502,7 +556,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 49861885952,
       "memtableBytes": 34114048,
-      "sstableCount": 743
+      "sstableCount": 743,
+      "readSstables": 14
     },
     {
       "t": 1772064000000,
@@ -511,7 +566,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 50801410048,
       "memtableBytes": 1789952,
-      "sstableCount": 757
+      "sstableCount": 757,
+      "readSstables": 14
     },
     {
       "t": 1772150400000,
@@ -520,7 +576,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 51673825280,
       "memtableBytes": 36574720,
-      "sstableCount": 770
+      "sstableCount": 770,
+      "readSstables": 13
     },
     {
       "t": 1772236800000,
@@ -529,7 +586,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 52613349376,
       "memtableBytes": 4250624,
-      "sstableCount": 784
+      "sstableCount": 784,
+      "readSstables": 14
     },
     {
       "t": 1772323200000,
@@ -538,7 +596,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 53485764608,
       "memtableBytes": 39035392,
-      "sstableCount": 797
+      "sstableCount": 797,
+      "readSstables": 13
     },
     {
       "t": 1772409600000,
@@ -547,7 +606,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 54425288704,
       "memtableBytes": 6711296,
-      "sstableCount": 811
+      "sstableCount": 811,
+      "readSstables": 14
     },
     {
       "t": 1772496000000,
@@ -556,7 +616,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 55297703936,
       "memtableBytes": 41496064,
-      "sstableCount": 824
+      "sstableCount": 824,
+      "readSstables": 13
     },
     {
       "t": 1772582400000,
@@ -565,7 +626,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 56237228032,
       "memtableBytes": 9171968,
-      "sstableCount": 838
+      "sstableCount": 838,
+      "readSstables": 14
     },
     {
       "t": 1772668800000,
@@ -574,7 +636,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 57109643264,
       "memtableBytes": 43956736,
-      "sstableCount": 851
+      "sstableCount": 851,
+      "readSstables": 13
     },
     {
       "t": 1772755200000,
@@ -583,7 +646,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 58049167360,
       "memtableBytes": 11632640,
-      "sstableCount": 865
+      "sstableCount": 865,
+      "readSstables": 14
     },
     {
       "t": 1772841600000,
@@ -592,7 +656,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 58921582592,
       "memtableBytes": 46417408,
-      "sstableCount": 878
+      "sstableCount": 878,
+      "readSstables": 13
     },
     {
       "t": 1772928000000,
@@ -601,7 +666,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 59861106688,
       "memtableBytes": 14093312,
-      "sstableCount": 892
+      "sstableCount": 892,
+      "readSstables": 14
     },
     {
       "t": 1773014400000,
@@ -610,7 +676,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 60733521920,
       "memtableBytes": 48878080,
-      "sstableCount": 905
+      "sstableCount": 905,
+      "readSstables": 13
     },
     {
       "t": 1773100800000,
@@ -619,7 +686,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 61673046016,
       "memtableBytes": 16553984,
-      "sstableCount": 919
+      "sstableCount": 919,
+      "readSstables": 14
     },
     {
       "t": 1773187200000,
@@ -628,7 +696,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 62545461248,
       "memtableBytes": 51338752,
-      "sstableCount": 932
+      "sstableCount": 932,
+      "readSstables": 13
     },
     {
       "t": 1773273600000,
@@ -637,7 +706,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 63484985344,
       "memtableBytes": 19014656,
-      "sstableCount": 946
+      "sstableCount": 946,
+      "readSstables": 14
     },
     {
       "t": 1773360000000,
@@ -646,7 +716,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 64357400576,
       "memtableBytes": 53799424,
-      "sstableCount": 959
+      "sstableCount": 959,
+      "readSstables": 13
     },
     {
       "t": 1773446400000,
@@ -655,7 +726,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 65296924672,
       "memtableBytes": 21475328,
-      "sstableCount": 973
+      "sstableCount": 973,
+      "readSstables": 14
     },
     {
       "t": 1773532800000,
@@ -664,7 +736,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 66169339904,
       "memtableBytes": 56260096,
-      "sstableCount": 986
+      "sstableCount": 986,
+      "readSstables": 13
     },
     {
       "t": 1773619200000,
@@ -673,7 +746,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 67108864000,
       "memtableBytes": 23936000,
-      "sstableCount": 1000
+      "sstableCount": 1000,
+      "readSstables": 14
     },
     {
       "t": 1773705600000,
@@ -682,7 +756,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 67981279232,
       "memtableBytes": 58720768,
-      "sstableCount": 1013
+      "sstableCount": 1013,
+      "readSstables": 13
     },
     {
       "t": 1773792000000,
@@ -691,7 +766,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 68920803328,
       "memtableBytes": 26396672,
-      "sstableCount": 1027
+      "sstableCount": 1027,
+      "readSstables": 14
     },
     {
       "t": 1773878400000,
@@ -700,7 +776,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 69793218560,
       "memtableBytes": 61181440,
-      "sstableCount": 1040
+      "sstableCount": 1040,
+      "readSstables": 13
     },
     {
       "t": 1773964800000,
@@ -709,7 +786,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 70732742656,
       "memtableBytes": 28857344,
-      "sstableCount": 1054
+      "sstableCount": 1054,
+      "readSstables": 14
     },
     {
       "t": 1774051200000,
@@ -718,7 +796,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 71605157888,
       "memtableBytes": 63642112,
-      "sstableCount": 1067
+      "sstableCount": 1067,
+      "readSstables": 13
     },
     {
       "t": 1774137600000,
@@ -727,7 +806,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 72544681984,
       "memtableBytes": 31318016,
-      "sstableCount": 1081
+      "sstableCount": 1081,
+      "readSstables": 14
     },
     {
       "t": 1774224000000,
@@ -736,7 +816,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 73417097216,
       "memtableBytes": 66102784,
-      "sstableCount": 1094
+      "sstableCount": 1094,
+      "readSstables": 13
     },
     {
       "t": 1774310400000,
@@ -745,7 +826,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 74356621312,
       "memtableBytes": 33778688,
-      "sstableCount": 1108
+      "sstableCount": 1108,
+      "readSstables": 14
     },
     {
       "t": 1774396800000,
@@ -754,7 +836,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 75296145408,
       "memtableBytes": 1454592,
-      "sstableCount": 1122
+      "sstableCount": 1122,
+      "readSstables": 14
     },
     {
       "t": 1774483200000,
@@ -763,7 +846,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 76168560640,
       "memtableBytes": 36239360,
-      "sstableCount": 1135
+      "sstableCount": 1135,
+      "readSstables": 13
     },
     {
       "t": 1774569600000,
@@ -772,7 +856,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 77108084736,
       "memtableBytes": 3915264,
-      "sstableCount": 1149
+      "sstableCount": 1149,
+      "readSstables": 14
     },
     {
       "t": 1774656000000,
@@ -781,7 +866,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 77980499968,
       "memtableBytes": 38700032,
-      "sstableCount": 1162
+      "sstableCount": 1162,
+      "readSstables": 13
     },
     {
       "t": 1774742400000,
@@ -790,7 +876,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 78920024064,
       "memtableBytes": 6375936,
-      "sstableCount": 1176
+      "sstableCount": 1176,
+      "readSstables": 14
     },
     {
       "t": 1774828800000,
@@ -799,7 +886,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 79792439296,
       "memtableBytes": 41160704,
-      "sstableCount": 1189
+      "sstableCount": 1189,
+      "readSstables": 13
     },
     {
       "t": 1774915200000,
@@ -808,7 +896,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 80731963392,
       "memtableBytes": 8836608,
-      "sstableCount": 1203
+      "sstableCount": 1203,
+      "readSstables": 14
     },
     {
       "t": 1775001600000,
@@ -817,7 +906,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 81604378624,
       "memtableBytes": 43621376,
-      "sstableCount": 1216
+      "sstableCount": 1216,
+      "readSstables": 13
     },
     {
       "t": 1775088000000,
@@ -826,7 +916,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 82543902720,
       "memtableBytes": 11297280,
-      "sstableCount": 1230
+      "sstableCount": 1230,
+      "readSstables": 14
     },
     {
       "t": 1775174400000,
@@ -835,7 +926,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 83416317952,
       "memtableBytes": 46082048,
-      "sstableCount": 1243
+      "sstableCount": 1243,
+      "readSstables": 13
     },
     {
       "t": 1775260800000,
@@ -844,7 +936,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 84355842048,
       "memtableBytes": 13757952,
-      "sstableCount": 1257
+      "sstableCount": 1257,
+      "readSstables": 14
     },
     {
       "t": 1775347200000,
@@ -853,7 +946,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 85228257280,
       "memtableBytes": 48542720,
-      "sstableCount": 1270
+      "sstableCount": 1270,
+      "readSstables": 13
     },
     {
       "t": 1775433600000,
@@ -862,7 +956,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 86167781376,
       "memtableBytes": 16218624,
-      "sstableCount": 1284
+      "sstableCount": 1284,
+      "readSstables": 14
     },
     {
       "t": 1775520000000,
@@ -871,7 +966,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 87040196608,
       "memtableBytes": 51003392,
-      "sstableCount": 1297
+      "sstableCount": 1297,
+      "readSstables": 13
     },
     {
       "t": 1775606400000,
@@ -880,7 +976,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 87979720704,
       "memtableBytes": 18679296,
-      "sstableCount": 1311
+      "sstableCount": 1311,
+      "readSstables": 14
     },
     {
       "t": 1775692800000,
@@ -889,7 +986,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 88852135936,
       "memtableBytes": 53464064,
-      "sstableCount": 1324
+      "sstableCount": 1324,
+      "readSstables": 13
     },
     {
       "t": 1775779200000,
@@ -898,7 +996,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 89791660032,
       "memtableBytes": 21139968,
-      "sstableCount": 1338
+      "sstableCount": 1338,
+      "readSstables": 14
     },
     {
       "t": 1775865600000,
@@ -907,7 +1006,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 90664075264,
       "memtableBytes": 55924736,
-      "sstableCount": 1351
+      "sstableCount": 1351,
+      "readSstables": 13
     },
     {
       "t": 1775952000000,
@@ -916,7 +1016,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 91603599360,
       "memtableBytes": 23600640,
-      "sstableCount": 1365
+      "sstableCount": 1365,
+      "readSstables": 14
     },
     {
       "t": 1776038400000,
@@ -925,7 +1026,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 92476014592,
       "memtableBytes": 58385408,
-      "sstableCount": 1378
+      "sstableCount": 1378,
+      "readSstables": 13
     },
     {
       "t": 1776124800000,
@@ -934,7 +1036,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 93415538688,
       "memtableBytes": 26061312,
-      "sstableCount": 1392
+      "sstableCount": 1392,
+      "readSstables": 14
     },
     {
       "t": 1776211200000,
@@ -943,7 +1046,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 94287953920,
       "memtableBytes": 60846080,
-      "sstableCount": 1405
+      "sstableCount": 1405,
+      "readSstables": 13
     },
     {
       "t": 1776297600000,
@@ -952,7 +1056,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 95227478016,
       "memtableBytes": 28521984,
-      "sstableCount": 1419
+      "sstableCount": 1419,
+      "readSstables": 14
     },
     {
       "t": 1776384000000,
@@ -961,7 +1066,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 96099893248,
       "memtableBytes": 63306752,
-      "sstableCount": 1432
+      "sstableCount": 1432,
+      "readSstables": 13
     },
     {
       "t": 1776470400000,
@@ -970,7 +1076,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 97039417344,
       "memtableBytes": 30982656,
-      "sstableCount": 1446
+      "sstableCount": 1446,
+      "readSstables": 14
     },
     {
       "t": 1776556800000,
@@ -979,7 +1086,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 97911832576,
       "memtableBytes": 65767424,
-      "sstableCount": 1459
+      "sstableCount": 1459,
+      "readSstables": 13
     },
     {
       "t": 1776643200000,
@@ -988,7 +1096,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 98851356672,
       "memtableBytes": 33443328,
-      "sstableCount": 1473
+      "sstableCount": 1473,
+      "readSstables": 14
     },
     {
       "t": 1776729600000,
@@ -997,7 +1106,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 99790880768,
       "memtableBytes": 1119232,
-      "sstableCount": 1487
+      "sstableCount": 1487,
+      "readSstables": 14
     },
     {
       "t": 1776816000000,
@@ -1006,7 +1116,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 100663296000,
       "memtableBytes": 35904000,
-      "sstableCount": 1500
+      "sstableCount": 1500,
+      "readSstables": 13
     },
     {
       "t": 1776902400000,
@@ -1015,7 +1126,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 101602820096,
       "memtableBytes": 3579904,
-      "sstableCount": 1514
+      "sstableCount": 1514,
+      "readSstables": 14
     },
     {
       "t": 1776988800000,
@@ -1024,7 +1136,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 102475235328,
       "memtableBytes": 38364672,
-      "sstableCount": 1527
+      "sstableCount": 1527,
+      "readSstables": 13
     },
     {
       "t": 1777075200000,
@@ -1033,7 +1146,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 103414759424,
       "memtableBytes": 6040576,
-      "sstableCount": 1541
+      "sstableCount": 1541,
+      "readSstables": 14
     },
     {
       "t": 1777161600000,
@@ -1042,7 +1156,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 104287174656,
       "memtableBytes": 40825344,
-      "sstableCount": 1554
+      "sstableCount": 1554,
+      "readSstables": 13
     },
     {
       "t": 1777248000000,
@@ -1051,7 +1166,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 105226698752,
       "memtableBytes": 8501248,
-      "sstableCount": 1568
+      "sstableCount": 1568,
+      "readSstables": 14
     },
     {
       "t": 1777334400000,
@@ -1060,7 +1176,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 106099113984,
       "memtableBytes": 43286016,
-      "sstableCount": 1581
+      "sstableCount": 1581,
+      "readSstables": 13
     },
     {
       "t": 1777420800000,
@@ -1069,7 +1186,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 107038638080,
       "memtableBytes": 10961920,
-      "sstableCount": 1595
+      "sstableCount": 1595,
+      "readSstables": 14
     },
     {
       "t": 1777507200000,
@@ -1078,7 +1196,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 107911053312,
       "memtableBytes": 45746688,
-      "sstableCount": 1608
+      "sstableCount": 1608,
+      "readSstables": 13
     },
     {
       "t": 1777593600000,
@@ -1087,7 +1206,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 108850577408,
       "memtableBytes": 13422592,
-      "sstableCount": 1622
+      "sstableCount": 1622,
+      "readSstables": 14
     },
     {
       "t": 1777680000000,
@@ -1096,7 +1216,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 109722992640,
       "memtableBytes": 48207360,
-      "sstableCount": 1635
+      "sstableCount": 1635,
+      "readSstables": 13
     },
     {
       "t": 1777766400000,
@@ -1105,7 +1226,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 110662516736,
       "memtableBytes": 15883264,
-      "sstableCount": 1649
+      "sstableCount": 1649,
+      "readSstables": 14
     },
     {
       "t": 1777852800000,
@@ -1114,7 +1236,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 111534931968,
       "memtableBytes": 50668032,
-      "sstableCount": 1662
+      "sstableCount": 1662,
+      "readSstables": 13
     },
     {
       "t": 1777939200000,
@@ -1123,7 +1246,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 112474456064,
       "memtableBytes": 18343936,
-      "sstableCount": 1676
+      "sstableCount": 1676,
+      "readSstables": 14
     },
     {
       "t": 1778025600000,
@@ -1132,7 +1256,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 113346871296,
       "memtableBytes": 53128704,
-      "sstableCount": 1689
+      "sstableCount": 1689,
+      "readSstables": 13
     },
     {
       "t": 1778112000000,
@@ -1141,7 +1266,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 114286395392,
       "memtableBytes": 20804608,
-      "sstableCount": 1703
+      "sstableCount": 1703,
+      "readSstables": 14
     },
     {
       "t": 1778198400000,
@@ -1150,7 +1276,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 115158810624,
       "memtableBytes": 55589376,
-      "sstableCount": 1716
+      "sstableCount": 1716,
+      "readSstables": 13
     },
     {
       "t": 1778284800000,
@@ -1159,7 +1286,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 116098334720,
       "memtableBytes": 23265280,
-      "sstableCount": 1730
+      "sstableCount": 1730,
+      "readSstables": 14
     },
     {
       "t": 1778371200000,
@@ -1168,7 +1296,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 116970749952,
       "memtableBytes": 58050048,
-      "sstableCount": 1743
+      "sstableCount": 1743,
+      "readSstables": 13
     },
     {
       "t": 1778457600000,
@@ -1177,7 +1306,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 117910274048,
       "memtableBytes": 25725952,
-      "sstableCount": 1757
+      "sstableCount": 1757,
+      "readSstables": 14
     },
     {
       "t": 1778544000000,
@@ -1186,7 +1316,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 118782689280,
       "memtableBytes": 60510720,
-      "sstableCount": 1770
+      "sstableCount": 1770,
+      "readSstables": 13
     },
     {
       "t": 1778630400000,
@@ -1195,7 +1326,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 119722213376,
       "memtableBytes": 28186624,
-      "sstableCount": 1784
+      "sstableCount": 1784,
+      "readSstables": 14
     },
     {
       "t": 1778716800000,
@@ -1204,7 +1336,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 120594628608,
       "memtableBytes": 62971392,
-      "sstableCount": 1797
+      "sstableCount": 1797,
+      "readSstables": 13
     },
     {
       "t": 1778803200000,
@@ -1213,7 +1346,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 121534152704,
       "memtableBytes": 30647296,
-      "sstableCount": 1811
+      "sstableCount": 1811,
+      "readSstables": 14
     },
     {
       "t": 1778889600000,
@@ -1222,7 +1356,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 122406567936,
       "memtableBytes": 65432064,
-      "sstableCount": 1824
+      "sstableCount": 1824,
+      "readSstables": 13
     },
     {
       "t": 1778976000000,
@@ -1231,7 +1366,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 123346092032,
       "memtableBytes": 33107968,
-      "sstableCount": 1838
+      "sstableCount": 1838,
+      "readSstables": 14
     },
     {
       "t": 1779062400000,
@@ -1240,7 +1376,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 124285616128,
       "memtableBytes": 783872,
-      "sstableCount": 1852
+      "sstableCount": 1852,
+      "readSstables": 14
     },
     {
       "t": 1779148800000,
@@ -1249,7 +1386,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 125158031360,
       "memtableBytes": 35568640,
-      "sstableCount": 1865
+      "sstableCount": 1865,
+      "readSstables": 13
     },
     {
       "t": 1779235200000,
@@ -1258,7 +1396,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 126097555456,
       "memtableBytes": 3244544,
-      "sstableCount": 1879
+      "sstableCount": 1879,
+      "readSstables": 14
     },
     {
       "t": 1779321600000,
@@ -1267,7 +1406,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 126969970688,
       "memtableBytes": 38029312,
-      "sstableCount": 1892
+      "sstableCount": 1892,
+      "readSstables": 13
     },
     {
       "t": 1779408000000,
@@ -1276,7 +1416,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 127909494784,
       "memtableBytes": 5705216,
-      "sstableCount": 1906
+      "sstableCount": 1906,
+      "readSstables": 14
     },
     {
       "t": 1779494400000,
@@ -1285,7 +1426,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 128781910016,
       "memtableBytes": 40489984,
-      "sstableCount": 1919
+      "sstableCount": 1919,
+      "readSstables": 13
     },
     {
       "t": 1779580800000,
@@ -1294,7 +1436,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 129721434112,
       "memtableBytes": 8165888,
-      "sstableCount": 1933
+      "sstableCount": 1933,
+      "readSstables": 14
     },
     {
       "t": 1779667200000,
@@ -1303,7 +1446,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 130593849344,
       "memtableBytes": 42950656,
-      "sstableCount": 1946
+      "sstableCount": 1946,
+      "readSstables": 13
     },
     {
       "t": 1779753600000,
@@ -1312,7 +1456,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 131533373440,
       "memtableBytes": 10626560,
-      "sstableCount": 1960
+      "sstableCount": 1960,
+      "readSstables": 14
     },
     {
       "t": 1779840000000,
@@ -1321,7 +1466,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 132405788672,
       "memtableBytes": 45411328,
-      "sstableCount": 1973
+      "sstableCount": 1973,
+      "readSstables": 13
     },
     {
       "t": 1779926400000,
@@ -1330,7 +1476,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 133345312768,
       "memtableBytes": 13087232,
-      "sstableCount": 1987
+      "sstableCount": 1987,
+      "readSstables": 14
     },
     {
       "t": 1780012800000,
@@ -1339,7 +1486,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 134217728000,
       "memtableBytes": 47872000,
-      "sstableCount": 2000
+      "sstableCount": 2000,
+      "readSstables": 13
     },
     {
       "t": 1780099200000,
@@ -1348,7 +1496,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 135157252096,
       "memtableBytes": 15547904,
-      "sstableCount": 2014
+      "sstableCount": 2014,
+      "readSstables": 14
     },
     {
       "t": 1780185600000,
@@ -1357,7 +1506,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 136029667328,
       "memtableBytes": 50332672,
-      "sstableCount": 2027
+      "sstableCount": 2027,
+      "readSstables": 13
     },
     {
       "t": 1780272000000,
@@ -1366,7 +1516,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 136969191424,
       "memtableBytes": 18008576,
-      "sstableCount": 2041
+      "sstableCount": 2041,
+      "readSstables": 14
     },
     {
       "t": 1780358400000,
@@ -1375,7 +1526,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 137841606656,
       "memtableBytes": 52793344,
-      "sstableCount": 2054
+      "sstableCount": 2054,
+      "readSstables": 13
     },
     {
       "t": 1780444800000,
@@ -1384,7 +1536,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 138781130752,
       "memtableBytes": 20469248,
-      "sstableCount": 2068
+      "sstableCount": 2068,
+      "readSstables": 14
     },
     {
       "t": 1780531200000,
@@ -1393,7 +1546,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 139653545984,
       "memtableBytes": 55254016,
-      "sstableCount": 2081
+      "sstableCount": 2081,
+      "readSstables": 13
     },
     {
       "t": 1780617600000,
@@ -1402,7 +1556,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 140593070080,
       "memtableBytes": 22929920,
-      "sstableCount": 2095
+      "sstableCount": 2095,
+      "readSstables": 14
     },
     {
       "t": 1780704000000,
@@ -1411,7 +1566,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 141465485312,
       "memtableBytes": 57714688,
-      "sstableCount": 2108
+      "sstableCount": 2108,
+      "readSstables": 13
     },
     {
       "t": 1780790400000,
@@ -1420,7 +1576,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 142405009408,
       "memtableBytes": 25390592,
-      "sstableCount": 2122
+      "sstableCount": 2122,
+      "readSstables": 14
     },
     {
       "t": 1780876800000,
@@ -1429,7 +1586,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 143277424640,
       "memtableBytes": 60175360,
-      "sstableCount": 2135
+      "sstableCount": 2135,
+      "readSstables": 13
     },
     {
       "t": 1780963200000,
@@ -1438,7 +1596,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 144216948736,
       "memtableBytes": 27851264,
-      "sstableCount": 2149
+      "sstableCount": 2149,
+      "readSstables": 14
     },
     {
       "t": 1781049600000,
@@ -1447,7 +1606,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 145089363968,
       "memtableBytes": 62636032,
-      "sstableCount": 2162
+      "sstableCount": 2162,
+      "readSstables": 13
     },
     {
       "t": 1781136000000,
@@ -1456,7 +1616,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 146028888064,
       "memtableBytes": 30311936,
-      "sstableCount": 2176
+      "sstableCount": 2176,
+      "readSstables": 14
     },
     {
       "t": 1781222400000,
@@ -1465,7 +1626,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 146901303296,
       "memtableBytes": 65096704,
-      "sstableCount": 2189
+      "sstableCount": 2189,
+      "readSstables": 13
     },
     {
       "t": 1781308800000,
@@ -1474,7 +1636,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 147840827392,
       "memtableBytes": 32772608,
-      "sstableCount": 2203
+      "sstableCount": 2203,
+      "readSstables": 14
     },
     {
       "t": 1781395200000,
@@ -1483,7 +1646,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 148780351488,
       "memtableBytes": 448512,
-      "sstableCount": 2217
+      "sstableCount": 2217,
+      "readSstables": 14
     },
     {
       "t": 1781481600000,
@@ -1492,7 +1656,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 149652766720,
       "memtableBytes": 35233280,
-      "sstableCount": 2230
+      "sstableCount": 2230,
+      "readSstables": 13
     },
     {
       "t": 1781568000000,
@@ -1501,7 +1666,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 150592290816,
       "memtableBytes": 2909184,
-      "sstableCount": 2244
+      "sstableCount": 2244,
+      "readSstables": 14
     },
     {
       "t": 1781654400000,
@@ -1510,7 +1676,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 151464706048,
       "memtableBytes": 37693952,
-      "sstableCount": 2257
+      "sstableCount": 2257,
+      "readSstables": 13
     },
     {
       "t": 1781740800000,
@@ -1519,7 +1686,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 152404230144,
       "memtableBytes": 5369856,
-      "sstableCount": 2271
+      "sstableCount": 2271,
+      "readSstables": 14
     },
     {
       "t": 1781827200000,
@@ -1528,7 +1696,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 153276645376,
       "memtableBytes": 40154624,
-      "sstableCount": 2284
+      "sstableCount": 2284,
+      "readSstables": 13
     },
     {
       "t": 1781913600000,
@@ -1537,7 +1706,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 154216169472,
       "memtableBytes": 7830528,
-      "sstableCount": 2298
+      "sstableCount": 2298,
+      "readSstables": 14
     },
     {
       "t": 1782000000000,
@@ -1546,7 +1716,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 155088584704,
       "memtableBytes": 42615296,
-      "sstableCount": 2311
+      "sstableCount": 2311,
+      "readSstables": 13
     },
     {
       "t": 1782086400000,
@@ -1555,7 +1726,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 156028108800,
       "memtableBytes": 10291200,
-      "sstableCount": 2325
+      "sstableCount": 2325,
+      "readSstables": 14
     },
     {
       "t": 1782172800000,
@@ -1564,7 +1736,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 156900524032,
       "memtableBytes": 45075968,
-      "sstableCount": 2338
+      "sstableCount": 2338,
+      "readSstables": 13
     },
     {
       "t": 1782259200000,
@@ -1573,7 +1746,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 157840048128,
       "memtableBytes": 12751872,
-      "sstableCount": 2352
+      "sstableCount": 2352,
+      "readSstables": 14
     },
     {
       "t": 1782345600000,
@@ -1582,7 +1756,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 158712463360,
       "memtableBytes": 47536640,
-      "sstableCount": 2365
+      "sstableCount": 2365,
+      "readSstables": 13
     },
     {
       "t": 1782432000000,
@@ -1591,7 +1766,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 159651987456,
       "memtableBytes": 15212544,
-      "sstableCount": 2379
+      "sstableCount": 2379,
+      "readSstables": 14
     },
     {
       "t": 1782518400000,
@@ -1600,7 +1776,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 160524402688,
       "memtableBytes": 49997312,
-      "sstableCount": 2392
+      "sstableCount": 2392,
+      "readSstables": 13
     },
     {
       "t": 1782604800000,
@@ -1609,7 +1786,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 161463926784,
       "memtableBytes": 17673216,
-      "sstableCount": 2406
+      "sstableCount": 2406,
+      "readSstables": 14
     },
     {
       "t": 1782691200000,
@@ -1618,7 +1796,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 162336342016,
       "memtableBytes": 52457984,
-      "sstableCount": 2419
+      "sstableCount": 2419,
+      "readSstables": 13
     },
     {
       "t": 1782777600000,
@@ -1627,7 +1806,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 163275866112,
       "memtableBytes": 20133888,
-      "sstableCount": 2433
+      "sstableCount": 2433,
+      "readSstables": 14
     },
     {
       "t": 1782864000000,
@@ -1636,7 +1816,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 164148281344,
       "memtableBytes": 54918656,
-      "sstableCount": 2446
+      "sstableCount": 2446,
+      "readSstables": 13
     },
     {
       "t": 1782950400000,
@@ -1645,7 +1826,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 165087805440,
       "memtableBytes": 22594560,
-      "sstableCount": 2460
+      "sstableCount": 2460,
+      "readSstables": 14
     },
     {
       "t": 1783036800000,
@@ -1654,7 +1836,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 165960220672,
       "memtableBytes": 57379328,
-      "sstableCount": 2473
+      "sstableCount": 2473,
+      "readSstables": 13
     },
     {
       "t": 1783123200000,
@@ -1663,7 +1846,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 166899744768,
       "memtableBytes": 25055232,
-      "sstableCount": 2487
+      "sstableCount": 2487,
+      "readSstables": 14
     },
     {
       "t": 1783209600000,
@@ -1672,7 +1856,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 167772160000,
       "memtableBytes": 59840000,
-      "sstableCount": 2500
+      "sstableCount": 2500,
+      "readSstables": 13
     },
     {
       "t": 1783296000000,
@@ -1681,7 +1866,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 168711684096,
       "memtableBytes": 27515904,
-      "sstableCount": 2514
+      "sstableCount": 2514,
+      "readSstables": 14
     },
     {
       "t": 1783382400000,
@@ -1690,7 +1876,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 169584099328,
       "memtableBytes": 62300672,
-      "sstableCount": 2527
+      "sstableCount": 2527,
+      "readSstables": 13
     },
     {
       "t": 1783468800000,
@@ -1699,7 +1886,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 170523623424,
       "memtableBytes": 29976576,
-      "sstableCount": 2541
+      "sstableCount": 2541,
+      "readSstables": 14
     },
     {
       "t": 1783555200000,
@@ -1708,7 +1896,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 171396038656,
       "memtableBytes": 64761344,
-      "sstableCount": 2554
+      "sstableCount": 2554,
+      "readSstables": 13
     },
     {
       "t": 1783641600000,
@@ -1717,7 +1906,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 172335562752,
       "memtableBytes": 32437248,
-      "sstableCount": 2568
+      "sstableCount": 2568,
+      "readSstables": 14
     },
     {
       "t": 1783728000000,
@@ -1726,7 +1916,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 173275086848,
       "memtableBytes": 113152,
-      "sstableCount": 2582
+      "sstableCount": 2582,
+      "readSstables": 14
     },
     {
       "t": 1783814400000,
@@ -1735,7 +1926,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 174147502080,
       "memtableBytes": 34897920,
-      "sstableCount": 2595
+      "sstableCount": 2595,
+      "readSstables": 13
     },
     {
       "t": 1783900800000,
@@ -1744,7 +1936,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 175087026176,
       "memtableBytes": 2573824,
-      "sstableCount": 2609
+      "sstableCount": 2609,
+      "readSstables": 14
     },
     {
       "t": 1783987200000,
@@ -1753,7 +1946,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 175959441408,
       "memtableBytes": 37358592,
-      "sstableCount": 2622
+      "sstableCount": 2622,
+      "readSstables": 13
     },
     {
       "t": 1784073600000,
@@ -1762,7 +1956,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 176898965504,
       "memtableBytes": 5034496,
-      "sstableCount": 2636
+      "sstableCount": 2636,
+      "readSstables": 14
     },
     {
       "t": 1784160000000,
@@ -1771,7 +1966,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 177771380736,
       "memtableBytes": 39819264,
-      "sstableCount": 2649
+      "sstableCount": 2649,
+      "readSstables": 13
     },
     {
       "t": 1784246400000,
@@ -1780,7 +1976,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 178710904832,
       "memtableBytes": 7495168,
-      "sstableCount": 2663
+      "sstableCount": 2663,
+      "readSstables": 14
     },
     {
       "t": 1784332800000,
@@ -1789,7 +1986,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 179583320064,
       "memtableBytes": 42279936,
-      "sstableCount": 2676
+      "sstableCount": 2676,
+      "readSstables": 13
     },
     {
       "t": 1784419200000,
@@ -1798,7 +1996,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 180522844160,
       "memtableBytes": 9955840,
-      "sstableCount": 2690
+      "sstableCount": 2690,
+      "readSstables": 14
     },
     {
       "t": 1784505600000,
@@ -1807,7 +2006,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 181395259392,
       "memtableBytes": 44740608,
-      "sstableCount": 2703
+      "sstableCount": 2703,
+      "readSstables": 13
     },
     {
       "t": 1784592000000,
@@ -1816,7 +2016,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 182334783488,
       "memtableBytes": 12416512,
-      "sstableCount": 2717
+      "sstableCount": 2717,
+      "readSstables": 14
     },
     {
       "t": 1784678400000,
@@ -1825,7 +2026,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 183207198720,
       "memtableBytes": 47201280,
-      "sstableCount": 2730
+      "sstableCount": 2730,
+      "readSstables": 13
     },
     {
       "t": 1784764800000,
@@ -1834,7 +2036,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 184146722816,
       "memtableBytes": 14877184,
-      "sstableCount": 2744
+      "sstableCount": 2744,
+      "readSstables": 14
     },
     {
       "t": 1784851200000,
@@ -1843,7 +2046,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 185019138048,
       "memtableBytes": 49661952,
-      "sstableCount": 2757
+      "sstableCount": 2757,
+      "readSstables": 13
     },
     {
       "t": 1784937600000,
@@ -1852,7 +2056,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 185958662144,
       "memtableBytes": 17337856,
-      "sstableCount": 2771
+      "sstableCount": 2771,
+      "readSstables": 14
     },
     {
       "t": 1785024000000,
@@ -1861,7 +2066,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 186831077376,
       "memtableBytes": 52122624,
-      "sstableCount": 2784
+      "sstableCount": 2784,
+      "readSstables": 13
     },
     {
       "t": 1785110400000,
@@ -1870,7 +2076,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 187770601472,
       "memtableBytes": 19798528,
-      "sstableCount": 2798
+      "sstableCount": 2798,
+      "readSstables": 14
     },
     {
       "t": 1785196800000,
@@ -1879,7 +2086,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 188643016704,
       "memtableBytes": 54583296,
-      "sstableCount": 2811
+      "sstableCount": 2811,
+      "readSstables": 13
     },
     {
       "t": 1785283200000,
@@ -1888,7 +2096,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 189582540800,
       "memtableBytes": 22259200,
-      "sstableCount": 2825
+      "sstableCount": 2825,
+      "readSstables": 14
     },
     {
       "t": 1785369600000,
@@ -1897,7 +2106,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 190454956032,
       "memtableBytes": 57043968,
-      "sstableCount": 2838
+      "sstableCount": 2838,
+      "readSstables": 13
     },
     {
       "t": 1785456000000,
@@ -1906,7 +2116,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 191394480128,
       "memtableBytes": 24719872,
-      "sstableCount": 2852
+      "sstableCount": 2852,
+      "readSstables": 14
     },
     {
       "t": 1785542400000,
@@ -1915,7 +2126,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 192266895360,
       "memtableBytes": 59504640,
-      "sstableCount": 2865
+      "sstableCount": 2865,
+      "readSstables": 13
     },
     {
       "t": 1785628800000,
@@ -1924,7 +2136,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 193206419456,
       "memtableBytes": 27180544,
-      "sstableCount": 2879
+      "sstableCount": 2879,
+      "readSstables": 14
     },
     {
       "t": 1785715200000,
@@ -1933,7 +2146,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 194078834688,
       "memtableBytes": 61965312,
-      "sstableCount": 2892
+      "sstableCount": 2892,
+      "readSstables": 13
     },
     {
       "t": 1785801600000,
@@ -1942,7 +2156,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 195018358784,
       "memtableBytes": 29641216,
-      "sstableCount": 2906
+      "sstableCount": 2906,
+      "readSstables": 14
     },
     {
       "t": 1785888000000,
@@ -1951,7 +2166,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 195890774016,
       "memtableBytes": 64425984,
-      "sstableCount": 2919
+      "sstableCount": 2919,
+      "readSstables": 13
     },
     {
       "t": 1785974400000,
@@ -1960,7 +2176,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 196830298112,
       "memtableBytes": 32101888,
-      "sstableCount": 2933
+      "sstableCount": 2933,
+      "readSstables": 14
     },
     {
       "t": 1786060800000,
@@ -1969,7 +2186,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 197702713344,
       "memtableBytes": 66886656,
-      "sstableCount": 2946
+      "sstableCount": 2946,
+      "readSstables": 13
     },
     {
       "t": 1786147200000,
@@ -1978,7 +2196,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 198642237440,
       "memtableBytes": 34562560,
-      "sstableCount": 2960
+      "sstableCount": 2960,
+      "readSstables": 14
     },
     {
       "t": 1786233600000,
@@ -1987,7 +2206,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 199581761536,
       "memtableBytes": 2238464,
-      "sstableCount": 2974
+      "sstableCount": 2974,
+      "readSstables": 14
     },
     {
       "t": 1786320000000,
@@ -1996,7 +2216,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 200454176768,
       "memtableBytes": 37023232,
-      "sstableCount": 2987
+      "sstableCount": 2987,
+      "readSstables": 13
     },
     {
       "t": 1786406400000,
@@ -2005,7 +2226,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 201393700864,
       "memtableBytes": 4699136,
-      "sstableCount": 3001
+      "sstableCount": 3001,
+      "readSstables": 14
     },
     {
       "t": 1786492800000,
@@ -2014,7 +2236,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 202266116096,
       "memtableBytes": 39483904,
-      "sstableCount": 3014
+      "sstableCount": 3014,
+      "readSstables": 13
     },
     {
       "t": 1786579200000,
@@ -2023,7 +2246,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 203205640192,
       "memtableBytes": 7159808,
-      "sstableCount": 3028
+      "sstableCount": 3028,
+      "readSstables": 14
     },
     {
       "t": 1786665600000,
@@ -2032,7 +2256,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 204078055424,
       "memtableBytes": 41944576,
-      "sstableCount": 3041
+      "sstableCount": 3041,
+      "readSstables": 13
     },
     {
       "t": 1786752000000,
@@ -2041,7 +2266,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 205017579520,
       "memtableBytes": 9620480,
-      "sstableCount": 3055
+      "sstableCount": 3055,
+      "readSstables": 14
     },
     {
       "t": 1786838400000,
@@ -2050,7 +2276,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 205889994752,
       "memtableBytes": 44405248,
-      "sstableCount": 3068
+      "sstableCount": 3068,
+      "readSstables": 13
     },
     {
       "t": 1786924800000,
@@ -2059,7 +2286,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 206829518848,
       "memtableBytes": 12081152,
-      "sstableCount": 3082
+      "sstableCount": 3082,
+      "readSstables": 14
     },
     {
       "t": 1787011200000,
@@ -2068,7 +2296,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 207701934080,
       "memtableBytes": 46865920,
-      "sstableCount": 3095
+      "sstableCount": 3095,
+      "readSstables": 13
     },
     {
       "t": 1787097600000,
@@ -2077,7 +2306,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 208641458176,
       "memtableBytes": 14541824,
-      "sstableCount": 3109
+      "sstableCount": 3109,
+      "readSstables": 14
     },
     {
       "t": 1787184000000,
@@ -2086,7 +2316,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 209513873408,
       "memtableBytes": 49326592,
-      "sstableCount": 3122
+      "sstableCount": 3122,
+      "readSstables": 13
     },
     {
       "t": 1787270400000,
@@ -2095,7 +2326,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 210453397504,
       "memtableBytes": 17002496,
-      "sstableCount": 3136
+      "sstableCount": 3136,
+      "readSstables": 14
     },
     {
       "t": 1787356800000,
@@ -2104,7 +2336,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 211325812736,
       "memtableBytes": 51787264,
-      "sstableCount": 3149
+      "sstableCount": 3149,
+      "readSstables": 13
     },
     {
       "t": 1787443200000,
@@ -2113,7 +2346,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 212265336832,
       "memtableBytes": 19463168,
-      "sstableCount": 3163
+      "sstableCount": 3163,
+      "readSstables": 14
     },
     {
       "t": 1787529600000,
@@ -2122,7 +2356,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 213137752064,
       "memtableBytes": 54247936,
-      "sstableCount": 3176
+      "sstableCount": 3176,
+      "readSstables": 13
     },
     {
       "t": 1787616000000,
@@ -2131,7 +2366,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 214077276160,
       "memtableBytes": 21923840,
-      "sstableCount": 3190
+      "sstableCount": 3190,
+      "readSstables": 14
     },
     {
       "t": 1787702400000,
@@ -2140,7 +2376,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 214949691392,
       "memtableBytes": 56708608,
-      "sstableCount": 3203
+      "sstableCount": 3203,
+      "readSstables": 13
     },
     {
       "t": 1787788800000,
@@ -2149,7 +2386,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 215889215488,
       "memtableBytes": 24384512,
-      "sstableCount": 3217
+      "sstableCount": 3217,
+      "readSstables": 14
     },
     {
       "t": 1787875200000,
@@ -2158,7 +2396,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 216761630720,
       "memtableBytes": 59169280,
-      "sstableCount": 3230
+      "sstableCount": 3230,
+      "readSstables": 13
     },
     {
       "t": 1787961600000,
@@ -2167,7 +2406,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 217701154816,
       "memtableBytes": 26845184,
-      "sstableCount": 3244
+      "sstableCount": 3244,
+      "readSstables": 14
     },
     {
       "t": 1788048000000,
@@ -2176,7 +2416,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 218573570048,
       "memtableBytes": 61629952,
-      "sstableCount": 3257
+      "sstableCount": 3257,
+      "readSstables": 13
     },
     {
       "t": 1788134400000,
@@ -2185,7 +2426,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 219513094144,
       "memtableBytes": 29305856,
-      "sstableCount": 3271
+      "sstableCount": 3271,
+      "readSstables": 14
     },
     {
       "t": 1788220800000,
@@ -2194,7 +2436,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 220385509376,
       "memtableBytes": 64090624,
-      "sstableCount": 3284
+      "sstableCount": 3284,
+      "readSstables": 13
     },
     {
       "t": 1788307200000,
@@ -2203,7 +2446,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 221325033472,
       "memtableBytes": 31766528,
-      "sstableCount": 3298
+      "sstableCount": 3298,
+      "readSstables": 14
     },
     {
       "t": 1788393600000,
@@ -2212,7 +2456,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 222197448704,
       "memtableBytes": 66551296,
-      "sstableCount": 3311
+      "sstableCount": 3311,
+      "readSstables": 13
     },
     {
       "t": 1788480000000,
@@ -2221,7 +2466,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 223136972800,
       "memtableBytes": 34227200,
-      "sstableCount": 3325
+      "sstableCount": 3325,
+      "readSstables": 14
     },
     {
       "t": 1788566400000,
@@ -2230,7 +2476,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 224076496896,
       "memtableBytes": 1903104,
-      "sstableCount": 3339
+      "sstableCount": 3339,
+      "readSstables": 14
     },
     {
       "t": 1788652800000,
@@ -2239,7 +2486,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 224948912128,
       "memtableBytes": 36687872,
-      "sstableCount": 3352
+      "sstableCount": 3352,
+      "readSstables": 13
     },
     {
       "t": 1788739200000,
@@ -2248,7 +2496,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 225888436224,
       "memtableBytes": 4363776,
-      "sstableCount": 3366
+      "sstableCount": 3366,
+      "readSstables": 14
     },
     {
       "t": 1788825600000,
@@ -2257,7 +2506,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 226760851456,
       "memtableBytes": 39148544,
-      "sstableCount": 3379
+      "sstableCount": 3379,
+      "readSstables": 13
     },
     {
       "t": 1788912000000,
@@ -2266,7 +2516,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 227700375552,
       "memtableBytes": 6824448,
-      "sstableCount": 3393
+      "sstableCount": 3393,
+      "readSstables": 14
     },
     {
       "t": 1788998400000,
@@ -2275,7 +2526,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 228572790784,
       "memtableBytes": 41609216,
-      "sstableCount": 3406
+      "sstableCount": 3406,
+      "readSstables": 13
     },
     {
       "t": 1789084800000,
@@ -2284,7 +2536,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 229512314880,
       "memtableBytes": 9285120,
-      "sstableCount": 3420
+      "sstableCount": 3420,
+      "readSstables": 14
     },
     {
       "t": 1789171200000,
@@ -2293,7 +2546,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 230384730112,
       "memtableBytes": 44069888,
-      "sstableCount": 3433
+      "sstableCount": 3433,
+      "readSstables": 13
     },
     {
       "t": 1789257600000,
@@ -2302,7 +2556,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 231324254208,
       "memtableBytes": 11745792,
-      "sstableCount": 3447
+      "sstableCount": 3447,
+      "readSstables": 14
     },
     {
       "t": 1789344000000,
@@ -2311,7 +2566,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 232196669440,
       "memtableBytes": 46530560,
-      "sstableCount": 3460
+      "sstableCount": 3460,
+      "readSstables": 13
     },
     {
       "t": 1789430400000,
@@ -2320,7 +2576,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 233136193536,
       "memtableBytes": 14206464,
-      "sstableCount": 3474
+      "sstableCount": 3474,
+      "readSstables": 14
     },
     {
       "t": 1789516800000,
@@ -2329,7 +2586,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 234008608768,
       "memtableBytes": 48991232,
-      "sstableCount": 3487
+      "sstableCount": 3487,
+      "readSstables": 13
     },
     {
       "t": 1789603200000,
@@ -2338,7 +2596,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 234948132864,
       "memtableBytes": 16667136,
-      "sstableCount": 3501
+      "sstableCount": 3501,
+      "readSstables": 14
     },
     {
       "t": 1789689600000,
@@ -2347,7 +2606,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 235820548096,
       "memtableBytes": 51451904,
-      "sstableCount": 3514
+      "sstableCount": 3514,
+      "readSstables": 13
     },
     {
       "t": 1789776000000,
@@ -2356,7 +2616,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 236760072192,
       "memtableBytes": 19127808,
-      "sstableCount": 3528
+      "sstableCount": 3528,
+      "readSstables": 14
     },
     {
       "t": 1789862400000,
@@ -2365,7 +2626,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 237632487424,
       "memtableBytes": 53912576,
-      "sstableCount": 3541
+      "sstableCount": 3541,
+      "readSstables": 13
     },
     {
       "t": 1789948800000,
@@ -2374,7 +2636,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 238572011520,
       "memtableBytes": 21588480,
-      "sstableCount": 3555
+      "sstableCount": 3555,
+      "readSstables": 14
     },
     {
       "t": 1790035200000,
@@ -2383,7 +2646,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 239444426752,
       "memtableBytes": 56373248,
-      "sstableCount": 3568
+      "sstableCount": 3568,
+      "readSstables": 13
     },
     {
       "t": 1790121600000,
@@ -2392,7 +2656,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 240383950848,
       "memtableBytes": 24049152,
-      "sstableCount": 3582
+      "sstableCount": 3582,
+      "readSstables": 14
     },
     {
       "t": 1790208000000,
@@ -2401,7 +2666,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 241256366080,
       "memtableBytes": 58833920,
-      "sstableCount": 3595
+      "sstableCount": 3595,
+      "readSstables": 13
     },
     {
       "t": 1790294400000,
@@ -2410,7 +2676,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 242195890176,
       "memtableBytes": 26509824,
-      "sstableCount": 3609
+      "sstableCount": 3609,
+      "readSstables": 14
     },
     {
       "t": 1790380800000,
@@ -2419,7 +2686,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 243068305408,
       "memtableBytes": 61294592,
-      "sstableCount": 3622
+      "sstableCount": 3622,
+      "readSstables": 13
     },
     {
       "t": 1790467200000,
@@ -2428,7 +2696,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 244007829504,
       "memtableBytes": 28970496,
-      "sstableCount": 3636
+      "sstableCount": 3636,
+      "readSstables": 14
     },
     {
       "t": 1790553600000,
@@ -2437,7 +2706,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 244880244736,
       "memtableBytes": 63755264,
-      "sstableCount": 3649
+      "sstableCount": 3649,
+      "readSstables": 13
     },
     {
       "t": 1790640000000,
@@ -2446,7 +2716,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 245819768832,
       "memtableBytes": 31431168,
-      "sstableCount": 3663
+      "sstableCount": 3663,
+      "readSstables": 14
     },
     {
       "t": 1790726400000,
@@ -2455,7 +2726,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 246692184064,
       "memtableBytes": 66215936,
-      "sstableCount": 3676
+      "sstableCount": 3676,
+      "readSstables": 13
     },
     {
       "t": 1790812800000,
@@ -2464,7 +2736,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 247631708160,
       "memtableBytes": 33891840,
-      "sstableCount": 3690
+      "sstableCount": 3690,
+      "readSstables": 14
     },
     {
       "t": 1790899200000,
@@ -2473,7 +2746,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 248571232256,
       "memtableBytes": 1567744,
-      "sstableCount": 3704
+      "sstableCount": 3704,
+      "readSstables": 14
     },
     {
       "t": 1790985600000,
@@ -2482,7 +2756,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 249443647488,
       "memtableBytes": 36352512,
-      "sstableCount": 3717
+      "sstableCount": 3717,
+      "readSstables": 13
     },
     {
       "t": 1791072000000,
@@ -2491,7 +2766,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 250383171584,
       "memtableBytes": 4028416,
-      "sstableCount": 3731
+      "sstableCount": 3731,
+      "readSstables": 14
     },
     {
       "t": 1791158400000,
@@ -2500,7 +2776,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 251255586816,
       "memtableBytes": 38813184,
-      "sstableCount": 3744
+      "sstableCount": 3744,
+      "readSstables": 13
     },
     {
       "t": 1791244800000,
@@ -2509,7 +2786,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 252195110912,
       "memtableBytes": 6489088,
-      "sstableCount": 3758
+      "sstableCount": 3758,
+      "readSstables": 14
     },
     {
       "t": 1791331200000,
@@ -2518,7 +2796,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 253067526144,
       "memtableBytes": 41273856,
-      "sstableCount": 3771
+      "sstableCount": 3771,
+      "readSstables": 13
     },
     {
       "t": 1791417600000,
@@ -2527,7 +2806,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 254007050240,
       "memtableBytes": 8949760,
-      "sstableCount": 3785
+      "sstableCount": 3785,
+      "readSstables": 14
     },
     {
       "t": 1791504000000,
@@ -2536,7 +2816,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 254879465472,
       "memtableBytes": 43734528,
-      "sstableCount": 3798
+      "sstableCount": 3798,
+      "readSstables": 13
     },
     {
       "t": 1791590400000,
@@ -2545,7 +2826,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 255818989568,
       "memtableBytes": 11410432,
-      "sstableCount": 3812
+      "sstableCount": 3812,
+      "readSstables": 14
     },
     {
       "t": 1791676800000,
@@ -2554,7 +2836,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 256691404800,
       "memtableBytes": 46195200,
-      "sstableCount": 3825
+      "sstableCount": 3825,
+      "readSstables": 13
     },
     {
       "t": 1791763200000,
@@ -2563,7 +2846,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 257630928896,
       "memtableBytes": 13871104,
-      "sstableCount": 3839
+      "sstableCount": 3839,
+      "readSstables": 14
     },
     {
       "t": 1791849600000,
@@ -2572,7 +2856,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 258503344128,
       "memtableBytes": 48655872,
-      "sstableCount": 3852
+      "sstableCount": 3852,
+      "readSstables": 13
     },
     {
       "t": 1791936000000,
@@ -2581,7 +2866,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 259442868224,
       "memtableBytes": 16331776,
-      "sstableCount": 3866
+      "sstableCount": 3866,
+      "readSstables": 14
     },
     {
       "t": 1792022400000,
@@ -2590,7 +2876,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 260315283456,
       "memtableBytes": 51116544,
-      "sstableCount": 3879
+      "sstableCount": 3879,
+      "readSstables": 13
     },
     {
       "t": 1792108800000,
@@ -2599,7 +2886,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 261254807552,
       "memtableBytes": 18792448,
-      "sstableCount": 3893
+      "sstableCount": 3893,
+      "readSstables": 14
     },
     {
       "t": 1792195200000,
@@ -2608,7 +2896,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 262127222784,
       "memtableBytes": 53577216,
-      "sstableCount": 3906
+      "sstableCount": 3906,
+      "readSstables": 13
     },
     {
       "t": 1792281600000,
@@ -2617,7 +2906,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 263066746880,
       "memtableBytes": 21253120,
-      "sstableCount": 3920
+      "sstableCount": 3920,
+      "readSstables": 14
     },
     {
       "t": 1792368000000,
@@ -2626,7 +2916,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 263939162112,
       "memtableBytes": 56037888,
-      "sstableCount": 3933
+      "sstableCount": 3933,
+      "readSstables": 13
     },
     {
       "t": 1792454400000,
@@ -2635,7 +2926,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 264878686208,
       "memtableBytes": 23713792,
-      "sstableCount": 3947
+      "sstableCount": 3947,
+      "readSstables": 14
     },
     {
       "t": 1792540800000,
@@ -2644,7 +2936,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 265751101440,
       "memtableBytes": 58498560,
-      "sstableCount": 3960
+      "sstableCount": 3960,
+      "readSstables": 13
     },
     {
       "t": 1792627200000,
@@ -2653,7 +2946,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 266690625536,
       "memtableBytes": 26174464,
-      "sstableCount": 3974
+      "sstableCount": 3974,
+      "readSstables": 14
     },
     {
       "t": 1792713600000,
@@ -2662,7 +2956,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 267563040768,
       "memtableBytes": 60959232,
-      "sstableCount": 3987
+      "sstableCount": 3987,
+      "readSstables": 13
     },
     {
       "t": 1792800000000,
@@ -2671,7 +2966,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 268502564864,
       "memtableBytes": 28635136,
-      "sstableCount": 4001
+      "sstableCount": 4001,
+      "readSstables": 14
     },
     {
       "t": 1792886400000,
@@ -2680,7 +2976,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 269374980096,
       "memtableBytes": 63419904,
-      "sstableCount": 4014
+      "sstableCount": 4014,
+      "readSstables": 13
     },
     {
       "t": 1792972800000,
@@ -2689,7 +2986,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 270314504192,
       "memtableBytes": 31095808,
-      "sstableCount": 4028
+      "sstableCount": 4028,
+      "readSstables": 14
     },
     {
       "t": 1793059200000,
@@ -2698,7 +2996,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 271186919424,
       "memtableBytes": 65880576,
-      "sstableCount": 4041
+      "sstableCount": 4041,
+      "readSstables": 13
     },
     {
       "t": 1793145600000,
@@ -2707,7 +3006,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 272126443520,
       "memtableBytes": 33556480,
-      "sstableCount": 4055
+      "sstableCount": 4055,
+      "readSstables": 14
     },
     {
       "t": 1793232000000,
@@ -2716,7 +3016,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 273065967616,
       "memtableBytes": 1232384,
-      "sstableCount": 4069
+      "sstableCount": 4069,
+      "readSstables": 14
     },
     {
       "t": 1793318400000,
@@ -2725,7 +3026,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 273938382848,
       "memtableBytes": 36017152,
-      "sstableCount": 4082
+      "sstableCount": 4082,
+      "readSstables": 13
     },
     {
       "t": 1793404800000,
@@ -2734,7 +3036,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 274877906944,
       "memtableBytes": 3693056,
-      "sstableCount": 4096
+      "sstableCount": 4096,
+      "readSstables": 14
     },
     {
       "t": 1793491200000,
@@ -2743,7 +3046,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 275750322176,
       "memtableBytes": 38477824,
-      "sstableCount": 4109
+      "sstableCount": 4109,
+      "readSstables": 13
     },
     {
       "t": 1793577600000,
@@ -2752,7 +3056,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 276689846272,
       "memtableBytes": 6153728,
-      "sstableCount": 4123
+      "sstableCount": 4123,
+      "readSstables": 14
     },
     {
       "t": 1793664000000,
@@ -2761,7 +3066,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 277562261504,
       "memtableBytes": 40938496,
-      "sstableCount": 4136
+      "sstableCount": 4136,
+      "readSstables": 13
     },
     {
       "t": 1793750400000,
@@ -2770,7 +3076,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 278501785600,
       "memtableBytes": 8614400,
-      "sstableCount": 4150
+      "sstableCount": 4150,
+      "readSstables": 14
     },
     {
       "t": 1793836800000,
@@ -2779,7 +3086,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 279374200832,
       "memtableBytes": 43399168,
-      "sstableCount": 4163
+      "sstableCount": 4163,
+      "readSstables": 13
     },
     {
       "t": 1793923200000,
@@ -2788,7 +3096,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 280313724928,
       "memtableBytes": 11075072,
-      "sstableCount": 4177
+      "sstableCount": 4177,
+      "readSstables": 14
     },
     {
       "t": 1794009600000,
@@ -2797,7 +3106,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 281186140160,
       "memtableBytes": 45859840,
-      "sstableCount": 4190
+      "sstableCount": 4190,
+      "readSstables": 13
     },
     {
       "t": 1794096000000,
@@ -2806,7 +3116,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 282125664256,
       "memtableBytes": 13535744,
-      "sstableCount": 4204
+      "sstableCount": 4204,
+      "readSstables": 14
     },
     {
       "t": 1794182400000,
@@ -2815,7 +3126,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 282998079488,
       "memtableBytes": 48320512,
-      "sstableCount": 4217
+      "sstableCount": 4217,
+      "readSstables": 13
     },
     {
       "t": 1794268800000,
@@ -2824,7 +3136,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 283937603584,
       "memtableBytes": 15996416,
-      "sstableCount": 4231
+      "sstableCount": 4231,
+      "readSstables": 14
     },
     {
       "t": 1794355200000,
@@ -2833,7 +3146,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 284810018816,
       "memtableBytes": 50781184,
-      "sstableCount": 4244
+      "sstableCount": 4244,
+      "readSstables": 13
     },
     {
       "t": 1794441600000,
@@ -2842,7 +3156,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 285749542912,
       "memtableBytes": 18457088,
-      "sstableCount": 4258
+      "sstableCount": 4258,
+      "readSstables": 14
     },
     {
       "t": 1794528000000,
@@ -2851,7 +3166,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 286621958144,
       "memtableBytes": 53241856,
-      "sstableCount": 4271
+      "sstableCount": 4271,
+      "readSstables": 13
     },
     {
       "t": 1794614400000,
@@ -2860,7 +3176,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 287561482240,
       "memtableBytes": 20917760,
-      "sstableCount": 4285
+      "sstableCount": 4285,
+      "readSstables": 14
     },
     {
       "t": 1794700800000,
@@ -2869,7 +3186,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 288433897472,
       "memtableBytes": 55702528,
-      "sstableCount": 4298
+      "sstableCount": 4298,
+      "readSstables": 13
     },
     {
       "t": 1794787200000,
@@ -2878,7 +3196,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 289373421568,
       "memtableBytes": 23378432,
-      "sstableCount": 4312
+      "sstableCount": 4312,
+      "readSstables": 14
     },
     {
       "t": 1794873600000,
@@ -2887,7 +3206,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 290245836800,
       "memtableBytes": 58163200,
-      "sstableCount": 4325
+      "sstableCount": 4325,
+      "readSstables": 13
     },
     {
       "t": 1794960000000,
@@ -2896,7 +3216,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 291185360896,
       "memtableBytes": 25839104,
-      "sstableCount": 4339
+      "sstableCount": 4339,
+      "readSstables": 14
     },
     {
       "t": 1795046400000,
@@ -2905,7 +3226,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 292057776128,
       "memtableBytes": 60623872,
-      "sstableCount": 4352
+      "sstableCount": 4352,
+      "readSstables": 13
     },
     {
       "t": 1795132800000,
@@ -2914,7 +3236,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 292997300224,
       "memtableBytes": 28299776,
-      "sstableCount": 4366
+      "sstableCount": 4366,
+      "readSstables": 14
     },
     {
       "t": 1795219200000,
@@ -2923,7 +3246,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 293869715456,
       "memtableBytes": 63084544,
-      "sstableCount": 4379
+      "sstableCount": 4379,
+      "readSstables": 13
     },
     {
       "t": 1795305600000,
@@ -2932,7 +3256,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 294809239552,
       "memtableBytes": 30760448,
-      "sstableCount": 4393
+      "sstableCount": 4393,
+      "readSstables": 14
     },
     {
       "t": 1795392000000,
@@ -2941,7 +3266,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 295681654784,
       "memtableBytes": 65545216,
-      "sstableCount": 4406
+      "sstableCount": 4406,
+      "readSstables": 13
     },
     {
       "t": 1795478400000,
@@ -2950,7 +3276,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 296621178880,
       "memtableBytes": 33221120,
-      "sstableCount": 4420
+      "sstableCount": 4420,
+      "readSstables": 14
     },
     {
       "t": 1795564800000,
@@ -2959,7 +3286,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 297560702976,
       "memtableBytes": 897024,
-      "sstableCount": 4434
+      "sstableCount": 4434,
+      "readSstables": 14
     },
     {
       "t": 1795651200000,
@@ -2968,7 +3296,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 298433118208,
       "memtableBytes": 35681792,
-      "sstableCount": 4447
+      "sstableCount": 4447,
+      "readSstables": 13
     },
     {
       "t": 1795737600000,
@@ -2977,7 +3306,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 299372642304,
       "memtableBytes": 3357696,
-      "sstableCount": 4461
+      "sstableCount": 4461,
+      "readSstables": 14
     },
     {
       "t": 1795824000000,
@@ -2986,7 +3316,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 300245057536,
       "memtableBytes": 38142464,
-      "sstableCount": 4474
+      "sstableCount": 4474,
+      "readSstables": 13
     },
     {
       "t": 1795910400000,
@@ -2995,7 +3326,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 301184581632,
       "memtableBytes": 5818368,
-      "sstableCount": 4488
+      "sstableCount": 4488,
+      "readSstables": 14
     },
     {
       "t": 1795996800000,
@@ -3004,7 +3336,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 302056996864,
       "memtableBytes": 40603136,
-      "sstableCount": 4501
+      "sstableCount": 4501,
+      "readSstables": 13
     },
     {
       "t": 1796083200000,
@@ -3013,7 +3346,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 302996520960,
       "memtableBytes": 8279040,
-      "sstableCount": 4515
+      "sstableCount": 4515,
+      "readSstables": 14
     },
     {
       "t": 1796169600000,
@@ -3022,7 +3356,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 303868936192,
       "memtableBytes": 43063808,
-      "sstableCount": 4528
+      "sstableCount": 4528,
+      "readSstables": 13
     },
     {
       "t": 1796256000000,
@@ -3031,7 +3366,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 304808460288,
       "memtableBytes": 10739712,
-      "sstableCount": 4542
+      "sstableCount": 4542,
+      "readSstables": 14
     },
     {
       "t": 1796342400000,
@@ -3040,7 +3376,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 305680875520,
       "memtableBytes": 45524480,
-      "sstableCount": 4555
+      "sstableCount": 4555,
+      "readSstables": 13
     },
     {
       "t": 1796428800000,
@@ -3049,7 +3386,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 306620399616,
       "memtableBytes": 13200384,
-      "sstableCount": 4569
+      "sstableCount": 4569,
+      "readSstables": 14
     },
     {
       "t": 1796515200000,
@@ -3058,7 +3396,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 307492814848,
       "memtableBytes": 47985152,
-      "sstableCount": 4582
+      "sstableCount": 4582,
+      "readSstables": 13
     },
     {
       "t": 1796601600000,
@@ -3067,7 +3406,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 308432338944,
       "memtableBytes": 15661056,
-      "sstableCount": 4596
+      "sstableCount": 4596,
+      "readSstables": 14
     },
     {
       "t": 1796688000000,
@@ -3076,7 +3416,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 309304754176,
       "memtableBytes": 50445824,
-      "sstableCount": 4609
+      "sstableCount": 4609,
+      "readSstables": 13
     },
     {
       "t": 1796774400000,
@@ -3085,7 +3426,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 310244278272,
       "memtableBytes": 18121728,
-      "sstableCount": 4623
+      "sstableCount": 4623,
+      "readSstables": 14
     },
     {
       "t": 1796860800000,
@@ -3094,7 +3436,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 311116693504,
       "memtableBytes": 52906496,
-      "sstableCount": 4636
+      "sstableCount": 4636,
+      "readSstables": 13
     },
     {
       "t": 1796947200000,
@@ -3103,7 +3446,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 312056217600,
       "memtableBytes": 20582400,
-      "sstableCount": 4650
+      "sstableCount": 4650,
+      "readSstables": 14
     },
     {
       "t": 1797033600000,
@@ -3112,7 +3456,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 312928632832,
       "memtableBytes": 55367168,
-      "sstableCount": 4663
+      "sstableCount": 4663,
+      "readSstables": 13
     },
     {
       "t": 1797120000000,
@@ -3121,7 +3466,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 313868156928,
       "memtableBytes": 23043072,
-      "sstableCount": 4677
+      "sstableCount": 4677,
+      "readSstables": 14
     },
     {
       "t": 1797206400000,
@@ -3130,7 +3476,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 314740572160,
       "memtableBytes": 57827840,
-      "sstableCount": 4690
+      "sstableCount": 4690,
+      "readSstables": 13
     },
     {
       "t": 1797292800000,
@@ -3139,7 +3486,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 315680096256,
       "memtableBytes": 25503744,
-      "sstableCount": 4704
+      "sstableCount": 4704,
+      "readSstables": 14
     },
     {
       "t": 1797379200000,
@@ -3148,7 +3496,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 316552511488,
       "memtableBytes": 60288512,
-      "sstableCount": 4717
+      "sstableCount": 4717,
+      "readSstables": 13
     },
     {
       "t": 1797465600000,
@@ -3157,7 +3506,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 317492035584,
       "memtableBytes": 27964416,
-      "sstableCount": 4731
+      "sstableCount": 4731,
+      "readSstables": 14
     },
     {
       "t": 1797552000000,
@@ -3166,7 +3516,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 318364450816,
       "memtableBytes": 62749184,
-      "sstableCount": 4744
+      "sstableCount": 4744,
+      "readSstables": 13
     },
     {
       "t": 1797638400000,
@@ -3175,7 +3526,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 319303974912,
       "memtableBytes": 30425088,
-      "sstableCount": 4758
+      "sstableCount": 4758,
+      "readSstables": 14
     },
     {
       "t": 1797724800000,
@@ -3184,7 +3536,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 320176390144,
       "memtableBytes": 65209856,
-      "sstableCount": 4771
+      "sstableCount": 4771,
+      "readSstables": 13
     },
     {
       "t": 1797811200000,
@@ -3193,7 +3546,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 321115914240,
       "memtableBytes": 32885760,
-      "sstableCount": 4785
+      "sstableCount": 4785,
+      "readSstables": 14
     },
     {
       "t": 1797897600000,
@@ -3202,7 +3556,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 322055438336,
       "memtableBytes": 561664,
-      "sstableCount": 4799
+      "sstableCount": 4799,
+      "readSstables": 14
     },
     {
       "t": 1797984000000,
@@ -3211,7 +3566,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 322927853568,
       "memtableBytes": 35346432,
-      "sstableCount": 4812
+      "sstableCount": 4812,
+      "readSstables": 13
     },
     {
       "t": 1798070400000,
@@ -3220,7 +3576,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 323867377664,
       "memtableBytes": 3022336,
-      "sstableCount": 4826
+      "sstableCount": 4826,
+      "readSstables": 14
     },
     {
       "t": 1798156800000,
@@ -3229,7 +3586,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 324739792896,
       "memtableBytes": 37807104,
-      "sstableCount": 4839
+      "sstableCount": 4839,
+      "readSstables": 13
     },
     {
       "t": 1798243200000,
@@ -3238,7 +3596,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 325679316992,
       "memtableBytes": 5483008,
-      "sstableCount": 4853
+      "sstableCount": 4853,
+      "readSstables": 14
     },
     {
       "t": 1798329600000,
@@ -3247,7 +3606,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 326551732224,
       "memtableBytes": 40267776,
-      "sstableCount": 4866
+      "sstableCount": 4866,
+      "readSstables": 13
     },
     {
       "t": 1798416000000,
@@ -3256,7 +3616,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 327491256320,
       "memtableBytes": 7943680,
-      "sstableCount": 4880
+      "sstableCount": 4880,
+      "readSstables": 14
     },
     {
       "t": 1798502400000,
@@ -3265,7 +3626,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 328363671552,
       "memtableBytes": 42728448,
-      "sstableCount": 4893
+      "sstableCount": 4893,
+      "readSstables": 13
     },
     {
       "t": 1798588800000,
@@ -3274,7 +3636,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 329303195648,
       "memtableBytes": 10404352,
-      "sstableCount": 4907
+      "sstableCount": 4907,
+      "readSstables": 14
     },
     {
       "t": 1798675200000,
@@ -3283,7 +3646,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 330175610880,
       "memtableBytes": 45189120,
-      "sstableCount": 4920
+      "sstableCount": 4920,
+      "readSstables": 13
     },
     {
       "t": 1798761600000,
@@ -3292,7 +3656,8 @@
       "tombstoneBytes": 0,
       "diskBytes": 331115134976,
       "memtableBytes": 12865024,
-      "sstableCount": 4934
+      "sstableCount": 4934,
+      "readSstables": 14
     }
   ],
   "sstables": [

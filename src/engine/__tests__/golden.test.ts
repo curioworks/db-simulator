@@ -38,6 +38,11 @@ const m4Config: SimConfig = {
   compaction: { strategy: 'twcs', windowMs: 7 * 86_400_000 }, // 7d windows
 };
 
+const m5Config: SimConfig = {
+  ...m4Config,
+  queryWindowMs: 3 * 86_400_000, // read amp over a 3d query window
+};
+
 function checkGolden(name: string, config: SimConfig) {
   const goldenPath = fileURLToPath(new URL(`./golden/${name}.json`, import.meta.url));
   const actual = simulate(config);
@@ -70,5 +75,9 @@ describe('golden time series (fixed seed + config → exact committed output)', 
 
   it('M4: 30d TTL + deletes + TWCS 7d windows with 10d gc_grace, daily ticks × 365', () => {
     checkGolden('m4-twcs-ttl', m4Config);
+  });
+
+  it('M5: same TWCS run with a 3d query window for read amplification', () => {
+    checkGolden('m5-readamp', m5Config);
   });
 });

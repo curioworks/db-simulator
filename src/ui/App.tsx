@@ -2,8 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { buildSizeModel } from '../engine/profiler/rowSize.ts';
 import { presets, sensorBaseline } from '../presets/index.ts';
 import { clampScenario, toSimConfig, type ScenarioConfig } from '../presets/scenario.ts';
-import { ControlsPanel } from './ControlsPanel.tsx';
+import { ControlsPanel, formatQueryWindow } from './ControlsPanel.tsx';
 import { GrowthChart } from './GrowthChart.tsx';
+import { ReadAmpChart } from './ReadAmpChart.tsx';
 import { formatBytes, formatCount, formatDate } from './format.ts';
 import { useSimulation } from './useSimulation.ts';
 import { useTheme } from './theme.ts';
@@ -56,7 +57,8 @@ export function App() {
           <p>
             How a table grows on disk given a schema, write rate, TTL and compaction strategy.
             Try TWCS on a TTL'd table: a window sized to the TTL drops whole expired windows
-            daily, while a 30-day window strands weeks of expired data on disk.
+            daily, while a 30-day window strands weeks of expired data on disk. The read
+            amplification panel counts the SSTables one time-bounded read has to touch.
           </p>
         </header>
         <label className="field preset-field">
@@ -113,6 +115,11 @@ export function App() {
                   : 'no compaction'
             }
           />
+          <StatTile
+            label="Read amplification"
+            value={last ? formatCount(last.readSstables) : '—'}
+            sub={`SSTables per read, last ${formatQueryWindow(scenario.queryWindowHours)}`}
+          />
         </div>
 
         <div className="chart-card">
@@ -123,6 +130,16 @@ export function App() {
             )}
           </div>
           <GrowthChart snapshots={snapshots} theme={theme} running={running} />
+        </div>
+
+        <div className="chart-card">
+          <div className="chart-title">
+            <h2>Read amplification</h2>
+            <span className="chart-meta">
+              SSTables a read of the last {formatQueryWindow(scenario.queryWindowHours)} must touch
+            </span>
+          </div>
+          <ReadAmpChart snapshots={snapshots} theme={theme} running={running} />
         </div>
 
         <details className="table-view">
@@ -165,6 +182,7 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
           <th>Tombstones</th>
           <th>Total on disk</th>
           <th>SSTables</th>
+          <th>Read amp</th>
           <th>Memtable</th>
         </tr>
       </thead>
@@ -177,6 +195,7 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
             <td>{formatBytes(s.tombstoneBytes)}</td>
             <td>{formatBytes(s.diskBytes)}</td>
             <td>{formatCount(s.sstableCount)}</td>
+            <td>{formatCount(s.readSstables)}</td>
             <td>{formatBytes(s.memtableBytes)}</td>
           </tr>
         ))}

@@ -27,13 +27,16 @@ export const sensorBaseline: ScenarioConfig = {
   compaction: 'none',
   twcsWindowDays: 1,
   gcGraceDays: 10,
+  queryWindowHours: 24,
   seed: 42,
 };
 
 /**
  * The M2 classic mistake: a 7-day TTL "keeps the table small" — but without
  * compaction nothing is ever dropped. Live bytes plateau after a week while
- * the disk line keeps climbing. Expired ≠ deleted.
+ * the disk line keeps climbing. Expired ≠ deleted. Reads hurt too (M5): at
+ * ~69 flushes/day, a day-long query has to touch ~70 SSTables — the same
+ * read touches at most 9 once any compaction strategy is on.
  */
 export const ttlNoCompaction: ScenarioConfig = {
   name: 'TTL 7d, no compaction (expired ≠ deleted)',
@@ -49,6 +52,7 @@ export const ttlNoCompaction: ScenarioConfig = {
   compaction: 'none',
   twcsWindowDays: 1,
   gcGraceDays: 10,
+  queryWindowHours: 24,
   seed: 42,
 };
 

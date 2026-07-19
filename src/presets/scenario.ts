@@ -31,6 +31,8 @@ export interface ScenarioConfig {
   twcsWindowDays: number;
   /** gc_grace in days; gates purging of expired data and tombstones. */
   gcGraceDays: number;
+  /** How far back a typical read scans, in hours; drives the read-amp metric (M5). */
+  queryWindowHours: number;
   seed: number;
 }
 
@@ -59,6 +61,8 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
     compaction: s.compaction === 'stcs' || s.compaction === 'twcs' ? s.compaction : 'none',
     twcsWindowDays: Math.round(num(s.twcsWindowDays, 1, 365, 1)),
     gcGraceDays: num(s.gcGraceDays, 0, 365, 10),
+    // Pre-M5 links lack this; default to a day-long query.
+    queryWindowHours: Math.round(num(s.queryWindowHours, 1, 168, 24)),
     seed: Math.round(num(s.seed, 0, 2 ** 31, 42)),
     schema: {
       columns: s.schema.columns.slice(0, 32).map((c, i) => ({
@@ -92,6 +96,7 @@ export function toSimConfig(
     deleteRatePerSec: s.deleteRatePerSec,
     tombstoneRowBytes: sizeModel.tombstoneRowBytes,
     gcGraceMs: s.gcGraceDays * DAY_MS,
+    queryWindowMs: s.queryWindowHours * HOUR_MS,
     compaction:
       s.compaction === 'twcs'
         ? { strategy: 'twcs', windowMs: s.twcsWindowDays * DAY_MS }

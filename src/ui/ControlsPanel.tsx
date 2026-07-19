@@ -59,6 +59,15 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           }
           onChange={(deleteRatePerSec) => set({ deleteRatePerSec })}
         />
+        <SliderField
+          label="Query window"
+          value={scenario.queryWindowHours}
+          min={1}
+          max={168}
+          step={1}
+          display={`reads last ${formatQueryWindow(scenario.queryWindowHours)}`}
+          onChange={(queryWindowHours) => set({ queryWindowHours })}
+        />
         <label className="field">
           <span className="field-label">Tick resolution</span>
           <select
@@ -209,6 +218,12 @@ export function ControlsPanel({ scenario, onChange }: Props) {
       </section>
     </div>
   );
+}
+
+export function formatQueryWindow(hours: number): string {
+  if (hours === 24) return '1 day';
+  if (hours % 24 === 0) return `${hours / 24} days`;
+  return `${hours} h`;
 }
 
 interface SliderFieldProps {

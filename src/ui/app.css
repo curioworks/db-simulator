@@ -258,6 +258,10 @@ body {
   color: var(--muted);
 }
 
+.chart-empty-short {
+  height: 160px;
+}
+
 /* ── Legend ──────────────────────────────────────────── */
 
 .legend {

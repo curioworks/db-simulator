@@ -9,10 +9,9 @@ import {
   YAxis,
 } from 'recharts';
 import type { MetricsSnapshot } from '../engine/types.ts';
+import { spansYears, useChartPoints, useXTicks } from './chartData.ts';
 import { formatBytes, formatCount, formatDate, formatShortDate } from './format.ts';
 import type { Theme } from './theme.ts';
-
-const MAX_POINTS = 800;
 
 interface Series {
   key: 'liveBytes' | 'expiredBytes' | 'tombstoneBytes';
@@ -40,16 +39,7 @@ interface Props {
 }
 
 export function GrowthChart({ snapshots, theme, running }: Props) {
-  // Hourly ticks over years produce tens of thousands of points; the bands are
-  // monotone-smooth so a stride-downsample (always keeping the endpoint) is
-  // lossless at screen resolution.
-  const data = useMemo(() => {
-    const stride = Math.max(1, Math.ceil(snapshots.length / MAX_POINTS));
-    const out = snapshots.filter((_, i) => i % stride === 0);
-    const last = snapshots.at(-1);
-    if (last && out.at(-1) !== last) out.push(last);
-    return out;
-  }, [snapshots]);
+  const data = useChartPoints(snapshots);
 
   // A band that is zero across the whole run is omitted (with its legend
   // entry); the survivors keep their colors.
@@ -58,12 +48,7 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
     [theme, data],
   );
 
-  const xTicks = useMemo(() => {
-    if (data.length < 2) return undefined;
-    const t0 = data[0].t;
-    const t1 = data[data.length - 1].t;
-    return Array.from({ length: 6 }, (_, i) => t0 + ((t1 - t0) * i) / 5);
-  }, [data]);
+  const xTicks = useXTicks(data);
 
   // Clean Y ticks: round steps in binary byte units (…, 32, 64, 128 GiB) so
   // labels come out as "64 GB", never "79.2 GB".
@@ -75,7 +60,7 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
     return Array.from({ length: count + 1 }, (_, i) => i * step);
   }, [data]);
 
-  const spansYears = data.length > 1 && data[data.length - 1].t - data[0].t > 200 * 86_400_000;
+  const yearly = spansYears(data);
 
   if (data.length === 0) return <div className="chart-empty">Simulating…</div>;
 
@@ -92,7 +77,7 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
         </div>
       )}
       <ResponsiveContainer width="100%" height={360}>
-        <AreaChart data={data} margin={{ top: 8, right: 16, bottom: 0, left: 8 }}>
+        <AreaChart data={data} syncId="sim" margin={{ top: 8, right: 16, bottom: 0, left: 8 }}>
           <CartesianGrid vertical={false} stroke={theme.grid} strokeWidth={1} />
           <XAxis
             dataKey="t"
@@ -100,7 +85,7 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
             scale="linear"
             domain={['dataMin', 'dataMax']}
             ticks={xTicks}
-            tickFormatter={(t: number) => (spansYears ? formatDate(t) : formatShortDate(t))}
+            tickFormatter={(t: number) => (yearly ? formatDate(t) : formatShortDate(t))}
             tick={{ fill: theme.muted, fontSize: 12 }}
             tickLine={false}
             axisLine={{ stroke: theme.axis, strokeWidth: 1 }}
