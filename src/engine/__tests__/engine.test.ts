@@ -93,7 +93,15 @@ describe('simulate — write-only growth', () => {
     // flushes (~16 TB). The bound is loose to stay CI-safe; the O(ticks ×
     // SSTables) re-sum this guards against took >1s for half this load.
     const t0 = performance.now();
-    const big = simulate({ ...config, writeRatePerSec: 1000, tickMs: 86_400_000, ticks: 1825 });
+    const big = simulate({
+      ...config,
+      writeRatePerSec: 1000,
+      tickMs: 86_400_000,
+      ticks: 1825,
+      ttlMs: 7 * 86_400_000,
+      deleteRatePerSec: 100,
+      tombstoneRowBytes: 45,
+    });
     const elapsed = performance.now() - t0;
     expect(big.sstables.length).toBeGreaterThan(200_000);
     expect(elapsed).toBeLessThan(1000);

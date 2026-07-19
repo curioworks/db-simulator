@@ -34,6 +34,17 @@ export interface SimConfig {
    * compression and RF into every byte figure so all units line up.)
    */
   memtableFlushBytes: number;
+  /**
+   * Row TTL in ms; 0 or absent = no TTL. Data older than `now − ttlMs` counts
+   * as expired: still on disk (expired ≠ deleted), droppable only by a
+   * compaction that gets past the gc_grace gate (M3+). Data expires only once
+   * flushed; memtable residence (≪ any real TTL) is ignored.
+   */
+  ttlMs?: number;
+  /** Row deletions per second, cluster-wide; each writes one tombstone. 0/absent = none. */
+  deleteRatePerSec?: number;
+  /** Cluster-wide on-disk bytes per tombstone, from the size profiler. */
+  tombstoneRowBytes?: number;
 }
 
 /** Emitted once per tick, at the end of the tick. */

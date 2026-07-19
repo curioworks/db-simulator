@@ -14,6 +14,24 @@ import type { Theme } from './theme.ts';
 
 const MAX_POINTS = 800;
 
+interface Series {
+  key: 'liveBytes' | 'expiredBytes' | 'tombstoneBytes';
+  name: string;
+  color: string;
+}
+
+/**
+ * Colors follow the entity, never the series count: live/expired/tombstone
+ * hold categorical slots 1/2/3 whether or not a band is currently visible.
+ */
+function allSeries(theme: Theme): Series[] {
+  return [
+    { key: 'liveBytes', name: 'Live', color: theme.series1 },
+    { key: 'expiredBytes', name: 'Expired (not dropped)', color: theme.series2 },
+    { key: 'tombstoneBytes', name: 'Tombstones', color: theme.series3 },
+  ];
+}
+
 interface Props {
   snapshots: MetricsSnapshot[];
   theme: Theme;
@@ -22,9 +40,9 @@ interface Props {
 }
 
 export function GrowthChart({ snapshots, theme, running }: Props) {
-  // Hourly ticks over years produce tens of thousands of points; the line is
-  // monotone so a stride-downsample (always keeping the endpoint) is lossless
-  // at screen resolution.
+  // Hourly ticks over years produce tens of thousands of points; the bands are
+  // monotone-smooth so a stride-downsample (always keeping the endpoint) is
+  // lossless at screen resolution.
   const data = useMemo(() => {
     const stride = Math.max(1, Math.ceil(snapshots.length / MAX_POINTS));
     const out = snapshots.filter((_, i) => i % stride === 0);
@@ -32,6 +50,13 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
     if (last && out.at(-1) !== last) out.push(last);
     return out;
   }, [snapshots]);
+
+  // A band that is zero across the whole run is omitted (with its legend
+  // entry); the survivors keep their colors.
+  const series = useMemo(
+    () => allSeries(theme).filter((s) => data.some((d) => d[s.key] > 0)),
+    [theme, data],
+  );
 
   const xTicks = useMemo(() => {
     if (data.length < 2) return undefined;
@@ -56,6 +81,16 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
 
   return (
     <div className="chart-body" style={{ opacity: running ? 0.55 : 1 }}>
+      {series.length > 1 && (
+        <div className="legend">
+          {series.map((s) => (
+            <span className="legend-item" key={s.key}>
+              <span className="legend-swatch" style={{ background: s.color }} />
+              {s.name}
+            </span>
+          ))}
+        </div>
+      )}
       <ResponsiveContainer width="100%" height={360}>
         <AreaChart data={data} margin={{ top: 8, right: 16, bottom: 0, left: 8 }}>
           <CartesianGrid vertical={false} stroke={theme.grid} strokeWidth={1} />
@@ -81,21 +116,25 @@ export function GrowthChart({ snapshots, theme, running }: Props) {
           />
           <Tooltip
             cursor={{ stroke: theme.axis, strokeWidth: 1 }}
-            content={<GrowthTooltip theme={theme} />}
+            content={<GrowthTooltip series={series} />}
           />
-          <Area
-            dataKey="diskBytes"
-            name="On-disk size"
-            type="linear"
-            stroke={theme.series1}
-            strokeWidth={2}
-            strokeLinejoin="round"
-            strokeLinecap="round"
-            fill={theme.series1}
-            fillOpacity={0.1}
-            isAnimationActive={false}
-            activeDot={{ r: 4.5, fill: theme.series1, stroke: theme.surface, strokeWidth: 2 }}
-          />
+          {series.map((s) => (
+            <Area
+              key={s.key}
+              dataKey={s.key}
+              name={s.name}
+              stackId="disk"
+              type="linear"
+              stroke={s.color}
+              strokeWidth={2}
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              fill={s.color}
+              fillOpacity={0.1}
+              isAnimationActive={false}
+              activeDot={{ r: 4.5, fill: s.color, stroke: theme.surface, strokeWidth: 2 }}
+            />
+          ))}
         </AreaChart>
       </ResponsiveContainer>
     </div>
@@ -115,22 +154,31 @@ function niceByteStep(rough: number): number {
 }
 
 interface TooltipProps {
-  theme: Theme;
+  series: Series[];
   active?: boolean;
   payload?: Array<{ payload: MetricsSnapshot }>;
 }
 
-function GrowthTooltip({ theme, active, payload }: TooltipProps) {
+function GrowthTooltip({ series, active, payload }: TooltipProps) {
   if (!active || !payload?.length) return null;
   const s = payload[0].payload;
   return (
     <div className="tooltip">
       <div className="tooltip-date">{formatDate(s.t)}</div>
-      <div className="tooltip-row">
-        <span className="tooltip-key" style={{ background: theme.series1 }} />
-        <span className="tooltip-value">{formatBytes(s.diskBytes)}</span>
-        <span className="tooltip-label">on disk</span>
-      </div>
+      {series.map((sr) => (
+        <div className="tooltip-row" key={sr.key}>
+          <span className="tooltip-key" style={{ background: sr.color }} />
+          <span className="tooltip-value">{formatBytes(s[sr.key])}</span>
+          <span className="tooltip-label">{sr.name.toLowerCase()}</span>
+        </div>
+      ))}
+      {series.length > 1 && (
+        <div className="tooltip-row tooltip-total">
+          <span className="tooltip-key" />
+          <span className="tooltip-value">{formatBytes(s.diskBytes)}</span>
+          <span className="tooltip-label">total on disk</span>
+        </div>
+      )}
       <div className="tooltip-row tooltip-secondary">
         {formatCount(s.sstableCount)} SSTables · memtable {formatBytes(s.memtableBytes)}
       </div>

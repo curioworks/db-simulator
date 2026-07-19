@@ -21,6 +21,10 @@ export interface ScenarioConfig {
   /** Simulated horizon in days. */
   days: number;
   memtableFlushMiB: number;
+  /** Row TTL in days; 0 = no TTL. */
+  ttlDays: number;
+  /** Row deletions per second, cluster-wide (each writes a tombstone). */
+  deleteRatePerSec: number;
   seed: number;
 }
 
@@ -41,6 +45,9 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
     tickMs: s.tickMs === HOUR_MS ? HOUR_MS : DAY_MS,
     days: Math.round(num(s.days, 1, 3650, 365)),
     memtableFlushMiB: num(s.memtableFlushMiB, 1, 4096, 64),
+    // M1-era shared links lack these fields; default them to "off".
+    ttlDays: num(s.ttlDays, 0, 3650, 0),
+    deleteRatePerSec: num(s.deleteRatePerSec, 0, 1_000_000, 0),
     seed: Math.round(num(s.seed, 0, 2 ** 31, 42)),
     schema: {
       columns: s.schema.columns.slice(0, 32).map((c, i) => ({
@@ -58,14 +65,20 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
   };
 }
 
-export function toSimConfig(s: ScenarioConfig, onDiskRowBytes: number): SimConfig {
+export function toSimConfig(
+  s: ScenarioConfig,
+  sizeModel: { onDiskRowBytes: number; tombstoneRowBytes: number },
+): SimConfig {
   return {
     seed: s.seed,
     startTime: Date.UTC(2026, 0, 1),
     tickMs: s.tickMs,
     ticks: Math.max(1, Math.ceil((s.days * DAY_MS) / s.tickMs)),
     writeRatePerSec: s.writeRatePerSec,
-    onDiskRowBytes,
+    onDiskRowBytes: sizeModel.onDiskRowBytes,
     memtableFlushBytes: s.memtableFlushMiB * MiB,
+    ttlMs: s.ttlDays * DAY_MS,
+    deleteRatePerSec: s.deleteRatePerSec,
+    tombstoneRowBytes: sizeModel.tombstoneRowBytes,
   };
 }

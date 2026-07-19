@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { buildSizeModel } from '../engine/profiler/rowSize.ts';
-import { sensorBaseline } from '../presets/index.ts';
+import { presets, sensorBaseline } from '../presets/index.ts';
 import { clampScenario, toSimConfig, type ScenarioConfig } from '../presets/scenario.ts';
 import { ControlsPanel } from './ControlsPanel.tsx';
 import { GrowthChart } from './GrowthChart.tsx';
@@ -39,14 +39,14 @@ export function App() {
       }),
     [scenario],
   );
-  const simConfig = useMemo(
-    () => toSimConfig(scenario, sizeModel.onDiskRowBytes),
-    [scenario, sizeModel],
-  );
+  const simConfig = useMemo(() => toSimConfig(scenario, sizeModel), [scenario, sizeModel]);
   const { snapshots, running, elapsedMs } = useSimulation(simConfig);
 
   const last = snapshots.at(-1);
-  const ingestPerDay = scenario.writeRatePerSec * 86_400 * sizeModel.onDiskRowBytes;
+  const ingestPerDay =
+    scenario.writeRatePerSec * 86_400 * sizeModel.onDiskRowBytes +
+    scenario.deleteRatePerSec * 86_400 * sizeModel.tombstoneRowBytes;
+  const deadAtHorizon = last ? last.expiredBytes + last.tombstoneBytes : null;
 
   return (
     <div className="app">
@@ -54,11 +54,33 @@ export function App() {
         <header className="brand">
           <h1>Cassandra growth simulator</h1>
           <p>
-            How a table grows on disk given a schema, write rate and flush policy. M1: write-only
-            growth, no compaction yet.
+            How a table grows on disk given a schema, write rate, TTL and flush policy. No
+            compaction yet (M3) — expired data and tombstones never get dropped.
           </p>
         </header>
-        <ControlsPanel scenario={scenario} onChange={setScenario} />
+        <label className="field preset-field">
+          <span className="field-label">Preset</span>
+          <select
+            value={presets.some((p) => p.name === scenario.name) ? scenario.name : '__custom__'}
+            onChange={(e) => {
+              const preset = presets.find((p) => p.name === e.target.value);
+              if (preset) setScenario(preset);
+            }}
+          >
+            {presets.map((p) => (
+              <option key={p.name} value={p.name}>
+                {p.name}
+              </option>
+            ))}
+            {!presets.some((p) => p.name === scenario.name) && (
+              <option value="__custom__">Custom scenario</option>
+            )}
+          </select>
+        </label>
+        <ControlsPanel
+          scenario={scenario}
+          onChange={(next) => setScenario({ ...next, name: 'Custom scenario' })}
+        />
       </aside>
 
       <main className="main">
@@ -75,9 +97,14 @@ export function App() {
             sub={last ? formatDate(last.t) : ''}
           />
           <StatTile
+            label="Dead at horizon"
+            value={deadAtHorizon !== null ? formatBytes(deadAtHorizon) : '—'}
+            sub="expired + tombstones"
+          />
+          <StatTile
             label="SSTables"
             value={last ? formatCount(last.sstableCount) : '—'}
-            sub="no compaction (M1)"
+            sub="no compaction yet"
           />
         </div>
 
@@ -126,7 +153,10 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
       <thead>
         <tr>
           <th>Date</th>
-          <th>On disk</th>
+          <th>Live</th>
+          <th>Expired</th>
+          <th>Tombstones</th>
+          <th>Total on disk</th>
           <th>SSTables</th>
           <th>Memtable</th>
         </tr>
@@ -135,6 +165,9 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
         {rows.map((s) => (
           <tr key={s.t}>
             <td>{formatDate(s.t)}</td>
+            <td>{formatBytes(s.liveBytes)}</td>
+            <td>{formatBytes(s.expiredBytes)}</td>
+            <td>{formatBytes(s.tombstoneBytes)}</td>
             <td>{formatBytes(s.diskBytes)}</td>
             <td>{formatCount(s.sstableCount)}</td>
             <td>{formatBytes(s.memtableBytes)}</td>

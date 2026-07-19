@@ -3,13 +3,24 @@ import { noCompaction, type CompactionStrategy } from './compaction/strategy.ts'
 import type { MetricsSnapshot, SimConfig, SimResult, SSTable } from './types.ts';
 
 /**
- * Tick loop: accumulate memtable → flush at the threshold → run the compaction
- * strategy → emit a metrics snapshot. Writes arrive at a continuous constant
- * rate within a tick, so flush moments are interpolated to the exact ms; this
- * keeps minTs/maxTs honest for the time-windowed strategies later (TWCS).
+ * Tick loop: accumulate memtable → flush at the threshold → age data across
+ * TTL → run the compaction strategy → emit a metrics snapshot.
+ *
+ * Writes arrive at a continuous constant rate within a tick, so flush moments
+ * are interpolated to the exact ms; this keeps minTs/maxTs honest for the
+ * time-windowed strategies later (TWCS). Data + tombstone ingest share the
+ * memtable; each flushed SSTable splits its bytes by the two rates.
+ *
+ * TTL aging assumes data inside an SSTable is uniformly distributed over
+ * [minTs, maxTs] (true by construction: constant rate, contiguous spans). The
+ * expiry cutoff `now − ttl` therefore lands inside at most one SSTable, and a
+ * pointer over the time-ordered list makes aging amortized O(1) per tick.
  */
 export function simulate(config: SimConfig, strategy: CompactionStrategy = noCompaction): SimResult {
   const { startTime, tickMs, ticks, writeRatePerSec, onDiskRowBytes, memtableFlushBytes } = config;
+  const ttlMs = config.ttlMs ?? 0;
+  const deleteRatePerSec = config.deleteRatePerSec ?? 0;
+  const tombstoneRowBytes = config.tombstoneRowBytes ?? 0;
 
   if (tickMs <= 0) throw new RangeError(`tickMs must be > 0, got ${tickMs}`);
   if (!Number.isInteger(ticks) || ticks < 0) {
@@ -20,19 +31,27 @@ export function simulate(config: SimConfig, strategy: CompactionStrategy = noCom
   if (memtableFlushBytes <= 0) {
     throw new RangeError(`memtableFlushBytes must be > 0, got ${memtableFlushBytes}`);
   }
+  if (ttlMs < 0) throw new RangeError(`ttlMs must be ≥ 0, got ${ttlMs}`);
+  if (deleteRatePerSec < 0) throw new RangeError(`deleteRatePerSec must be ≥ 0, got ${deleteRatePerSec}`);
+  if (tombstoneRowBytes < 0) throw new RangeError(`tombstoneRowBytes must be ≥ 0, got ${tombstoneRowBytes}`);
 
   const rng = mulberry32(config.seed);
-  const bytesPerMs = (writeRatePerSec * onDiskRowBytes) / 1000;
+  const dataPerMs = (writeRatePerSec * onDiskRowBytes) / 1000;
+  const tombPerMs = (deleteRatePerSec * tombstoneRowBytes) / 1000;
+  const bytesPerMs = dataPerMs + tombPerMs;
+  const dataFrac = bytesPerMs > 0 ? dataPerMs / bytesPerMs : 0;
 
   let sstables: SSTable[] = [];
   let memtableBytes = 0;
   /** Timestamp of the oldest data sitting in the memtable; null when empty. */
   let memtableMinTs: number | null = null;
-  // Running totals over `sstables`, maintained incrementally: flushes add to
-  // them, and a full re-sum happens only on ticks where the strategy actually
-  // changed the set (signalled by returning a new array — see the
-  // CompactionStrategy contract). Re-summing every tick is O(ticks × SSTables)
-  // and blows the milliseconds budget at high write rates.
+  /** Index of the first SSTable that is not yet fully expired. */
+  let agePtr = 0;
+  // Running totals over `sstables`, maintained incrementally: flushes and
+  // aging apply deltas, and a full re-sum happens only on ticks where the
+  // strategy actually changed the set (signalled by returning a new array —
+  // see the CompactionStrategy contract). Re-summing every tick is
+  // O(ticks × SSTables) and blows the milliseconds budget at high write rates.
   let liveBytes = 0;
   let expiredBytes = 0;
   let tombstoneBytes = 0;
@@ -49,15 +68,18 @@ export function simulate(config: SimConfig, strategy: CompactionStrategy = noCom
     while (bytesPerMs > 0 && memtableBytes + remaining >= memtableFlushBytes) {
       const needed = memtableFlushBytes - memtableBytes;
       const flushAt = cursor + needed / bytesPerMs;
+      const flushLive = memtableFlushBytes * dataFrac;
+      const flushTomb = memtableFlushBytes - flushLive;
       sstables.push({
         createdAt: flushAt,
         minTs: memtableMinTs ?? cursor,
         maxTs: flushAt,
-        liveBytes: memtableFlushBytes,
+        liveBytes: flushLive,
         expiredBytes: 0,
-        tombstoneBytes: 0,
+        tombstoneBytes: flushTomb,
       });
-      liveBytes += memtableFlushBytes;
+      liveBytes += flushLive;
+      tombstoneBytes += flushTomb;
       remaining -= needed;
       cursor = flushAt;
       memtableBytes = 0;
@@ -68,16 +90,51 @@ export function simulate(config: SimConfig, strategy: CompactionStrategy = noCom
       memtableBytes += remaining;
     }
 
+    // Age flushed data across the TTL. SSTable spans are contiguous and
+    // time-ordered, so everything before agePtr is fully expired, the cutoff
+    // sits inside at most one SSTable, and each SSTable is fully expired
+    // exactly once — amortized O(flushes) across the whole run.
+    if (ttlMs > 0) {
+      const cutoff = tickEnd - ttlMs;
+      while (agePtr < sstables.length && sstables[agePtr].maxTs <= cutoff) {
+        const s = sstables[agePtr];
+        expiredBytes += s.liveBytes;
+        liveBytes -= s.liveBytes;
+        s.expiredBytes += s.liveBytes;
+        s.liveBytes = 0;
+        agePtr++;
+      }
+      if (agePtr < sstables.length) {
+        const s = sstables[agePtr];
+        if (s.minTs < cutoff) {
+          const dataTotal = s.liveBytes + s.expiredBytes;
+          const targetExpired = dataTotal * ((cutoff - s.minTs) / (s.maxTs - s.minTs));
+          const delta = targetExpired - s.expiredBytes;
+          if (delta > 0) {
+            s.expiredBytes = targetExpired;
+            s.liveBytes = dataTotal - targetExpired;
+            expiredBytes += delta;
+            liveBytes -= delta;
+          }
+        }
+      }
+    }
+
     const compacted = strategy.compact(sstables, { now: tickEnd, rng });
     if (compacted !== sstables) {
       sstables = [...compacted];
       liveBytes = 0;
       expiredBytes = 0;
       tombstoneBytes = 0;
-      for (const s of sstables) {
+      agePtr = sstables.length;
+      for (let j = sstables.length - 1; j >= 0; j--) {
+        const s = sstables[j];
         liveBytes += s.liveBytes;
         expiredBytes += s.expiredBytes;
         tombstoneBytes += s.tombstoneBytes;
+        // Aging is monotone over the time-ordered list, so fully-expired
+        // SSTables form a prefix; strategies must keep the list minTs-sorted.
+        if (s.liveBytes > 0) agePtr = j;
       }
     }
 

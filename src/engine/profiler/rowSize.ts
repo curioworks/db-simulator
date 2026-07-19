@@ -2,6 +2,8 @@ import type { SizeModel, SizeModelInput } from './types.ts';
 
 export const DEFAULT_CELL_OVERHEAD_BYTES = 12;
 export const DEFAULT_ROW_OVERHEAD_BYTES = 10;
+/** Deletion info on a row tombstone: markedForDeleteAt (8B) + localDeletionTime (4B). */
+export const TOMBSTONE_MARKER_BYTES = 12;
 
 /**
  * Manual-schema size model:
@@ -33,10 +35,13 @@ export function buildSizeModel(input: SizeModelInput): SizeModel {
     cellBytes += col.valueBytes + (col.cellOverheadBytes ?? DEFAULT_CELL_OVERHEAD_BYTES);
   }
 
-  const rawRowBytes =
-    cellBytes + schema.clusteringKeyBytes + (schema.rowOverheadBytes ?? DEFAULT_ROW_OVERHEAD_BYTES);
+  const rowOverhead = schema.rowOverheadBytes ?? DEFAULT_ROW_OVERHEAD_BYTES;
+  const rawRowBytes = cellBytes + schema.clusteringKeyBytes + rowOverhead;
   const compressedRowBytes = rawRowBytes * (1 - compressionRatio);
   const onDiskRowBytes = compressedRowBytes * replicationFactor;
 
-  return { rawRowBytes, compressedRowBytes, onDiskRowBytes };
+  const rawTombstoneBytes = schema.clusteringKeyBytes + rowOverhead + TOMBSTONE_MARKER_BYTES;
+  const tombstoneRowBytes = rawTombstoneBytes * (1 - compressionRatio) * replicationFactor;
+
+  return { rawRowBytes, compressedRowBytes, onDiskRowBytes, tombstoneRowBytes };
 }

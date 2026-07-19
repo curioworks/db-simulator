@@ -37,6 +37,28 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           display={scenario.days >= 365 ? `${(scenario.days / 365).toFixed(1)} years` : `${scenario.days} days`}
           onChange={(days) => set({ days })}
         />
+        <SliderField
+          label="Row TTL"
+          value={scenario.ttlDays}
+          min={0}
+          max={90}
+          step={1}
+          display={scenario.ttlDays === 0 ? 'off' : `${scenario.ttlDays} days`}
+          onChange={(ttlDays) => set({ ttlDays })}
+        />
+        <SliderField
+          label="Delete rate"
+          value={scenario.deleteRatePerSec}
+          min={0}
+          max={1000}
+          step={5}
+          display={
+            scenario.deleteRatePerSec === 0
+              ? 'none'
+              : `${scenario.deleteRatePerSec.toLocaleString('en-US')} rows/s`
+          }
+          onChange={(deleteRatePerSec) => set({ deleteRatePerSec })}
+        />
         <label className="field">
           <span className="field-label">Tick resolution</span>
           <select

@@ -36,4 +36,10 @@ export interface SizeModel {
   compressedRowBytes: number;
   /** Cluster-wide on-disk bytes per row: compressed × RF. */
   onDiskRowBytes: number;
+  /**
+   * Cluster-wide on-disk bytes of one row-deletion tombstone: clustering key +
+   * row overhead + deletion marker, compressed × RF. No cell values — a
+   * tombstone is a marker, not data.
+   */
+  tombstoneRowBytes: number;
 }

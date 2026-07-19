@@ -10,6 +10,8 @@ export interface Theme {
   grid: string;
   axis: string;
   series1: string;
+  series2: string;
+  series3: string;
   border: string;
 }
 
@@ -22,6 +24,8 @@ export const lightTheme: Theme = {
   grid: '#e1e0d9',
   axis: '#c3c2b7',
   series1: '#2a78d6',
+  series2: '#008300',
+  series3: '#e87ba4',
   border: 'rgba(11,11,11,0.10)',
 };
 
@@ -34,6 +38,8 @@ export const darkTheme: Theme = {
   grid: '#2c2c2a',
   axis: '#383835',
   series1: '#3987e5',
+  series2: '#008300',
+  series3: '#d55181',
   border: 'rgba(255,255,255,0.10)',
 };
 
