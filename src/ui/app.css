@@ -9,6 +9,16 @@
   --axis: #c3c2b7;
   --series-1: #2a78d6;
   --border: rgba(11, 11, 11, 0.1);
+  /* Status palette — fixed, never themed, and deliberately distinct from the
+     series slots so a status colour can never impersonate a series. Used as
+     marks only: warning is 1.79:1 on this surface, fine for a badge and
+     unreadable as text, so every label stays in an ink token. */
+  --status-ok: #0ca30c;
+  --status-warn: #fab219;
+  --status-fatal: #d03b3b;
+  --status-ok-ink: #0b0b0b;
+  --status-warn-ink: #0b0b0b;
+  --status-fatal-ink: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -213,6 +223,94 @@ body {
 }
 
 .tile-sub {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ── Verdicts ────────────────────────────────────────── */
+
+.verdicts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+  transition: opacity 120ms ease;
+}
+
+.verdict {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--status);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.verdict-ok {
+  --status: var(--status-ok);
+  --status-ink: var(--status-ok-ink);
+}
+
+.verdict-warn {
+  --status: var(--status-warn);
+  --status-ink: var(--status-warn-ink);
+}
+
+.verdict-fatal {
+  --status: var(--status-fatal);
+  --status-ink: var(--status-fatal-ink);
+}
+
+.verdict-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* The glyph takes its contrast from the badge behind it, not from the page —
+   that is what keeps the yellow warning state legible. */
+.verdict-badge {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--status);
+  color: var(--status-ink);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.verdict-level {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.verdict-title {
+  color: var(--ink2);
+  font-size: 12.5px;
+  margin-left: auto;
+}
+
+.verdict-headline {
+  font-size: 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin-top: 2px;
+}
+
+.verdict-detail {
+  color: var(--ink2);
+  font-size: 12.5px;
+}
+
+.verdict-fix {
   color: var(--muted);
   font-size: 12px;
   margin-top: 2px;

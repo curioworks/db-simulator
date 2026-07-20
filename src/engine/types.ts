@@ -69,6 +69,18 @@ export interface SimConfig {
    * in every snapshot are 0 and `SimResult.skew` is undefined.
    */
   skew?: SkewConfig;
+  /**
+   * Per-node compaction throughput cap in bytes/sec — Cassandra's
+   * `compaction_throughput` (4.x default: 64 MiB/s). The engine itself still
+   * compacts unthrottled; the cap only drives the backlog queue that decides
+   * the saturation verdict (M7). Absent or 0 = uncapped, backlog stays empty.
+   */
+  compactionThroughputBytesPerSec?: number;
+  /**
+   * Usable disk per node in bytes, for the disk-exhaustion verdict (M7).
+   * Absent or 0 = unbounded, verdict always ok.
+   */
+  diskPerNodeBytes?: number;
 }
 
 /**
@@ -157,6 +169,14 @@ export interface MetricsSnapshot {
   maxPartitionBytes: number;
   /** On-disk bytes on the fullest node (M6). 0 without a skew config. */
   hotNodeBytes: number;
+  /** Bytes compaction wrote this tick, cluster-wide (M7). 0 without compaction. */
+  compactionBytes: number;
+  /**
+   * Compaction the fullest node owes but the throughput cap has not paid off
+   * (M7), in bytes. Stays 0 without a cap or a skew config. A queue that never
+   * returns to 0 is the saturation verdict's evidence.
+   */
+  compactionBacklogBytes: number;
 }
 
 export interface SimResult {
@@ -165,4 +185,99 @@ export interface SimResult {
   sstables: SSTable[];
   /** Resolved skew model — weights and replica placement (M6); undefined without a skew config. */
   skew?: SkewModel;
+  /** Failure verdicts with the date each threshold was first crossed (M7). */
+  verdicts: Verdict[];
 }
+
+/**
+ * Failure verdicts (M7): three ways a cluster is mathematically bound to
+ * fail, each a threshold with a date. `ok` is a real answer — it means the
+ * metric never reached its warn line inside the simulated horizon, not that
+ * the check was skipped.
+ */
+export type VerdictLevel = 'ok' | 'warn' | 'fatal';
+
+export type VerdictId = 'wide-partition' | 'compaction-saturation' | 'disk-asymmetry';
+
+/** The moment a metric first reached a threshold. */
+export interface VerdictCrossing {
+  /** Epoch ms of the first snapshot at or past the threshold. */
+  at: number;
+  /** Whole days from the start of the simulation. */
+  day: number;
+  /** The metric's value at that snapshot. */
+  value: number;
+  /** The threshold it reached. */
+  threshold: number;
+}
+
+interface VerdictBase {
+  level: VerdictLevel;
+  /** The deciding metric at the horizon, in this verdict's own unit. */
+  value: number;
+  /**
+   * The metric's maximum anywhere in the run, same unit. Not decoration: an
+   * STCS sawtooth can peak at twice its horizon value, so a cluster that reads
+   * as half full at the end of the run spent every cycle running out of disk.
+   * `value` alone would hide that; the verdict is decided on the peak.
+   */
+  peak: number;
+  /** The warn line the metric is read against, same unit — shown even when ok. */
+  limit: number;
+  warn: VerdictCrossing | null;
+  fatal: VerdictCrossing | null;
+}
+
+/**
+ * Cassandra degrades past ~100 MB in a single partition (repair, read and
+ * compaction all materialize a partition at a time) and falls over in the
+ * multi-GB range. Measured per replica, which is how the guidance is stated.
+ */
+export interface WidePartitionVerdict extends VerdictBase {
+  id: 'wide-partition';
+  /** Partitions the writes spread over — the lever that fixes this verdict. */
+  partitionCount: number;
+}
+
+/**
+ * Compaction is a queue: work arrives at `ingest × writeAmp` and drains at
+ * the throughput cap. ρ > 1 means the backlog grows without bound — no
+ * amount of time lets it catch up, so the crossing day is a hard date.
+ */
+export interface CompactionSaturationVerdict extends VerdictBase {
+  id: 'compaction-saturation';
+  /** Fullest node — the most write-loaded, so the first to saturate. */
+  node: number;
+  /** That node's sustained compaction write rate over the final quarter, bytes/s. */
+  writeRateBytesPerSec: number;
+  /** The per-node cap it drains at, bytes/s. */
+  capBytesPerSec: number;
+  /** Backlog still queued at the horizon, bytes. */
+  backlogBytes: number;
+  /**
+   * Whether a compaction strategy is running at all. Without one the queue is
+   * trivially empty, which is not the same answer as "compaction keeps up" —
+   * that cluster fails on read amplification instead.
+   */
+  compacting: boolean;
+}
+
+/**
+ * The cluster average stays healthy while one replica fills: skew puts more
+ * of the data on whichever nodes own the hot partitions' token ranges.
+ */
+export interface DiskAsymmetryVerdict extends VerdictBase {
+  id: 'disk-asymmetry';
+  /** Fullest node. */
+  node: number;
+  /**
+   * Cluster-average bytes per node **at the tick the hot node peaked** — the
+   * reassuring number, measured at the same moment so the gap between it and
+   * `peak` is real asymmetry rather than the sawtooth.
+   */
+  averageBytes: number;
+  /** Usable disk per node. */
+  capacityBytes: number;
+}
+
+export type Verdict = WidePartitionVerdict | CompactionSaturationVerdict | DiskAsymmetryVerdict;

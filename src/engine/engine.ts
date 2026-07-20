@@ -3,6 +3,7 @@ import { noCompaction, type CompactionStrategy } from './compaction/strategy.ts'
 import { createStcs } from './compaction/stcs.ts';
 import { createTwcs } from './compaction/twcs.ts';
 import { buildSkewModel } from './skew.ts';
+import { computeVerdicts } from './verdicts.ts';
 import type { MetricsSnapshot, SimConfig, SimResult, SSTable } from './types.ts';
 
 /**
@@ -28,6 +29,7 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   const tombstoneRowBytes = config.tombstoneRowBytes ?? 0;
   const gcGraceMs = config.gcGraceMs ?? 0;
   const queryWindowMs = config.queryWindowMs ?? 86_400_000;
+  const compactionCapPerSec = config.compactionThroughputBytesPerSec ?? 0;
   // An explicit strategy argument (tests, custom strategies) wins over the
   // serializable spec that arrives through the worker boundary.
   strategy ??=
@@ -51,6 +53,12 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   if (tombstoneRowBytes < 0) throw new RangeError(`tombstoneRowBytes must be ≥ 0, got ${tombstoneRowBytes}`);
   if (gcGraceMs < 0) throw new RangeError(`gcGraceMs must be ≥ 0, got ${gcGraceMs}`);
   if (queryWindowMs <= 0) throw new RangeError(`queryWindowMs must be > 0, got ${queryWindowMs}`);
+  if (compactionCapPerSec < 0) {
+    throw new RangeError(`compactionThroughputBytesPerSec must be ≥ 0, got ${compactionCapPerSec}`);
+  }
+  if ((config.diskPerNodeBytes ?? 0) < 0) {
+    throw new RangeError(`diskPerNodeBytes must be ≥ 0, got ${config.diskPerNodeBytes}`);
+  }
 
   const rng = mulberry32(config.seed);
   // Skew (M6): with constant write shares and one uniform TTL, every
@@ -89,6 +97,22 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   // mirror; those ticks are already O(n) by the strategy contract.
   let maxTsSorted: number[] = [];
   let queryPtr = 0;
+  // Compaction saturation (M7): a shadow queue beside the simulation. The
+  // strategy above still compacts unthrottled and instantly — the disk line
+  // shows what a cluster that kept up would look like — while this queue
+  // measures whether it could have. Work arrives as the bytes each merge
+  // writes and drains at the per-node cap; a queue that never empties again
+  // is a cluster that never recovers.
+  //
+  // The fullest node is also the most write-loaded: constant shares and one
+  // uniform TTL make a node's share of writes and its share of disk the same
+  // fraction (see SkewModel), so hotNodeFrac serves both.
+  const capPerTick = (compactionCapPerSec * tickMs) / 1000;
+  let backlogBytes = 0;
+  let tickCompactionBytes = 0;
+  const onWrite = (bytes: number) => {
+    tickCompactionBytes += bytes;
+  };
   const snapshots: MetricsSnapshot[] = [];
 
   for (let i = 0; i < ticks; i++) {
@@ -157,7 +181,8 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
       }
     }
 
-    const compacted = strategy.compact(sstables, { now: tickEnd, ttlMs, gcGraceMs, rng });
+    tickCompactionBytes = 0;
+    const compacted = strategy.compact(sstables, { now: tickEnd, ttlMs, gcGraceMs, rng, onWrite });
     if (compacted !== sstables) {
       sstables = [...compacted];
       liveBytes = 0;
@@ -181,6 +206,10 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     const queryCutoff = tickEnd - queryWindowMs;
     while (queryPtr < maxTsSorted.length && maxTsSorted[queryPtr] < queryCutoff) queryPtr++;
 
+    if (capPerTick > 0) {
+      backlogBytes = Math.max(0, backlogBytes + hotNodeFrac * tickCompactionBytes - capPerTick);
+    }
+
     const diskBytes = liveBytes + expiredBytes + tombstoneBytes;
     snapshots.push({
       t: tickEnd,
@@ -193,8 +222,10 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
       readSstables: maxTsSorted.length - queryPtr,
       maxPartitionBytes: maxPartitionFrac * diskBytes,
       hotNodeBytes: hotNodeFrac * diskBytes,
+      compactionBytes: tickCompactionBytes,
+      compactionBacklogBytes: backlogBytes,
     });
   }
 
-  return { snapshots, sstables, skew };
+  return { snapshots, sstables, skew, verdicts: computeVerdicts(snapshots, config, skew) };
 }

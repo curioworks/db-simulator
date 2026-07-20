@@ -177,7 +177,11 @@ export function createStcs(tuning: StcsTuning = {}): CompactionStrategy {
         const picked = new Set(mergeSet);
         const next = current.filter((s) => !picked.has(s));
         const merged = mergeSSTables(mergeSet, ctx);
-        if (merged !== null) next.push(merged);
+        if (merged !== null) {
+          // Every cascade step is real I/O, so report each one (M7 write amp).
+          ctx.onWrite?.(sizeOf(merged));
+          next.push(merged);
+        }
         next.sort((a, b) => a.minTs - b.minTs || a.createdAt - b.createdAt);
         current = next;
       }

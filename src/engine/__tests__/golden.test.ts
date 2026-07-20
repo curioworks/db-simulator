@@ -55,6 +55,15 @@ const m6Config: SimConfig = {
   },
 };
 
+const m7Config: SimConfig = {
+  ...m6Config,
+  // A throughput cap the workload saturates and a node disk it crowds, so the
+  // golden pins real crossings rather than three ok verdicts — and lands one
+  // verdict on each level: fatal, fatal, warn.
+  compactionThroughputBytesPerSec: 4096,
+  diskPerNodeBytes: 10 * 1024 * 1024 * 1024,
+};
+
 function checkGolden(name: string, config: SimConfig) {
   const goldenPath = fileURLToPath(new URL(`./golden/${name}.json`, import.meta.url));
   const actual = simulate(config);
@@ -71,6 +80,7 @@ function checkGolden(name: string, config: SimConfig) {
   expect(actual.snapshots).toEqual(golden.snapshots);
   expect(actual.sstables).toEqual(golden.sstables);
   expect(actual.skew).toEqual(golden.skew);
+  expect(actual.verdicts).toEqual(golden.verdicts);
 }
 
 describe('golden time series (fixed seed + config → exact committed output)', () => {
@@ -96,5 +106,9 @@ describe('golden time series (fixed seed + config → exact committed output)', 
 
   it('M6: same run with Zipf 1.1 skew over 10K partitions on a 6-node RF-3 ring', () => {
     checkGolden('m6-skew', m6Config);
+  });
+
+  it('M7: same run under a compaction cap and a node disk it outgrows', () => {
+    checkGolden('m7-verdicts', m7Config);
   });
 });

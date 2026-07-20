@@ -77,7 +77,12 @@ export function createTwcs(tuning: TwcsTuning = {}): CompactionStrategy {
         }
         changed = true;
         const merged = mergeSSTables(tables, ctx);
-        if (merged !== null) next.push(merged);
+        if (merged !== null) {
+          // The per-window major. Move 1's whole-table drops write nothing —
+          // that is exactly why TWCS costs less compaction I/O than STCS.
+          ctx.onWrite?.(merged.liveBytes + merged.expiredBytes + merged.tombstoneBytes);
+          next.push(merged);
+        }
       }
 
       const compactedCurrent = stcs.compact(currentTables, ctx);

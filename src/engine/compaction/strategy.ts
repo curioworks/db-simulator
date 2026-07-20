@@ -9,6 +9,14 @@ export interface CompactionContext {
   /** gc_grace in ms; gates purging of expired data and tombstones. */
   gcGraceMs: number;
   rng: PRNG;
+  /**
+   * Report the bytes each merge writes out (M7 write amplification). Called
+   * once per merge, not once per tick: a strategy that cascades several merges
+   * within one tick did all that I/O, and diffing the tick's input and output
+   * sets would miss every intermediate table. Optional — a strategy that never
+   * calls it simply reports no compaction work.
+   */
+  onWrite?(bytes: number): void;
 }
 
 /**

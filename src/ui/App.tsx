@@ -6,6 +6,7 @@ import { ControlsPanel, formatPartitionCount, formatQueryWindow } from './Contro
 import { GrowthChart } from './GrowthChart.tsx';
 import { NodeChart } from './NodeChart.tsx';
 import { ReadAmpChart } from './ReadAmpChart.tsx';
+import { VerdictPanel } from './VerdictPanel.tsx';
 import { formatBytes, formatCount, formatDate } from './format.ts';
 import { useSimulation } from './useSimulation.ts';
 import { useTheme } from './theme.ts';
@@ -42,7 +43,7 @@ export function App() {
     [scenario],
   );
   const simConfig = useMemo(() => toSimConfig(scenario, sizeModel), [scenario, sizeModel]);
-  const { snapshots, skew, running, elapsedMs } = useSimulation(simConfig);
+  const { snapshots, skew, verdicts, running, elapsedMs } = useSimulation(simConfig);
 
   const last = snapshots.at(-1);
   // Both figures must come from the same simulation: while a re-sim is in
@@ -66,7 +67,10 @@ export function App() {
             daily, while a 30-day window strands weeks of expired data on disk. The read
             amplification panel counts the SSTables one time-bounded read has to touch. Turn
             up write skew and watch the hottest partition swell while the fullest node pulls
-            away from a cluster average that still looks healthy.
+            away from a cluster average that still looks healthy. The verdicts up top turn all
+            of that into three dates: when the hottest partition passes the cliff, when
+            compaction stops being able to catch up, and when the fullest node runs out of
+            disk.
           </p>
         </header>
         <label className="field preset-field">
@@ -95,6 +99,8 @@ export function App() {
       </aside>
 
       <main className="main">
+        <VerdictPanel verdicts={verdicts} running={running} />
+
         <div className="tiles">
           <StatTile
             label="Row on disk"
@@ -222,6 +228,8 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
           <th>Read amp</th>
           <th>Hot partition</th>
           <th>Fullest node</th>
+          <th>Compacted</th>
+          <th>Backlog</th>
           <th>Memtable</th>
         </tr>
       </thead>
@@ -237,6 +245,8 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
             <td>{formatCount(s.readSstables)}</td>
             <td>{formatBytes(s.maxPartitionBytes)}</td>
             <td>{formatBytes(s.hotNodeBytes)}</td>
+            <td>{formatBytes(s.compactionBytes)}</td>
+            <td>{formatBytes(s.compactionBacklogBytes)}</td>
             <td>{formatBytes(s.memtableBytes)}</td>
           </tr>
         ))}

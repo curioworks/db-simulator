@@ -46,6 +46,8 @@ describe('simulate — write-only growth', () => {
       readSstables: 0,
       maxPartitionBytes: 0,
       hotNodeBytes: 0,
+      compactionBytes: 0,
+      compactionBacklogBytes: 0,
     });
 
     expect(snapshots[1].diskBytes).toBe(FLUSH);

@@ -1,5 +1,6 @@
 import type { ColumnSpec } from '../engine/profiler/types.ts';
 import { DAY_MS, HOUR_MS, type ScenarioConfig } from '../presets/scenario.ts';
+import { formatBytes } from './format.ts';
 
 interface Props {
   scenario: ScenarioConfig;
@@ -127,6 +128,15 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           </select>
         </label>
         <SliderField
+          label="Disk per node"
+          value={Math.log2(scenario.diskPerNodeGiB)}
+          min={6}
+          max={14}
+          step={0.25}
+          display={formatDiskPerNode(scenario.diskPerNodeGiB)}
+          onChange={(log) => set({ diskPerNodeGiB: roundDiskGiB(2 ** log) })}
+        />
+        <SliderField
           label="Compression savings"
           value={scenario.compressionRatio}
           min={0}
@@ -164,6 +174,17 @@ export function ControlsPanel({ scenario, onChange }: Props) {
             step={1}
             display={scenario.twcsWindowDays === 1 ? '1 day' : `${scenario.twcsWindowDays} days`}
             onChange={(twcsWindowDays) => set({ twcsWindowDays })}
+          />
+        )}
+        {scenario.compaction !== 'none' && (
+          <SliderField
+            label="Compaction throughput"
+            value={scenario.compactionMiBPerSec}
+            min={1}
+            max={256}
+            step={1}
+            display={`${scenario.compactionMiBPerSec} MiB/s per node`}
+            onChange={(compactionMiBPerSec) => set({ compactionMiBPerSec })}
           />
         )}
         {scenario.compaction !== 'none' && (
@@ -271,6 +292,24 @@ export function formatPartitionCount(n: number): string {
   if (n >= 1_000_000) return `${parseFloat((n / 1_000_000).toFixed(1))}M keys`;
   if (n >= 1_000) return `${parseFloat((n / 1_000).toFixed(1))}K keys`;
   return `${n} keys`;
+}
+
+/**
+ * The disk slider is logarithmic (64 GiB → 16 TiB), so snap to the round
+ * capacities people actually buy rather than to 2^13.25 = 9,742 GiB.
+ */
+function roundDiskGiB(raw: number): number {
+  const magnitude = 2 ** Math.floor(Math.log2(raw));
+  return Math.round(Math.round(raw / (magnitude / 4)) * (magnitude / 4));
+}
+
+/**
+ * Formatted through formatBytes so the slider and the disk verdict name the
+ * same capacity the same way — "3 TB per node" in both places, not "3 TiB"
+ * here and "3 TB" there.
+ */
+export function formatDiskPerNode(giB: number): string {
+  return `${formatBytes(giB * 1024 * 1024 * 1024)} per node`;
 }
 
 /** Zipf exponent → what it means for the hot end of the key distribution. */

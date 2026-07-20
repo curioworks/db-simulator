@@ -39,6 +39,10 @@ export interface ScenarioConfig {
   skewExponent: number;
   /** Nodes on the token ring (M6); always ≥ replicationFactor. */
   nodes: number;
+  /** Usable disk per node in GiB (M7) — the disk-exhaustion verdict's limit. */
+  diskPerNodeGiB: number;
+  /** Per-node compaction throughput cap in MiB/s (M7); Cassandra 4.x default 64. */
+  compactionMiBPerSec: number;
   seed: number;
 }
 
@@ -83,6 +87,10 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
     partitionCount: Math.round(num(s.partitionCount, 1, 100_000_000, 100_000)),
     skewExponent: num(s.skewExponent, 0, 2, 0.3),
     nodes: Math.max(replicationFactor, Math.round(num(s.nodes, 1, 64, 6))),
+    // Pre-M7 links lack these; default to a 1 TiB node running Cassandra
+    // 4.x's stock compaction_throughput.
+    diskPerNodeGiB: Math.round(num(s.diskPerNodeGiB, 16, 65_536, 1024)),
+    compactionMiBPerSec: Math.round(num(s.compactionMiBPerSec, 1, 1024, 64)),
     seed: Math.round(num(s.seed, 0, 2 ** 31, 42)),
     schema: {
       columns: s.schema.columns.slice(0, 32).map((c, i) => ({
@@ -124,6 +132,8 @@ export function toSimConfig(
       nodes: s.nodes,
       replicationFactor: Math.min(s.replicationFactor, s.nodes),
     },
+    diskPerNodeBytes: s.diskPerNodeGiB * 1024 * MiB,
+    compactionThroughputBytesPerSec: s.compactionMiBPerSec * MiB,
     compaction:
       s.compaction === 'twcs'
         ? { strategy: 'twcs', windowMs: s.twcsWindowDays * DAY_MS }

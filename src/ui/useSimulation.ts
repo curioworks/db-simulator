@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import type { MetricsSnapshot, SimConfig, SkewModel } from '../engine/types.ts';
+import type { MetricsSnapshot, SimConfig, SkewModel, Verdict } from '../engine/types.ts';
 import type { SimRequest, SimResponse } from '../worker/protocol.ts';
 
 export interface SimulationState {
   snapshots: MetricsSnapshot[];
   /** Zipf weights + replica placement behind the per-node view (M6). */
   skew?: SkewModel;
+  /** Failure verdicts for the simulated config (M7). */
+  verdicts: Verdict[];
   /** True while a newer config is being simulated; keep the previous frame. */
   running: boolean;
   elapsedMs: number | null;
@@ -22,6 +24,7 @@ export function useSimulation(config: SimConfig): SimulationState {
   const requestId = useRef(0);
   const [state, setState] = useState<SimulationState>({
     snapshots: [],
+    verdicts: [],
     running: true,
     elapsedMs: null,
   });
@@ -35,6 +38,7 @@ export function useSimulation(config: SimConfig): SimulationState {
       setState({
         snapshots: e.data.snapshots,
         skew: e.data.skew,
+        verdicts: e.data.verdicts,
         running: false,
         elapsedMs: e.data.elapsedMs,
       });

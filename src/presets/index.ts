@@ -31,6 +31,8 @@ export const sensorBaseline: ScenarioConfig = {
   partitionCount: 100_000,
   skewExponent: 0.3,
   nodes: 6,
+  diskPerNodeGiB: 1024,
+  compactionMiBPerSec: 64,
   seed: 42,
 };
 
@@ -59,6 +61,8 @@ export const ttlNoCompaction: ScenarioConfig = {
   partitionCount: 100_000,
   skewExponent: 0.3,
   nodes: 6,
+  diskPerNodeGiB: 1024,
+  compactionMiBPerSec: 64,
   seed: 42,
 };
 
@@ -118,6 +122,62 @@ export const hotPartitions: ScenarioConfig = {
   nodes: 6,
 };
 
+/**
+ * The M7 mistake: compaction_throughput throttled to protect read latency,
+ * on a workload big enough that it can never catch up. 2 KB events at 3,500
+ * rows/s put 1.8 MB/s of new data on each node; STCS rewrites every byte ~5
+ * times over its life, so each node owes ~9.7 MB/s of compaction against an
+ * 8 MiB/s cap. ρ = 1.15, and a queue with ρ > 1 has no steady state — the
+ * backlog passes 8 TB by the horizon and would keep going.
+ *
+ * The disk line is the trap. It reads as a healthy 1.25 TB per node at the
+ * horizon, but STCS's lumpy reclaim swings it to 2.5 TB — 83% of the disk —
+ * every cycle, while the cluster average sits at 42%. Alert on the horizon
+ * value and you never see it; alert on the peak and you do.
+ *
+ * No single slider fixes both, which is the lesson. TWCS windows sized to the
+ * TTL drop whole windows instead of rewriting them and cut the compaction
+ * bill from 9.2 to 6.4 MiB/s — but that is still ρ 0.80, a warning, even
+ * though it halves the disk to 3.48 TB and clears the disk verdict. Raising
+ * the cap to Cassandra's stock 64 MiB/s takes ρ to 0.14 and leaves the disk
+ * peak exactly where it was. Doubling the ring to 12 nodes is the only single
+ * move that clears both (ρ 0.57, peak 42%), because it is the only one that
+ * divides the per-node load rather than the per-node work.
+ */
+export const compactionThrottled: ScenarioConfig = {
+  name: 'Compaction throttled (backlog never drains)',
+  schema: {
+    columns: [
+      { name: 'event_id', valueBytes: 16, cellOverheadBytes: 12 },
+      { name: 'payload', valueBytes: 2048, cellOverheadBytes: 12 },
+    ],
+    clusteringKeyBytes: 8,
+    rowOverheadBytes: 10,
+  },
+  compressionRatio: 0.5,
+  replicationFactor: 3,
+  writeRatePerSec: 3500,
+  tickMs: HOUR_MS,
+  days: 90,
+  // A big memtable is what keeps a 28 TB-per-month workload inside the
+  // milliseconds budget: sim cost tracks the flush count, not the byte count.
+  memtableFlushMiB: 512,
+  ttlDays: 3,
+  deleteRatePerSec: 0,
+  compaction: 'stcs',
+  twcsWindowDays: 1,
+  gcGraceDays: 1,
+  queryWindowHours: 24,
+  // Enough keys that the partition verdict stays quiet — this preset is about
+  // compaction, not the schema.
+  partitionCount: 10_000_000,
+  skewExponent: 0.3,
+  nodes: 6,
+  diskPerNodeGiB: 3072,
+  compactionMiBPerSec: 8,
+  seed: 42,
+};
+
 export const presets: ScenarioConfig[] = [
   sensorBaseline,
   ttlNoCompaction,
@@ -125,4 +185,5 @@ export const presets: ScenarioConfig[] = [
   ttlTwcsWide,
   ttlTwcsTuned,
   hotPartitions,
+  compactionThrottled,
 ];
