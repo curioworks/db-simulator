@@ -3,6 +3,7 @@ import { noCompaction, type CompactionStrategy } from './compaction/strategy.ts'
 import { createStcs } from './compaction/stcs.ts';
 import { createTwcs } from './compaction/twcs.ts';
 import { buildSkewModel } from './skew.ts';
+import { createSubSharder, type ShardTick } from './subshard.ts';
 import { computeVerdicts } from './verdicts.ts';
 import type { MetricsSnapshot, SimConfig, SimResult, SSTable } from './types.ts';
 
@@ -64,9 +65,21 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   // Skew (M6): with constant write shares and one uniform TTL, every
   // partition holds exactly its share of the totals at all times, so the
   // per-tick figures are two fixed fractions of diskBytes (see SkewModel).
+  // Sub-sharding (M8) is what makes a share stop being constant, so the
+  // figures come from the sub-sharder — which collapses back to exactly those
+  // two fractions when the mitigation is off.
   const skew = config.skew ? buildSkewModel(config.skew, config.seed) : undefined;
-  const maxPartitionFrac = skew && config.skew ? skew.hotWeights[0] / config.skew.replicationFactor : 0;
-  const hotNodeFrac = skew ? Math.max(...skew.nodeShare) : 0;
+  const sharder =
+    skew && config.skew
+      ? createSubSharder(config.skew, skew, config.seed, startTime)
+      : undefined;
+  const noSkew: ShardTick = {
+    maxPartitionBytes: 0,
+    hotNodeBytes: 0,
+    hotNode: 0,
+    hotNodeFrac: 0,
+    hotPartitionShards: 1,
+  };
   const dataPerMs = (writeRatePerSec * onDiskRowBytes) / 1000;
   const tombPerMs = (deleteRatePerSec * tombstoneRowBytes) / 1000;
   const bytesPerMs = dataPerMs + tombPerMs;
@@ -106,7 +119,9 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   //
   // The fullest node is also the most write-loaded: constant shares and one
   // uniform TTL make a node's share of writes and its share of disk the same
-  // fraction (see SkewModel), so hotNodeFrac serves both.
+  // fraction (see SkewModel), so the sharder's hotNodeFrac serves both. Under
+  // sub-sharding that fraction moves during the run, so it is read per tick —
+  // relieving the hot node is exactly how the mitigation reaches this verdict.
   const capPerTick = (compactionCapPerSec * tickMs) / 1000;
   let backlogBytes = 0;
   let tickCompactionBytes = 0;
@@ -206,11 +221,22 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     const queryCutoff = tickEnd - queryWindowMs;
     while (queryPtr < maxTsSorted.length && maxTsSorted[queryPtr] < queryCutoff) queryPtr++;
 
+    const diskBytes = liveBytes + expiredBytes + tombstoneBytes;
+
+    // How much write history the disk is still holding, in ms of ingest. This
+    // is what sub-sharding's generations age against (M8): a table whose
+    // compaction strands weeks of expired data is still holding the wide
+    // partition it was re-keyed away from weeks ago, and this measures that
+    // from the disk line itself rather than assuming it equals the TTL.
+    const elapsed = tickEnd - startTime;
+    const retentionMs =
+      bytesPerMs > 0 ? Math.min(elapsed, Math.max(tickMs, diskBytes / bytesPerMs)) : elapsed;
+    const shard = sharder ? sharder.step(tickEnd, diskBytes, retentionMs) : noSkew;
+
     if (capPerTick > 0) {
-      backlogBytes = Math.max(0, backlogBytes + hotNodeFrac * tickCompactionBytes - capPerTick);
+      backlogBytes = Math.max(0, backlogBytes + shard.hotNodeFrac * tickCompactionBytes - capPerTick);
     }
 
-    const diskBytes = liveBytes + expiredBytes + tombstoneBytes;
     snapshots.push({
       t: tickEnd,
       liveBytes,
@@ -220,12 +246,22 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
       memtableBytes,
       sstableCount: sstables.length,
       readSstables: maxTsSorted.length - queryPtr,
-      maxPartitionBytes: maxPartitionFrac * diskBytes,
-      hotNodeBytes: hotNodeFrac * diskBytes,
+      maxPartitionBytes: shard.maxPartitionBytes,
+      hotNodeBytes: shard.hotNodeBytes,
+      hotNode: shard.hotNode,
+      hotPartitionShards: shard.hotPartitionShards,
       compactionBytes: tickCompactionBytes,
       compactionBacklogBytes: backlogBytes,
     });
   }
 
-  return { snapshots, sstables, skew, verdicts: computeVerdicts(snapshots, config, skew) };
+  // The model handed back describes the horizon, not the start: promotions
+  // move shares, replica sets and shard counts as the run goes on.
+  const finalSkew = skew && sharder ? { ...skew, ...sharder.finalModel() } : skew;
+  return {
+    snapshots,
+    sstables,
+    skew: finalSkew,
+    verdicts: computeVerdicts(snapshots, config, finalSkew),
+  };
 }

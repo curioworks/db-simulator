@@ -464,3 +464,9 @@ body {
   padding: 4px 8px;
   border-bottom: 1px solid var(--grid);
 }
+
+/* Which node a figure belongs to — a qualifier on the value, not a value. */
+.table-note {
+  color: var(--muted);
+  font-size: 12px;
+}

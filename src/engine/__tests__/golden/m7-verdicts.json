@@ -38,6 +38,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 47426304.15564695,
       "hotNodeBytes": 187410722.3021873,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 0
     },
@@ -52,6 +54,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 98240201.46526869,
       "hotNodeBytes": 388207924.76881653,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 0
     },
@@ -66,6 +70,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 149054098.77489042,
       "hotNodeBytes": 589005127.2354457,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 0
     },
@@ -80,6 +86,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 196480402.93053737,
       "hotNodeBytes": 776415849.5376331,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 609932171.8398204
     },
@@ -94,6 +102,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 247294300.24015912,
       "hotNodeBytes": 977213052.0042623,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 456834974.30644965
     },
@@ -108,6 +118,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 298108197.54978085,
       "hotNodeBytes": 1178010254.4708915,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 303737776.7730789
     },
@@ -122,6 +134,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 345534501.7054277,
       "hotNodeBytes": 1365420976.7730784,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 1315264353.5461574
     },
@@ -136,6 +150,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 396348399.01504946,
       "hotNodeBytes": 1566218179.2397077,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 1162167156.0127866
     },
@@ -150,6 +166,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 447162296.3246712,
       "hotNodeBytes": 1767015381.706337,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 1009069958.4794159
     },
@@ -164,6 +182,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 494588600.4803181,
       "hotNodeBytes": 1954426104.0085244,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 842586280.7816031
     },
@@ -178,6 +198,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 545402497.7899399,
       "hotNodeBytes": 2155223306.4751534,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 1479291412.9503074
     },
@@ -192,6 +214,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 596216395.0995616,
       "hotNodeBytes": 2356020508.9417825,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 1326194215.4169366
     },
@@ -206,6 +230,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 643642699.2552085,
       "hotNodeBytes": 2543431231.24397,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 1159710537.7191238
     },
@@ -220,6 +246,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 694456596.5648303,
       "hotNodeBytes": 2744228433.710599,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 2184623594.656644
     },
@@ -234,6 +262,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 745270493.8744519,
       "hotNodeBytes": 2945025636.177228,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 2031526397.123273
     },
@@ -248,6 +278,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 792696798.0300989,
       "hotNodeBytes": 3132436358.4794154,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 1865042719.4254603
     },
@@ -262,6 +294,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 843510695.3397206,
       "hotNodeBytes": 3333233560.9460444,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 1711945521.8920896
     },
@@ -276,6 +310,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 894324592.6493424,
       "hotNodeBytes": 3534030763.412674,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 2348650654.060794
     },
@@ -290,6 +326,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 941750896.8049893,
       "hotNodeBytes": 3721441485.7148614,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 2182166976.3629813
     },
@@ -304,6 +342,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 992564794.114611,
       "hotNodeBytes": 3922238688.1814904,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 2029069778.8296103
     },
@@ -318,6 +358,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 1043378691.4242326,
       "hotNodeBytes": 4123035890.648119,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 3053982835.767131
     },
@@ -332,6 +374,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1090804995.5798795,
       "hotNodeBytes": 4310446612.950307,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 2887499158.0693183
     },
@@ -346,6 +390,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1141618892.8895013,
       "hotNodeBytes": 4511243815.416936,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 2734401960.5359473
     },
@@ -360,6 +406,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1192432790.1991231,
       "hotNodeBytes": 4712041017.883565,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 2581304763.0025764
     },
@@ -374,6 +422,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 1239859094.3547702,
       "hotNodeBytes": 4899451740.185753,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 3191236934.8423967
     },
@@ -388,6 +438,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1290672991.6643918,
       "hotNodeBytes": 5100248942.652382,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 3038139737.309026
     },
@@ -402,6 +454,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1341486888.9740133,
       "hotNodeBytes": 5301046145.11901,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 2885042539.775655
     },
@@ -416,6 +470,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 1388913193.1296606,
       "hotNodeBytes": 5488456867.421198,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 3896569116.548733
     },
@@ -430,6 +486,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1439727090.4392822,
       "hotNodeBytes": 5689254069.887827,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 3743471919.0153623
     },
@@ -444,6 +502,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1490540987.7489035,
       "hotNodeBytes": 5890051272.354455,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 3590374721.4819913
     },
@@ -458,6 +518,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1537967291.9045506,
       "hotNodeBytes": 6077461994.656643,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 3423891043.7841787
     },
@@ -472,6 +534,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 1588781189.2141724,
       "hotNodeBytes": 6278259197.123272,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 4060596175.952883
     },
@@ -486,6 +550,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1639595086.5237942,
       "hotNodeBytes": 6479056399.589902,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 3907498978.419512
     },
@@ -500,6 +566,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1690408983.833416,
       "hotNodeBytes": 6679853602.056531,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 3754401780.886141
     },
@@ -514,6 +582,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 1737835287.989063,
       "hotNodeBytes": 6867264324.358719,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 4779314837.823661
     },
@@ -528,6 +598,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1788649185.2986848,
       "hotNodeBytes": 7068061526.825348,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 4626217640.29029
     },
@@ -542,6 +614,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1839463082.6083064,
       "hotNodeBytes": 7268858729.291977,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 4473120442.756919
     },
@@ -556,6 +630,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 1886889386.7639534,
       "hotNodeBytes": 7456269451.594165,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 4306636765.059106
     },
@@ -570,6 +646,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 1937703284.0735753,
       "hotNodeBytes": 7657066654.060794,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 4943341897.22781
     },
@@ -584,6 +662,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 4790244699.694439
     },
@@ -598,6 +678,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 4623761021.996626
     },
@@ -612,6 +694,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 5648674078.934146
     },
@@ -626,6 +710,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 5495576881.400775
     },
@@ -640,6 +726,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 5329093203.702962
     },
@@ -654,6 +742,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 5175996006.169591
     },
@@ -668,6 +758,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998314,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 5812701138.338295
     },
@@ -682,6 +774,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 5646217460.640482
     },
@@ -696,6 +790,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 5493120263.107111
     },
@@ -710,6 +806,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 6518033320.044631
     },
@@ -724,6 +822,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 6351549642.346818
     },
@@ -738,6 +838,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 6198452444.813447
     },
@@ -752,6 +854,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 6045355247.280076
     },
@@ -766,6 +870,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 6655287419.119896
     },
@@ -780,6 +886,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 6502190221.586525
     },
@@ -794,6 +902,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 6349093024.053154
     },
@@ -808,6 +918,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 7360619600.826233
     },
@@ -822,6 +934,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 7207522403.292862
     },
@@ -836,6 +950,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 7054425205.759491
     },
@@ -850,6 +966,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 6887941528.061678
     },
@@ -864,6 +982,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 7524646660.230382
     },
@@ -878,6 +998,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 7371549462.697011
     },
@@ -892,6 +1014,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 7205065784.999198
     },
@@ -906,6 +1030,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 8229978841.936718
     },
@@ -920,6 +1046,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 8076881644.403347
     },
@@ -934,6 +1062,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 7923784446.869976
     },
@@ -948,6 +1078,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 7757300769.172163
     },
@@ -962,6 +1094,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998314,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 8394005901.340868
     },
@@ -976,6 +1110,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1991904774.5371714,
       "hotNodeBytes": 7871250336.691863,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 8240908703.807497
     },
@@ -990,6 +1126,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 8074425026.109684
     },
@@ -1004,6 +1142,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 9099338083.047205
     },
@@ -1018,6 +1158,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2140958873.3120618,
       "hotNodeBytes": 8460255463.927309,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 8946240885.513834
     },
@@ -1032,6 +1174,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 8779757207.816021
     },
@@ -1046,6 +1190,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 8626660010.28265
     },
@@ -1060,6 +1206,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2290012972.0869527,
       "hotNodeBytes": 9049260591.162756,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 9263365142.451355
     },
@@ -1074,6 +1222,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 9096881464.753542
     },
@@ -1088,6 +1238,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 8943784267.220171
     },
@@ -1102,6 +1254,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 9968697324.157692
     },
@@ -1116,6 +1270,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 9802213646.459879
     },
@@ -1130,6 +1286,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 9649116448.926508
     },
@@ -1144,6 +1302,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 9496019251.393137
     },
@@ -1158,6 +1318,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 10105951423.232958
     },
@@ -1172,6 +1334,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 9952854225.699587
     },
@@ -1186,6 +1350,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 9799757028.166216
     },
@@ -1200,6 +1366,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 10811283604.939295
     },
@@ -1214,6 +1382,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 10658186407.405924
     },
@@ -1228,6 +1398,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 10505089209.872553
     },
@@ -1242,6 +1414,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 10338605532.17474
     },
@@ -1256,6 +1430,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 10975310664.343445
     },
@@ -1270,6 +1446,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 10822213466.810074
     },
@@ -1284,6 +1462,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 10655729789.11226
     },
@@ -1298,6 +1478,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 11680642846.049782
     },
@@ -1312,6 +1494,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 11527545648.51641
     },
@@ -1326,6 +1510,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 11361061970.818598
     },
@@ -1340,6 +1526,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 11207964773.285227
     },
@@ -1354,6 +1542,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998314,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 11844669905.453932
     },
@@ -1368,6 +1558,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 11678186227.756119
     },
@@ -1382,6 +1574,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 11525089030.222748
     },
@@ -1396,6 +1590,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 12550002087.160269
     },
@@ -1410,6 +1606,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2140958873.3120618,
       "hotNodeBytes": 8460255463.927309,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 12396904889.626898
     },
@@ -1424,6 +1622,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 12230421211.929085
     },
@@ -1438,6 +1638,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 12077324014.395714
     },
@@ -1452,6 +1654,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2290012972.0869527,
       "hotNodeBytes": 9049260591.162756,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 12714029146.564419
     },
@@ -1466,6 +1670,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 12547545468.866606
     },
@@ -1480,6 +1686,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 12394448271.333235
     },
@@ -1494,6 +1702,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 13419361328.270756
     },
@@ -1508,6 +1718,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 13252877650.572943
     },
@@ -1522,6 +1734,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 13099780453.039572
     },
@@ -1536,6 +1750,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 12946683255.5062
     },
@@ -1550,6 +1766,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 13556615427.346022
     },
@@ -1564,6 +1782,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 13403518229.81265
     },
@@ -1578,6 +1798,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 13250421032.27928
     },
@@ -1592,6 +1814,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 14261947609.052359
     },
@@ -1606,6 +1830,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 14108850411.518988
     },
@@ -1620,6 +1846,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 13955753213.985617
     },
@@ -1634,6 +1862,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 13789269536.287804
     },
@@ -1648,6 +1878,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 14425974668.456509
     },
@@ -1662,6 +1894,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 14272877470.923138
     },
@@ -1676,6 +1910,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 14106393793.225325
     },
@@ -1690,6 +1926,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 15131306850.162846
     },
@@ -1704,6 +1942,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 14978209652.629475
     },
@@ -1718,6 +1958,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 14811725974.931662
     },
@@ -1732,6 +1974,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 14658628777.39829
     },
@@ -1746,6 +1990,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 15295333909.566996
     },
@@ -1760,6 +2006,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 15128850231.869183
     },
@@ -1774,6 +2022,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 14975753034.335812
     },
@@ -1788,6 +2038,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 16000666091.273333
     },
@@ -1802,6 +2054,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 15834182413.57552
     },
@@ -1816,6 +2070,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 15681085216.042149
     },
@@ -1830,6 +2086,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 15527988018.508778
     },
@@ -1844,6 +2102,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2290012972.0869527,
       "hotNodeBytes": 9049260591.162756,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 16164693150.677483
     },
@@ -1858,6 +2118,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 15998209472.97967
     },
@@ -1872,6 +2134,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 15845112275.446299
     },
@@ -1886,6 +2150,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 16870025332.38382
     },
@@ -1900,6 +2166,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 16703541654.686007
     },
@@ -1914,6 +2182,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 16550444457.152636
     },
@@ -1928,6 +2198,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 16397347259.619265
     },
@@ -1942,6 +2214,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 17007279431.459084
     },
@@ -1956,6 +2230,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 16854182233.925713
     },
@@ -1970,6 +2246,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 16701085036.392342
     },
@@ -1984,6 +2262,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 17712611613.16542
     },
@@ -1998,6 +2278,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 17559514415.63205
     },
@@ -2012,6 +2294,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 17406417218.09868
     },
@@ -2026,6 +2310,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 17239933540.400867
     },
@@ -2040,6 +2326,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 17876638672.569572
     },
@@ -2054,6 +2342,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 17723541475.0362
     },
@@ -2068,6 +2358,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 17557057797.33839
     },
@@ -2082,6 +2374,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 18581970854.27591
     },
@@ -2096,6 +2390,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 18428873656.74254
     },
@@ -2110,6 +2406,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 18262389979.044727
     },
@@ -2124,6 +2422,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 18109292781.511356
     },
@@ -2138,6 +2438,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 18745997913.68006
     },
@@ -2152,6 +2454,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 18579514235.98225
     },
@@ -2166,6 +2470,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 18426417038.44888
     },
@@ -2180,6 +2486,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 19451330095.3864
     },
@@ -2194,6 +2502,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 19284846417.688587
     },
@@ -2208,6 +2518,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 19131749220.155216
     },
@@ -2222,6 +2534,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 18978652022.621845
     },
@@ -2236,6 +2550,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 19588584194.461666
     },
@@ -2250,6 +2566,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 19435486996.928295
     },
@@ -2264,6 +2582,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 19282389799.394924
     },
@@ -2278,6 +2598,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 20307302856.332443
     },
@@ -2292,6 +2614,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 20140819178.634632
     },
@@ -2306,6 +2630,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 19987721981.10126
     },
@@ -2320,6 +2646,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 19834624783.56789
     },
@@ -2334,6 +2662,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 20444556955.40771
     },
@@ -2348,6 +2678,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 20291459757.87434
     },
@@ -2362,6 +2694,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 20138362560.34097
     },
@@ -2376,6 +2710,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 21149889137.114048
     },
@@ -2390,6 +2726,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 20996791939.580677
     },
@@ -2404,6 +2742,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 20843694742.047306
     },
@@ -2418,6 +2758,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 20677211064.349495
     },
@@ -2432,6 +2774,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 21313916196.5182
     },
@@ -2446,6 +2790,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 21160818998.98483
     },
@@ -2460,6 +2806,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 20994335321.287018
     },
@@ -2474,6 +2822,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 22019248378.224537
     },
@@ -2488,6 +2838,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 21866151180.691166
     },
@@ -2502,6 +2854,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 21699667502.993355
     },
@@ -2516,6 +2870,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 21546570305.459984
     },
@@ -2530,6 +2886,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 22183275437.62869
     },
@@ -2544,6 +2902,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 22016791759.930878
     },
@@ -2558,6 +2918,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 21863694562.397507
     },
@@ -2572,6 +2934,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 22888607619.335026
     },
@@ -2586,6 +2950,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 22722123941.637215
     },
@@ -2600,6 +2966,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 22569026744.103844
     },
@@ -2614,6 +2982,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 22415929546.570473
     },
@@ -2628,6 +2998,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 23025861718.410294
     },
@@ -2642,6 +3014,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 22872764520.876923
     },
@@ -2656,6 +3030,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 22719667323.34355
     },
@@ -2670,6 +3046,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 23731193900.11663
     },
@@ -2684,6 +3062,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 23578096702.58326
     },
@@ -2698,6 +3078,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 23424999505.04989
     },
@@ -2712,6 +3094,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 23258515827.352077
     },
@@ -2726,6 +3110,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 23895220959.520782
     },
@@ -2740,6 +3126,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 23742123761.98741
     },
@@ -2754,6 +3142,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 23589026564.45404
     },
@@ -2768,6 +3158,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 24613939621.39156
     },
@@ -2782,6 +3174,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 24460842423.85819
     },
@@ -2796,6 +3190,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 24307745226.324818
     },
@@ -2810,6 +3206,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 24141261548.627007
     },
@@ -2824,6 +3222,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 24777966680.79571
     },
@@ -2838,6 +3238,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 24624869483.26234
     },
@@ -2852,6 +3254,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 24458385805.56453
     },
@@ -2866,6 +3270,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 25483298862.50205
     },
@@ -2880,6 +3286,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 25330201664.968678
     },
@@ -2894,6 +3302,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 25163717987.270866
     },
@@ -2908,6 +3318,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 25010620789.737495
     },
@@ -2922,6 +3334,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998314,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 25647325921.9062
     },
@@ -2936,6 +3350,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 25480842244.20839
     },
@@ -2950,6 +3366,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 25327745046.67502
     },
@@ -2964,6 +3382,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 26352658103.612537
     },
@@ -2978,6 +3398,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 26186174425.914726
     },
@@ -2992,6 +3414,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 26033077228.381355
     },
@@ -3006,6 +3430,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 25879980030.847984
     },
@@ -3020,6 +3446,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 26489912202.687805
     },
@@ -3034,6 +3462,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 26336815005.154434
     },
@@ -3048,6 +3478,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 26183717807.621063
     },
@@ -3062,6 +3494,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 27195244384.394142
     },
@@ -3076,6 +3510,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 27042147186.86077
     },
@@ -3090,6 +3526,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 26889049989.3274
     },
@@ -3104,6 +3542,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 26722566311.62959
     },
@@ -3118,6 +3558,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.932977,
       "hotNodeBytes": 9035874110.998312,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 27359271443.798294
     },
@@ -3132,6 +3574,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 27206174246.264923
     },
@@ -3146,6 +3590,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 27039690568.567112
     },
@@ -3160,6 +3606,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 28064603625.50463
     },
@@ -3174,6 +3622,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 27911506427.97126
     },
@@ -3188,6 +3638,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 27758409230.43789
     },
@@ -3202,6 +3654,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 27591925552.740078
     },
@@ -3216,6 +3670,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998314,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 28228630684.908783
     },
@@ -3230,6 +3686,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1991904774.5371714,
       "hotNodeBytes": 7871250336.691863,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 28075533487.375412
     },
@@ -3244,6 +3702,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 27909049809.6776
     },
@@ -3258,6 +3718,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 28933962866.61512
     },
@@ -3272,6 +3734,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2140958873.3120618,
       "hotNodeBytes": 8460255463.927309,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 28780865669.08175
     },
@@ -3286,6 +3750,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 28614381991.383938
     },
@@ -3300,6 +3766,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 28461284793.850567
     },
@@ -3314,6 +3782,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2290012972.0869527,
       "hotNodeBytes": 9049260591.162756,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 29097989926.01927
     },
@@ -3328,6 +3798,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 28931506248.32146
     },
@@ -3342,6 +3814,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 28778409050.78809
     },
@@ -3356,6 +3830,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 29803322107.72561
     },
@@ -3370,6 +3846,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 29636838430.027798
     },
@@ -3384,6 +3862,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 29483741232.494427
     },
@@ -3398,6 +3878,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 29330644034.961056
     },
@@ -3412,6 +3894,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 29940576206.800877
     },
@@ -3426,6 +3910,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 29787479009.267506
     },
@@ -3440,6 +3926,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 29634381811.734135
     },
@@ -3454,6 +3942,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 30645908388.507214
     },
@@ -3468,6 +3958,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 30492811190.973843
     },
@@ -3482,6 +3974,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 30339713993.44047
     },
@@ -3496,6 +3990,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 30173230315.74266
     },
@@ -3510,6 +4006,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 30809935447.911366
     },
@@ -3524,6 +4022,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 30656838250.377995
     },
@@ -3538,6 +4038,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 30490354572.680183
     },
@@ -3552,6 +4054,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 31515267629.617702
     },
@@ -3566,6 +4070,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 31362170432.08433
     },
@@ -3580,6 +4086,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 31195686754.38652
     },
@@ -3594,6 +4102,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 31042589556.85315
     },
@@ -3608,6 +4118,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998314,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 31679294689.021854
     },
@@ -3622,6 +4134,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1991904774.5371714,
       "hotNodeBytes": 7871250336.691863,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 31526197491.488483
     },
@@ -3636,6 +4150,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 31359713813.790672
     },
@@ -3650,6 +4166,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 32384626870.72819
     },
@@ -3664,6 +4182,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2140958873.3120618,
       "hotNodeBytes": 8460255463.927309,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 32231529673.19482
     },
@@ -3678,6 +4198,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 32065045995.49701
     },
@@ -3692,6 +4214,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.777331,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 31911948797.96364
     },
@@ -3706,6 +4230,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2290012972.0869527,
       "hotNodeBytes": 9049260591.162756,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 32548653930.132343
     },
@@ -3720,6 +4246,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 32382170252.434532
     },
@@ -3734,6 +4262,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 32229073054.90116
     },
@@ -3748,6 +4278,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 33253986111.83868
     },
@@ -3762,6 +4294,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 33087502434.14087
     },
@@ -3776,6 +4310,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 32934405236.6075
     },
@@ -3790,6 +4326,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 32781308039.074127
     },
@@ -3804,6 +4342,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 33391240210.913948
     },
@@ -3818,6 +4358,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 33238143013.380577
     },
@@ -3832,6 +4374,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 33085045815.847206
     },
@@ -3846,6 +4390,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 34096572392.620285
     },
@@ -3860,6 +4406,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 33943475195.086914
     },
@@ -3874,6 +4422,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 33790377997.553543
     },
@@ -3888,6 +4438,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 33623894319.855732
     },
@@ -3902,6 +4454,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 34260599452.024437
     },
@@ -3916,6 +4470,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 34107502254.491066
     },
@@ -3930,6 +4486,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 33941018576.793255
     },
@@ -3944,6 +4502,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 34965931633.730774
     },
@@ -3958,6 +4518,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 34812834436.1974
     },
@@ -3972,6 +4534,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 34646350758.49959
     },
@@ -3986,6 +4550,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 34493253560.96622
     },
@@ -4000,6 +4566,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998314,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 35129958693.13492
     },
@@ -4014,6 +4582,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 34963475015.4371
     },
@@ -4028,6 +4598,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 34810377817.90373
     },
@@ -4042,6 +4614,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 35835290874.841255
     },
@@ -4056,6 +4630,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 35668807197.14344
     },
@@ -4070,6 +4646,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 35515709999.61007
     },
@@ -4084,6 +4662,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 35362612802.0767
     },
@@ -4098,6 +4678,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2290012972.0869527,
       "hotNodeBytes": 9049260591.162756,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 35999317934.2454
     },
@@ -4112,6 +4694,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 35832834256.547585
     },
@@ -4126,6 +4710,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 35679737059.01421
     },
@@ -4140,6 +4726,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 36704650115.95174
     },
@@ -4154,6 +4742,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 36538166438.25392
     },
@@ -4168,6 +4758,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 36385069240.72055
     },
@@ -4182,6 +4774,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 36231972043.18718
     },
@@ -4196,6 +4790,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 36841904215.027
     },
@@ -4210,6 +4806,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 36688807017.49363
     },
@@ -4224,6 +4822,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 36535709819.96026
     },
@@ -4238,6 +4838,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 37547236396.73334
     },
@@ -4252,6 +4854,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 37394139199.19997
     },
@@ -4266,6 +4870,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 37241042001.666595
     },
@@ -4280,6 +4886,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 37074558323.96878
     },
@@ -4294,6 +4902,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 37711263456.13748
     },
@@ -4308,6 +4918,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 37558166258.60411
     },
@@ -4322,6 +4934,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 37391682580.906296
     },
@@ -4336,6 +4950,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 38416595637.84382
     },
@@ -4350,6 +4966,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 38263498440.31045
     },
@@ -4364,6 +4982,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 38097014762.61263
     },
@@ -4378,6 +4998,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 37943917565.07926
     },
@@ -4392,6 +5014,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 38580622697.24796
     },
@@ -4406,6 +5030,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 38414139019.55015
     },
@@ -4420,6 +5046,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 38261041822.01678
     },
@@ -4434,6 +5062,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 39285954878.9543
     },
@@ -4448,6 +5078,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 39119471201.256485
     },
@@ -4462,6 +5094,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 38966374003.723114
     },
@@ -4476,6 +5110,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 38813276806.18974
     },
@@ -4490,6 +5126,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 39423208978.029564
     },
@@ -4504,6 +5142,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 39270111780.49619
     },
@@ -4518,6 +5158,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928184,
       "hotNodeBytes": 8058661058.994051,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 39117014582.96282
     },
@@ -4532,6 +5174,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 40141927639.900345
     },
@@ -4546,6 +5190,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 39975443962.20253
     },
@@ -4560,6 +5206,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 39822346764.66916
     },
@@ -4574,6 +5222,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 39669249567.13579
     },
@@ -4588,6 +5238,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 40279181738.97561
     },
@@ -4602,6 +5254,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 40126084541.44224
     },
@@ -4616,6 +5270,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 39972987343.90887
     },
@@ -4630,6 +5286,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 40984513920.681946
     },
@@ -4644,6 +5302,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 40831416723.148575
     },
@@ -4658,6 +5318,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 40678319525.615204
     },
@@ -4672,6 +5334,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 40511835847.91739
     },
@@ -4686,6 +5350,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 41148540980.08609
     },
@@ -4700,6 +5366,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 40995443782.55272
     },
@@ -4714,6 +5382,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 40828960104.854904
     },
@@ -4728,6 +5398,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 41853873161.79243
     },
@@ -4742,6 +5414,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 41700775964.259056
     },
@@ -4756,6 +5430,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2184997584.313734,
       "hotNodeBytes": 8634279706.065054,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 41534292286.56124
     },
@@ -4770,6 +5446,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 41381195089.02787
     },
@@ -4784,6 +5462,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 42017900221.19657
     },
@@ -4798,6 +5478,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 41851416543.49876
     },
@@ -4812,6 +5494,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 41698319345.965385
     },
@@ -4826,6 +5510,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2090144976.00244,
       "hotNodeBytes": 8259458261.46068,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 42723232402.90291
     },
@@ -4840,6 +5526,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 42556748725.20509
     },
@@ -4854,6 +5542,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 42403651527.67172
     },
@@ -4868,6 +5558,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2239199074.7773304,
       "hotNodeBytes": 8848463388.696127,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 42250554330.13835
     },
@@ -4882,6 +5574,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4831838207.999999,
       "compactionBacklogBytes": 42860486501.97817
     },
@@ -4896,6 +5590,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 42707389304.4448
     },
@@ -4910,6 +5606,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928184,
       "hotNodeBytes": 8058661058.994051,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 42554292106.91143
     },
@@ -4924,6 +5622,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6845104127.999996,
       "compactionBacklogBytes": 43565818683.68451
     },
@@ -4938,6 +5638,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 43412721486.15114
     },
@@ -4952,6 +5654,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.4677086,
       "hotNodeBytes": 8647666186.229496,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 43259624288.61777
     },
@@ -4966,6 +5670,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 43093140610.91995
     },
@@ -4980,6 +5686,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 43729845743.08865
     },
@@ -4994,6 +5702,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831968,
       "hotNodeBytes": 7857863856.527423,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 43576748545.55528
     },
@@ -5008,6 +5718,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2039331078.6928186,
       "hotNodeBytes": 8058661058.994052,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 43423651348.02191
     },
@@ -5022,6 +5734,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 44448564404.959435
     },
@@ -5036,6 +5750,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 44295467207.42606
     },
@@ -5050,6 +5766,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2188385177.467709,
       "hotNodeBytes": 8647666186.229498,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 44142370009.89269
     },
@@ -5064,6 +5782,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2235811481.623356,
       "hotNodeBytes": 8835076908.531685,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 43975886332.19488
     },
@@ -5078,6 +5798,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2286625378.9329777,
       "hotNodeBytes": 9035874110.998316,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 4966055935.999999,
       "compactionBacklogBytes": 44612591464.36358
     },
@@ -5092,6 +5814,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 1988517181.3831966,
       "hotNodeBytes": 7857863856.527422,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 44459494266.83021
     },
@@ -5106,6 +5830,8 @@
       "readSstables": 3,
       "maxPartitionBytes": 2035943485.5388439,
       "hotNodeBytes": 8045274578.829611,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 939524095.9999998,
       "compactionBacklogBytes": 44293010589.13239
     },
@@ -5120,6 +5846,8 @@
       "readSstables": 1,
       "maxPartitionBytes": 2086757382.8484652,
       "hotNodeBytes": 8246071781.296238,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 6912212991.999996,
       "compactionBacklogBytes": 45317923646.069916
     },
@@ -5134,6 +5862,8 @@
       "readSstables": 2,
       "maxPartitionBytes": 2137571280.158087,
       "hotNodeBytes": 8446868983.762867,
+      "hotNode": 4,
+      "hotPartitionShards": 1,
       "compactionBytes": 1006632959.9999996,
       "compactionBacklogBytes": 45164826448.536545
     }
@@ -5257,6 +5987,16 @@
       0.17067819350030478,
       0.19947409874859381,
       0.17957741742684266
+    ],
+    "subShards": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
     ]
   },
   "verdicts": [
@@ -5278,7 +6018,10 @@
         "value": 1090804995.5798795,
         "threshold": 1073741824
       },
-      "partitionCount": 10000
+      "partitionCount": 10000,
+      "subShards": 1,
+      "maxSubShards": 1,
+      "promoted": null
     },
     {
       "id": "compaction-saturation",

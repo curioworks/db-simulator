@@ -52,6 +52,8 @@ describe('simulate — TTL expiry + tombstones', () => {
       readSstables: 1,
       maxPartitionBytes: 0,
       hotNodeBytes: 0,
+      hotNode: 0,
+      hotPartitionShards: 1,
       compactionBytes: 0,
       compactionBacklogBytes: 0,
     });

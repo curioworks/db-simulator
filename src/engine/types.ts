@@ -102,6 +102,13 @@ export interface SkewConfig {
   nodes: number;
   /** Replicas per partition; must be ≤ nodes. */
   replicationFactor: number;
+  /**
+   * Mitigation (M8): the most sub-shards a hot partition may be split into.
+   * 1 or absent = off. A tracked partition doubles its sub-shard count — and
+   * so re-keys onto fresh tokens — whenever one of its shards outgrows the
+   * promotion trigger, up to this cap.
+   */
+  maxSubShards?: number;
 }
 
 /**
@@ -110,16 +117,26 @@ export interface SkewConfig {
  * partition's on-disk bytes are exactly its share of the cluster totals at
  * all times — so the per-partition state is the weights and replica
  * assignments, and per-tick figures are share × running totals.
+ *
+ * Sub-sharding (M8) is what breaks that collapse: promoting a partition
+ * changes its write share partway through the run, so the disk-share figures
+ * below are the ones in force **at the horizon** rather than for all time.
  */
 export interface SkewModel {
   /** Zipf write share of each of the top-K partitions, hottest first. */
   hotWeights: number[];
   /** Combined write share of every partition past the top K. */
   tailWeight: number;
-  /** Node ids holding each hot partition — RF ring-consecutive entries each. */
+  /**
+   * Node ids still holding bytes of each hot partition at the horizon. RF
+   * ring-consecutive entries without sub-sharding; a promoted partition adds
+   * the nodes of every generation that has not finished draining.
+   */
   hotReplicas: number[][];
-  /** Fraction of cluster-wide disk bytes on each node; sums to 1. */
+  /** Fraction of cluster-wide disk bytes on each node at the horizon; sums to 1. */
   nodeShare: number[];
+  /** Sub-shards each tracked partition ended the run split into (M8); 1 = never promoted. */
+  subShards: number[];
 }
 
 /** STCS knobs, mirroring Cassandra's defaults; all optional. */
@@ -165,10 +182,25 @@ export interface MetricsSnapshot {
   sstableCount: number;
   /** SSTables whose time span overlaps the trailing query window (M5 read amp). */
   readSstables: number;
-  /** Per-replica on-disk bytes of the single hottest partition (M6). 0 without a skew config. */
+  /**
+   * Per-replica on-disk bytes of the widest single partition (M6) — of the
+   * widest *sub-shard* once sub-sharding is on, which is the thing Cassandra
+   * actually materializes. 0 without a skew config.
+   */
   maxPartitionBytes: number;
   /** On-disk bytes on the fullest node (M6). 0 without a skew config. */
   hotNodeBytes: number;
+  /**
+   * Which node that is (M6). Only fixed for the whole run while shares are:
+   * promoting a hot partition re-keys it onto fresh tokens, so the fullest
+   * node can change hands mid-run (M8).
+   */
+  hotNode: number;
+  /**
+   * Sub-shards the hottest partition is writing to at this tick (M8). 1 until
+   * its first promotion, and always 1 with the mitigation off.
+   */
+  hotPartitionShards: number;
   /** Bytes compaction wrote this tick, cluster-wide (M7). 0 without compaction. */
   compactionBytes: number;
   /**
@@ -237,6 +269,16 @@ export interface WidePartitionVerdict extends VerdictBase {
   id: 'wide-partition';
   /** Partitions the writes spread over — the lever that fixes this verdict. */
   partitionCount: number;
+  /** Sub-shards the hottest partition ended on (M8); 1 = never promoted. */
+  subShards: number;
+  /** The cap sub-sharding was allowed to promote to; 1 = mitigation off. */
+  maxSubShards: number;
+  /**
+   * The last step-up promotion (M8): when it fired and how wide the partition
+   * had grown by then. `value` above the warn line means the mitigation was
+   * switched on too late to have prevented the crossing it is now fixing.
+   */
+  promoted: VerdictCrossing | null;
 }
 
 /**

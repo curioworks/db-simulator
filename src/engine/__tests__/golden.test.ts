@@ -64,6 +64,14 @@ const m7Config: SimConfig = {
   diskPerNodeBytes: 10 * 1024 * 1024 * 1024,
 };
 
+const m8Config: SimConfig = {
+  ...m7Config,
+  // The same run with the mitigation on. 8 sub-shards is the cap, so the
+  // golden pins the promotion ladder — the shard count stepping up, and the
+  // widest partition going flat at each step instead of dropping.
+  skew: { ...m6Config.skew!, maxSubShards: 8 },
+};
+
 function checkGolden(name: string, config: SimConfig) {
   const goldenPath = fileURLToPath(new URL(`./golden/${name}.json`, import.meta.url));
   const actual = simulate(config);
@@ -110,5 +118,9 @@ describe('golden time series (fixed seed + config → exact committed output)', 
 
   it('M7: same run under a compaction cap and a node disk it outgrows', () => {
     checkGolden('m7-verdicts', m7Config);
+  });
+
+  it('M8: same run with sub-sharding promoting the hot partitions up to 8 shards', () => {
+    checkGolden('m8-subshards', m8Config);
   });
 });

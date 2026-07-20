@@ -39,6 +39,11 @@ export interface ScenarioConfig {
   skewExponent: number;
   /** Nodes on the token ring (M6); always ≥ replicationFactor. */
   nodes: number;
+  /**
+   * Mitigation (M8): most sub-shards a hot partition may be promoted to.
+   * 1 = off. Powers of two, since the bucket column is `hash(x) % S`.
+   */
+  maxSubShards: number;
   /** Usable disk per node in GiB (M7) — the disk-exhaustion verdict's limit. */
   diskPerNodeGiB: number;
   /** Per-node compaction throughput cap in MiB/s (M7); Cassandra 4.x default 64. */
@@ -87,6 +92,10 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
     partitionCount: Math.round(num(s.partitionCount, 1, 100_000_000, 100_000)),
     skewExponent: num(s.skewExponent, 0, 2, 0.3),
     nodes: Math.max(replicationFactor, Math.round(num(s.nodes, 1, 64, 6))),
+    // Pre-M8 links lack this; default to the mitigation off. Snapped to a
+    // power of two so a hand-edited 5 becomes 4 rather than a shard count no
+    // modulo bucket scheme would produce.
+    maxSubShards: 2 ** Math.round(Math.log2(num(s.maxSubShards, 1, 8, 1))),
     // Pre-M7 links lack these; default to a 1 TiB node running Cassandra
     // 4.x's stock compaction_throughput.
     diskPerNodeGiB: Math.round(num(s.diskPerNodeGiB, 16, 65_536, 1024)),
@@ -131,6 +140,7 @@ export function toSimConfig(
       topK: TOP_K_PARTITIONS,
       nodes: s.nodes,
       replicationFactor: Math.min(s.replicationFactor, s.nodes),
+      maxSubShards: s.maxSubShards,
     },
     diskPerNodeBytes: s.diskPerNodeGiB * 1024 * MiB,
     compactionThroughputBytesPerSec: s.compactionMiBPerSec * MiB,

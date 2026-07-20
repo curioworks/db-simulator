@@ -46,6 +46,8 @@ describe('simulate — write-only growth', () => {
       readSstables: 0,
       maxPartitionBytes: 0,
       hotNodeBytes: 0,
+      hotNode: 0,
+      hotPartitionShards: 1,
       compactionBytes: 0,
       compactionBacklogBytes: 0,
     });

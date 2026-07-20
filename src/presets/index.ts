@@ -31,6 +31,7 @@ export const sensorBaseline: ScenarioConfig = {
   partitionCount: 100_000,
   skewExponent: 0.3,
   nodes: 6,
+  maxSubShards: 1,
   diskPerNodeGiB: 1024,
   compactionMiBPerSec: 64,
   seed: 42,
@@ -61,6 +62,7 @@ export const ttlNoCompaction: ScenarioConfig = {
   partitionCount: 100_000,
   skewExponent: 0.3,
   nodes: 6,
+  maxSubShards: 1,
   diskPerNodeGiB: 1024,
   compactionMiBPerSec: 64,
   seed: 42,
@@ -123,6 +125,35 @@ export const hotPartitions: ScenarioConfig = {
 };
 
 /**
+ * The M8 mitigation, and its ceiling. The same tuned TWCS workload on 5,000
+ * partitions with moderate skew: the hottest key alone reaches 659 MB, six
+ * times Cassandra's guidance, and passes 100 MB on day 2.
+ *
+ * Slide sub-sharding up and the verdict walks down one doubling at a time —
+ * 659 MB → 330 → 165 → 82.4 — and the crossing date recedes with it: day 2,
+ * day 6, day 12, then never. At 8 shards it is held at 82.4 MB and the verdict
+ * finally reads ok. Every promotion fires on day 1, each triggered by a shard
+ * passing the 50 MB step-up line at 51.6 MB.
+ *
+ * The ceiling is that 8 sub-shards is exactly 8×, and nothing more. Load the
+ * "Hot partitions" preset — the same fix on a key 100× too coarse — and the
+ * slider cannot rescue it: 8.92 GB → 4.46 → 2.23 → 1.11, fatal at every step.
+ * All it buys is time, and exactly proportional time at that: while disk is
+ * still growing linearly, each doubling of the shard count doubles the days to
+ * the cliff, so the fatal date goes day 2 → 4 → 8 → 16 and no further.
+ *
+ * Watch the disk line while you drag it: 73.4 GB at every setting. This is a
+ * schema change, not a capacity one — the same bytes, differently addressed.
+ */
+export const subSharded: ScenarioConfig = {
+  ...ttlTwcsTuned,
+  name: 'Sub-sharding (mitigating a wide partition)',
+  partitionCount: 5_000,
+  skewExponent: 0.7,
+  maxSubShards: 8,
+};
+
+/**
  * The M7 mistake: compaction_throughput throttled to protect read latency,
  * on a workload big enough that it can never catch up. 2 KB events at 3,500
  * rows/s put 1.8 MB/s of new data on each node; STCS rewrites every byte ~5
@@ -173,6 +204,7 @@ export const compactionThrottled: ScenarioConfig = {
   partitionCount: 10_000_000,
   skewExponent: 0.3,
   nodes: 6,
+  maxSubShards: 1,
   diskPerNodeGiB: 3072,
   compactionMiBPerSec: 8,
   seed: 42,
@@ -185,5 +217,6 @@ export const presets: ScenarioConfig[] = [
   ttlTwcsWide,
   ttlTwcsTuned,
   hotPartitions,
+  subSharded,
   compactionThrottled,
 ];

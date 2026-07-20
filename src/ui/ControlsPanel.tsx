@@ -110,6 +110,15 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           display={`${scenario.nodes} nodes`}
           onChange={(nodes) => set({ nodes })}
         />
+        <SliderField
+          label="Sub-sharding"
+          value={Math.log2(scenario.maxSubShards)}
+          min={0}
+          max={3}
+          step={1}
+          display={formatSubShards(scenario.maxSubShards)}
+          onChange={(log) => set({ maxSubShards: 2 ** log })}
+        />
       </section>
 
       <section>
@@ -310,6 +319,15 @@ function roundDiskGiB(raw: number): number {
  */
 export function formatDiskPerNode(giB: number): string {
   return `${formatBytes(giB * 1024 * 1024 * 1024)} per node`;
+}
+
+/**
+ * The mitigation's cap, not a fixed shard count: a partition is only promoted
+ * to it a doubling at a time, and only if it outgrows the trigger. Powers of
+ * two because the bucket column is `hash(x) % S`.
+ */
+export function formatSubShards(max: number): string {
+  return max <= 1 ? 'off' : `up to ${max} per hot key`;
 }
 
 /** Zipf exponent → what it means for the hot end of the key distribution. */

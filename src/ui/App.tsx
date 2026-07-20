@@ -70,7 +70,10 @@ export function App() {
             away from a cluster average that still looks healthy. The verdicts up top turn all
             of that into three dates: when the hottest partition passes the cliff, when
             compaction stops being able to catch up, and when the fullest node runs out of
-            disk.
+            disk. Then try the mitigation: sub-sharding splits a hot key across more
+            partitions as it outgrows them, pushing those dates out — but it never moves
+            the rows already written, so the wide partition you have stays wide until the
+            TTL gets to it.
           </p>
         </header>
         <label className="field preset-field">
@@ -135,9 +138,13 @@ export function App() {
             sub={`SSTables per read, last ${formatQueryWindow(scenario.queryWindowHours)}`}
           />
           <StatTile
-            label="Hottest partition"
+            label="Widest partition"
             value={last ? formatBytes(last.maxPartitionBytes) : '—'}
-            sub={`per replica, of ${formatPartitionCount(scenario.partitionCount)}`}
+            sub={
+              last && last.hotPartitionShards > 1
+                ? `per replica · hot key split ${last.hotPartitionShards} ways`
+                : `per replica, of ${formatPartitionCount(scenario.partitionCount)}`
+            }
           />
           <StatTile
             label="Fullest node"
@@ -226,7 +233,8 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
           <th>Total on disk</th>
           <th>SSTables</th>
           <th>Read amp</th>
-          <th>Hot partition</th>
+          <th>Widest partition</th>
+          <th>Sub-shards</th>
           <th>Fullest node</th>
           <th>Compacted</th>
           <th>Backlog</th>
@@ -244,7 +252,10 @@ function SnapshotTable({ snapshots }: { snapshots: ReturnType<typeof useSimulati
             <td>{formatCount(s.sstableCount)}</td>
             <td>{formatCount(s.readSstables)}</td>
             <td>{formatBytes(s.maxPartitionBytes)}</td>
-            <td>{formatBytes(s.hotNodeBytes)}</td>
+            <td>{s.hotPartitionShards}</td>
+            <td>
+              {formatBytes(s.hotNodeBytes)} <span className="table-note">n{s.hotNode}</span>
+            </td>
             <td>{formatBytes(s.compactionBytes)}</td>
             <td>{formatBytes(s.compactionBacklogBytes)}</td>
             <td>{formatBytes(s.memtableBytes)}</td>

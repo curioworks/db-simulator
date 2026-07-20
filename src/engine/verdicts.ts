@@ -9,6 +9,7 @@ import type {
   VerdictLevel,
   WidePartitionVerdict,
 } from './types.ts';
+import { PROMOTION_TRIGGER_BYTES } from './subshard.ts';
 
 /**
  * Failure verdicts (M7). Three ways a Cassandra cluster is mathematically
@@ -82,7 +83,15 @@ const peakOf = (
   metric: (s: MetricsSnapshot) => number,
 ): number => snapshots.reduce((m, s) => Math.max(m, metric(s)), 0);
 
-/** Verdict 1: the wide-partition cliff. */
+/**
+ * Verdict 1: the wide-partition cliff — and, with sub-sharding on (M8),
+ * whether the mitigation got there in time.
+ *
+ * The crossings are still read off the series rather than recomputed against
+ * the final shard count, because a promotion does not un-cross a threshold:
+ * a partition that reached 1 GB on day 20 and was split on day 21 spent day 20
+ * being a 1 GB partition, and the peak says so.
+ */
 function widePartition(
   snapshots: readonly MetricsSnapshot[],
   config: SimConfig,
@@ -90,6 +99,21 @@ function widePartition(
   const metric = (s: MetricsSnapshot) => s.maxPartitionBytes;
   const warn = firstCrossing(snapshots, config.startTime, WIDE_PARTITION_WARN_BYTES, metric);
   const fatal = firstCrossing(snapshots, config.startTime, WIDE_PARTITION_FATAL_BYTES, metric);
+
+  // The last step-up, found as the last tick the shard count went up.
+  let promoted: VerdictCrossing | null = null;
+  for (let i = snapshots.length - 1; i > 0; i--) {
+    if (snapshots[i].hotPartitionShards > snapshots[i - 1].hotPartitionShards) {
+      promoted = {
+        at: snapshots[i].t,
+        day: Math.floor((snapshots[i].t - config.startTime) / DAY_MS),
+        value: snapshots[i - 1].maxPartitionBytes,
+        threshold: PROMOTION_TRIGGER_BYTES,
+      };
+      break;
+    }
+  }
+
   return {
     id: 'wide-partition',
     level: levelOf(warn, fatal),
@@ -99,6 +123,9 @@ function widePartition(
     warn,
     fatal,
     partitionCount: config.skew?.partitionCount ?? 0,
+    subShards: snapshots.at(-1)?.hotPartitionShards ?? 1,
+    maxSubShards: config.skew?.maxSubShards ?? 1,
+    promoted,
   };
 }
 
@@ -118,8 +145,11 @@ function compactionSaturation(
   skew: SkewModel | undefined,
 ): CompactionSaturationVerdict {
   const cap = config.compactionThroughputBytesPerSec ?? 0;
+  // The horizon's hot node and its share: ρ is a tail average, so it is the
+  // node carrying the load at the end of the run that has to keep up — which
+  // sub-sharding may have made a different node than the one that started (M8).
   const nodeFrac = skew ? Math.max(...skew.nodeShare) : 0;
-  const node = skew ? skew.nodeShare.indexOf(Math.max(...skew.nodeShare)) : 0;
+  const node = snapshots.at(-1)?.hotNode ?? 0;
   const backlogBytes = snapshots.at(-1)?.compactionBacklogBytes ?? 0;
 
   const tail = snapshots.slice(-Math.max(1, Math.ceil(snapshots.length / 4)));
@@ -188,7 +218,6 @@ function diskAsymmetry(
 ): DiskAsymmetryVerdict {
   const capacity = config.diskPerNodeBytes ?? 0;
   const nodes = skew?.nodeShare.length ?? 0;
-  const node = skew ? skew.nodeShare.indexOf(Math.max(...skew.nodeShare)) : 0;
   const last = snapshots.at(-1);
   const metric = (s: MetricsSnapshot) => s.hotNodeBytes;
   // The cluster average is taken at the tick the hot node peaked, not at the
@@ -214,7 +243,10 @@ function diskAsymmetry(
     limit: capacity * DISK_WARN_FRACTION,
     warn,
     fatal,
-    node,
+    // The node named is the one that was fullest at the peak, which is the
+    // moment this verdict is decided on — not necessarily the one fullest at
+    // the horizon, since a promotion can hand that title over (M8).
+    node: peakTick?.hotNode ?? 0,
     averageBytes: peakTick && nodes > 0 ? peakTick.diskBytes / nodes : 0,
     capacityBytes: capacity,
   };

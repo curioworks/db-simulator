@@ -61,6 +61,10 @@ export function buildSkewModel(config: SkewConfig, seed: number): SkewModel {
       `replicationFactor (${replicationFactor}) cannot exceed nodes (${nodes})`,
     );
   }
+  const maxSubShards = config.maxSubShards ?? 1;
+  if (!Number.isInteger(maxSubShards) || maxSubShards < 1) {
+    throw new RangeError(`maxSubShards must be a positive integer, got ${config.maxSubShards}`);
+  }
 
   // Zipf: partition ranked i gets weight i^−s / H(partitionCount, s).
   const h = harmonic(partitionCount, zipfExponent);
@@ -81,5 +85,13 @@ export function buildSkewModel(config: SkewConfig, seed: number): SkewModel {
   hotReplicas.forEach((replicas, i) => {
     for (const node of replicas) nodeShare[node] += hotWeights[i];
   });
-  return { hotWeights, tailWeight, hotReplicas, nodeShare: nodeShare.map((s) => s / replicationFactor) };
+  return {
+    hotWeights,
+    tailWeight,
+    hotReplicas,
+    nodeShare: nodeShare.map((s) => s / replicationFactor),
+    // The un-mitigated starting point; the engine's sub-sharder replaces these
+    // three fields with the horizon state when promotion is on (M8).
+    subShards: hotWeights.map(() => 1),
+  };
 }

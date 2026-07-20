@@ -79,21 +79,52 @@ function describe(v: Verdict): Copy {
   switch (v.id) {
     case 'wide-partition': {
       const title = 'Wide partition cliff';
-      const headline = `${formatBytes(v.peak)} in the hottest partition`;
-      const fix = 'Add to the partition key so writes spread over more of them.';
+      const headline = `${formatBytes(v.peak)} in the widest partition`;
+      const sharded = v.maxSubShards > 1;
+      // Sub-sharding is a schema change with a running cost, so the copy names
+      // the cost wherever it takes credit: every read of a sub-sharded key has
+      // to scatter across all of its shards.
+      const fix = sharded
+        ? `Sub-sharding split it ${v.subShards} ways — every read of that key now scatters across all ${v.subShards}. Past that, only a finer partition key helps.`
+        : 'Add to the partition key so writes spread over more of them — or turn on sub-sharding to split the hot keys automatically.';
+
       if (v.fatal) {
+        const capped = sharded && v.subShards >= v.maxSubShards;
         return {
           title,
           headline,
-          detail: `Past 100 MB on ${when(v.warn ?? v.fatal)}, past 1 GB on ${when(v.fatal)}. Repair, compaction and reads all materialise a partition at a time.`,
+          detail:
+            `Past 100 MB on ${when(v.warn ?? v.fatal)}, past 1 GB on ${when(v.fatal)}. Repair, compaction and reads all materialise a partition at a time.` +
+            (capped
+              ? ` ${v.subShards} sub-shards only bought time: splitting ${v.subShards} ways divides the partition ${v.subShards} ways, and this key is further over than that.`
+              : ''),
           fix,
         };
       }
       if (v.warn) {
+        // Careful here: this branch is the partition going *over* the line, so
+        // the promotion did not hold it. Saying it did — next to a headline
+        // several times the guidance — is the kind of reassurance that gets a
+        // cluster paged at 3am.
+        const late = v.promoted
+          ? v.subShards >= v.maxSubShards
+            ? ` Sub-sharding split it ${v.subShards} ways and then ran out of shards on ${when(v.promoted)}; it kept growing from there.`
+            : ` Sub-sharding split it ${v.subShards} ways on ${when(v.promoted)}, which was not enough.`
+          : '';
         return {
           title,
           headline,
-          detail: `Past Cassandra's 100 MB guidance on ${when(v.warn)}. Still short of the multi-GB range that takes a node down.`,
+          detail:
+            `Past Cassandra's 100 MB guidance on ${when(v.warn)}. Still short of the multi-GB range that takes a node down.` +
+            late,
+          fix,
+        };
+      }
+      if (v.promoted) {
+        return {
+          title,
+          headline,
+          detail: `Held under the 100 MB guidance for the whole run. It was heading past it: sub-sharding promoted the hottest key to ${v.subShards} shards by ${when(v.promoted)}. The rows already written stayed exactly where they were — a split only redirects new ones.`,
           fix,
         };
       }

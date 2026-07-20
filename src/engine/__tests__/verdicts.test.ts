@@ -53,6 +53,8 @@ function series(values: Array<Partial<MetricsSnapshot>>): MetricsSnapshot[] {
     readSstables: 0,
     maxPartitionBytes: 0,
     hotNodeBytes: 0,
+    hotNode: 0,
+    hotPartitionShards: 1,
     compactionBytes: 0,
     compactionBacklogBytes: 0,
     ...v,
@@ -119,13 +121,14 @@ describe('disk-asymmetry verdict', () => {
   const scan = (hotNodeBytes: number[], nodes = 3) =>
     find(
       computeVerdicts(
-        series(hotNodeBytes.map((b) => ({ hotNodeBytes: b, diskBytes: b * nodes }))),
+        series(hotNodeBytes.map((b) => ({ hotNodeBytes: b, diskBytes: b * nodes, hotNode: 1 }))),
         { ...baseConfig, diskPerNodeBytes: capacity },
         {
           hotWeights: [0.4],
           tailWeight: 0.6,
           hotReplicas: [[1]],
           nodeShare: Array.from({ length: nodes }, (_, i) => (i === 1 ? 0.5 : 0.25)),
+          subShards: [1],
         },
       ),
       'disk-asymmetry',
@@ -146,13 +149,14 @@ describe('disk-asymmetry verdict', () => {
   it('contrasts the fullest node against a still-healthy cluster average', () => {
     // The whole point of the verdict: the hot node is over the line while the
     // average node, measured at the same moment, is comfortable.
-    const snapshots = series([{ hotNodeBytes: 900, diskBytes: 1800 }]);
+    const snapshots = series([{ hotNodeBytes: 900, diskBytes: 1800, hotNode: 1 }]);
     const v = find(
       computeVerdicts(snapshots, { ...baseConfig, diskPerNodeBytes: capacity }, {
         hotWeights: [0.5],
         tailWeight: 0.5,
         hotReplicas: [[1]],
         nodeShare: [0.25, 0.5, 0.25],
+        subShards: [1],
       }),
       'disk-asymmetry',
     );
@@ -175,6 +179,7 @@ describe('disk-asymmetry verdict', () => {
         tailWeight: 0.66,
         hotReplicas: [[0]],
         nodeShare: [1 / 3, 1 / 3, 1 / 3],
+        subShards: [1],
       }),
       'disk-asymmetry',
     );
@@ -200,6 +205,7 @@ describe('compaction-saturation verdict', () => {
     tailWeight: 0.5,
     hotReplicas: [[0]],
     nodeShare: [1],
+    subShards: [1],
   };
   /** One node holding everything, so cluster bytes are node bytes. */
   const scan = (compactionBytes: number[], capBytesPerSec: number) => {

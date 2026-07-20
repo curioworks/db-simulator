@@ -20,6 +20,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -34,6 +36,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -48,6 +52,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -62,6 +68,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -76,6 +84,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -90,6 +100,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -104,6 +116,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -118,6 +132,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -132,6 +148,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -146,6 +164,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -160,6 +180,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -174,6 +196,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -188,6 +212,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -202,6 +228,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -216,6 +244,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -230,6 +260,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -244,6 +276,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -258,6 +292,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -272,6 +308,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -286,6 +324,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -300,6 +340,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -314,6 +356,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -328,6 +372,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -342,6 +388,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -356,6 +404,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -370,6 +420,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -384,6 +436,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -398,6 +452,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -412,6 +468,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -426,6 +484,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -440,6 +500,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -454,6 +516,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -468,6 +532,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -482,6 +548,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -496,6 +564,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -510,6 +580,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -524,6 +596,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -538,6 +612,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -552,6 +628,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -566,6 +644,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -580,6 +660,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -594,6 +676,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -608,6 +692,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -622,6 +708,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -636,6 +724,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -650,6 +740,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -664,6 +756,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -678,6 +772,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -692,6 +788,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -706,6 +804,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -720,6 +820,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -734,6 +836,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -748,6 +852,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -762,6 +868,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -776,6 +884,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -790,6 +900,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -804,6 +916,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -818,6 +932,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -832,6 +948,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -846,6 +964,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -860,6 +980,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -874,6 +996,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -888,6 +1012,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -902,6 +1028,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -916,6 +1044,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -930,6 +1060,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -944,6 +1076,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -958,6 +1092,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -972,6 +1108,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -986,6 +1124,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1000,6 +1140,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1014,6 +1156,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1028,6 +1172,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1042,6 +1188,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1056,6 +1204,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1070,6 +1220,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1084,6 +1236,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1098,6 +1252,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1112,6 +1268,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1126,6 +1284,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1140,6 +1300,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1154,6 +1316,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1168,6 +1332,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1182,6 +1348,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1196,6 +1364,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1210,6 +1380,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1224,6 +1396,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1238,6 +1412,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1252,6 +1428,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1266,6 +1444,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1280,6 +1460,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1294,6 +1476,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1308,6 +1492,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1322,6 +1508,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1336,6 +1524,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1350,6 +1540,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1364,6 +1556,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1378,6 +1572,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1392,6 +1588,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1406,6 +1604,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1420,6 +1620,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1434,6 +1636,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1448,6 +1652,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1462,6 +1668,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1476,6 +1684,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1490,6 +1700,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1504,6 +1716,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1518,6 +1732,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1532,6 +1748,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1546,6 +1764,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1560,6 +1780,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1574,6 +1796,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1588,6 +1812,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1602,6 +1828,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1616,6 +1844,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1630,6 +1860,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1644,6 +1876,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1658,6 +1892,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1672,6 +1908,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1686,6 +1924,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1700,6 +1940,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1714,6 +1956,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1728,6 +1972,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1742,6 +1988,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1756,6 +2004,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1770,6 +2020,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1784,6 +2036,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1798,6 +2052,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1812,6 +2068,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1826,6 +2084,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1840,6 +2100,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1854,6 +2116,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1868,6 +2132,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1882,6 +2148,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1896,6 +2164,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1910,6 +2180,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1924,6 +2196,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1938,6 +2212,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1952,6 +2228,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1966,6 +2244,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1980,6 +2260,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -1994,6 +2276,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2008,6 +2292,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2022,6 +2308,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2036,6 +2324,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2050,6 +2340,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2064,6 +2356,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2078,6 +2372,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2092,6 +2388,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2106,6 +2404,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2120,6 +2420,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2134,6 +2436,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2148,6 +2452,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2162,6 +2468,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2176,6 +2484,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2190,6 +2500,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2204,6 +2516,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2218,6 +2532,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2232,6 +2548,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2246,6 +2564,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2260,6 +2580,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2274,6 +2596,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2288,6 +2612,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2302,6 +2628,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2316,6 +2644,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2330,6 +2660,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2344,6 +2676,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2358,6 +2692,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2372,6 +2708,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2386,6 +2724,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2400,6 +2740,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2414,6 +2756,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2428,6 +2772,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2442,6 +2788,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2456,6 +2804,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2470,6 +2820,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2484,6 +2836,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2498,6 +2852,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2512,6 +2868,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2526,6 +2884,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2540,6 +2900,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2554,6 +2916,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2568,6 +2932,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2582,6 +2948,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2596,6 +2964,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2610,6 +2980,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2624,6 +2996,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2638,6 +3012,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2652,6 +3028,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2666,6 +3044,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2680,6 +3060,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2694,6 +3076,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2708,6 +3092,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2722,6 +3108,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2736,6 +3124,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2750,6 +3140,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2764,6 +3156,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2778,6 +3172,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2792,6 +3188,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2806,6 +3204,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2820,6 +3220,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2834,6 +3236,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2848,6 +3252,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2862,6 +3268,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2876,6 +3284,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2890,6 +3300,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2904,6 +3316,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2918,6 +3332,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2932,6 +3348,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2946,6 +3364,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2960,6 +3380,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2974,6 +3396,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -2988,6 +3412,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3002,6 +3428,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3016,6 +3444,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3030,6 +3460,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3044,6 +3476,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3058,6 +3492,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3072,6 +3508,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3086,6 +3524,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3100,6 +3540,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3114,6 +3556,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3128,6 +3572,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3142,6 +3588,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3156,6 +3604,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3170,6 +3620,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3184,6 +3636,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3198,6 +3652,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3212,6 +3668,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3226,6 +3684,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3240,6 +3700,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3254,6 +3716,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3268,6 +3732,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3282,6 +3748,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3296,6 +3764,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3310,6 +3780,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3324,6 +3796,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3338,6 +3812,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3352,6 +3828,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3366,6 +3844,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3380,6 +3860,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3394,6 +3876,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3408,6 +3892,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3422,6 +3908,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3436,6 +3924,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3450,6 +3940,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3464,6 +3956,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3478,6 +3972,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3492,6 +3988,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3506,6 +4004,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3520,6 +4020,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3534,6 +4036,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3548,6 +4052,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3562,6 +4068,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3576,6 +4084,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3590,6 +4100,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3604,6 +4116,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3618,6 +4132,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3632,6 +4148,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3646,6 +4164,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3660,6 +4180,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3674,6 +4196,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3688,6 +4212,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3702,6 +4228,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3716,6 +4244,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3730,6 +4260,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3744,6 +4276,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3758,6 +4292,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3772,6 +4308,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3786,6 +4324,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3800,6 +4340,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3814,6 +4356,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3828,6 +4372,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3842,6 +4388,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3856,6 +4404,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3870,6 +4420,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3884,6 +4436,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3898,6 +4452,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3912,6 +4468,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3926,6 +4484,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3940,6 +4500,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3954,6 +4516,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3968,6 +4532,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3982,6 +4548,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -3996,6 +4564,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4010,6 +4580,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4024,6 +4596,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4038,6 +4612,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4052,6 +4628,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4066,6 +4644,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4080,6 +4660,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4094,6 +4676,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4108,6 +4692,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4122,6 +4708,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4136,6 +4724,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4150,6 +4740,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4164,6 +4756,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4178,6 +4772,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4192,6 +4788,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4206,6 +4804,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4220,6 +4820,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4234,6 +4836,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4248,6 +4852,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4262,6 +4868,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4276,6 +4884,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4290,6 +4900,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4304,6 +4916,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4318,6 +4932,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4332,6 +4948,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4346,6 +4964,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4360,6 +4980,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4374,6 +4996,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4388,6 +5012,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4402,6 +5028,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4416,6 +5044,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4430,6 +5060,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4444,6 +5076,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4458,6 +5092,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4472,6 +5108,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4486,6 +5124,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4500,6 +5140,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4514,6 +5156,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4528,6 +5172,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4542,6 +5188,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4556,6 +5204,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4570,6 +5220,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4584,6 +5236,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4598,6 +5252,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4612,6 +5268,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4626,6 +5284,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4640,6 +5300,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4654,6 +5316,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4668,6 +5332,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4682,6 +5348,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4696,6 +5364,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4710,6 +5380,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4724,6 +5396,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4738,6 +5412,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4752,6 +5428,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4766,6 +5444,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4780,6 +5460,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4794,6 +5476,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4808,6 +5492,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4822,6 +5508,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4836,6 +5524,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4850,6 +5540,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4864,6 +5556,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4878,6 +5572,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4892,6 +5588,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4906,6 +5604,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4920,6 +5620,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4934,6 +5636,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4948,6 +5652,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4962,6 +5668,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4976,6 +5684,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -4990,6 +5700,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5004,6 +5716,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5018,6 +5732,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5032,6 +5748,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5046,6 +5764,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5060,6 +5780,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5074,6 +5796,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5088,6 +5812,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5102,6 +5828,8 @@
       "readSstables": 13,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     },
@@ -5116,6 +5844,8 @@
       "readSstables": 14,
       "maxPartitionBytes": 0,
       "hotNodeBytes": 0,
+      "hotNode": 0,
+      "hotPartitionShards": 1,
       "compactionBytes": 0,
       "compactionBacklogBytes": 0
     }
@@ -44603,7 +45333,10 @@
       "limit": 104857600,
       "warn": null,
       "fatal": null,
-      "partitionCount": 0
+      "partitionCount": 0,
+      "subShards": 1,
+      "maxSubShards": 1,
+      "promoted": null
     },
     {
       "id": "compaction-saturation",
