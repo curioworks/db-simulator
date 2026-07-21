@@ -179,6 +179,14 @@ export interface MetricsSnapshot {
   /** live + expired + tombstone across all SSTables (excludes memtable). */
   diskBytes: number;
   memtableBytes: number;
+  /**
+   * SSTables across the whole cluster (a fleet total). Each node compacts its
+   * own share independently, so once every node has flushed the count is at
+   * least the node count; it is the per-node structure times `nodes`, which is
+   * volume-driven without compaction (node-independent) and structure-driven
+   * under TWCS/STCS (grows with the ring). Not the same as `SimResult.sstables`,
+   * which is one aggregate compaction domain used for the byte accounting.
+   */
   sstableCount: number;
   /** SSTables whose time span overlaps the trailing query window (M5 read amp). */
   readSstables: number;
@@ -213,7 +221,11 @@ export interface MetricsSnapshot {
 
 export interface SimResult {
   snapshots: MetricsSnapshot[];
-  /** Final SSTable set, mostly for tests and debugging views. */
+  /**
+   * Final SSTable set of the aggregate compaction domain (cluster bytes, RF
+   * folded in), mostly for tests and debugging views. Its length is the
+   * per-domain count, not the fleet total in `MetricsSnapshot.sstableCount`.
+   */
   sstables: SSTable[];
   /** Resolved skew model — weights and replica placement (M6); undefined without a skew config. */
   skew?: SkewModel;

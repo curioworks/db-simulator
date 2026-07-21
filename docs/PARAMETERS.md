@@ -221,8 +221,8 @@ stops the partition growing and never shrinks it. That is the correct answer.
 | Ingest per day | bytes/day | Cluster-wide. |
 | Disk at horizon | bytes | Includes the memtable. |
 | Dead at horizon | bytes | expired + tombstones — bytes you are paying for and cannot read. |
-| SSTables | count | The compaction strategy's signature. |
-| Read amplification | count | SSTables a single query over the trailing window must touch. |
+| SSTables | count **across the cluster** | A fleet total — every node compacts its own share, so this is the per-node structure × node count, and never less than the node count. See [§8](#8-model-limits). |
+| Read amplification | count **per replica** | SSTables a single query over the trailing window touches on one replica — the count that drives read latency, which is why it does not scale with the ring the way the fleet SSTable total does. |
 | **Widest partition** | bytes **per replica** | The widest single *sub-shard* when sub-sharding is on — which is what Cassandra actually materializes. |
 | **Fullest node** | bytes **per node** | With its ratio to the cluster average. |
 
@@ -584,14 +584,42 @@ What this tool does not know, so you do not read a verdict it cannot support.
 - Compaction is instantaneous and infinitely parallel; the throughput cap only
   feeds the shadow queue.
 
+**Compaction domains and the SSTable count**
+- The **byte engine is one aggregate compaction domain**: it accumulates the
+  whole cluster's ingest (RF folded in) into one memtable, flushes and compacts
+  it once, and every byte figure — disk, live, expired, read amp — comes from
+  that single stream. It does *not* run a separate memtable and compactor per
+  node. This is a deliberate simplification: the disk growth story is what the
+  tool is about, and total disk is additive across nodes regardless of how the
+  ring is sliced.
+- The **SSTable count is the exception, reconstructed as a fleet total.** A real
+  cluster has one compaction domain *per node*, so the minimum table count once
+  every node has flushed is the node count — which the aggregate stream, being a
+  single domain, cannot show. The count is instead computed by compacting one
+  average node's share and scaling by the node count. That is exact for TWCS
+  (windows are time-structural, so every node keeps the same set), collapses
+  back to the aggregate without compaction (the count is volume-driven there, so
+  it stays node-independent), and is a close approximation under STCS (a node
+  with 1/N the data has slightly fewer tiers). It is why the SSTable count grows
+  with the ring while read amplification does not — see below.
+- Residual approximations here: the per-node share is taken as uniform (the
+  average node), so skew does not make one node's *table count* higher than
+  another's, only its *bytes* (which the fullest-node metric already tracks);
+  and the STCS per-node tier count is read off that average node rather than
+  each node individually.
+
 **Reads**
-- Read amplification counts SSTables cluster-wide over a time window. It does
+- Read amplification is a **per-replica** count: the SSTables one replica must
+  touch for a query over the trailing window. That is the quantity that drives
+  read latency, and it is a structural figure (tiers under STCS, live windows
+  under TWCS) that barely depends on data volume — which is exactly why it does
+  *not* scale with the node count the way the fleet SSTable total does. It does
   not model bloom filters, key/row cache, partition index granularity, or
   latency of any kind.
 - The **read fan-out cost of sub-sharding is stated in the verdict copy, not
   folded into the read-amp metric** — a sub-sharded key scatters every read
-  across all its shards, but that is a different quantity from "SSTables touched
-  cluster-wide", and conflating them would make both numbers meaningless.
+  across all its shards, but that is a different quantity from "SSTables one
+  replica touches", and conflating them would make both numbers meaningless.
 
 **Not built**
 - The CSV/JSON sampling profiler described in `CLAUDE.md` ([§2](#2-there-is-no-sample-data)).

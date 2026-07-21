@@ -255,6 +255,34 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     });
   }
 
+  // SSTable count is a *fleet* total. Every node runs its own compaction on its
+  // own share of the writes, so the cluster holds `nodes` independent stores and
+  // the minimum table count once every node has flushed is the node count. The
+  // aggregate loop above is one compaction domain — its bytes are cluster-wide
+  // (RF folded in) but its table count is a single store's, which is what a
+  // query touches (read amp) but not what the cluster holds.
+  //
+  // Recover the fleet count by compacting one average node's share and scaling
+  // by the node count. This is not a flat × nodes: the count of a single store
+  // is volume-driven without compaction (so the fleet total is node-independent
+  // and this collapses back to the aggregate) but structure-driven under
+  // TWCS/STCS (so the fleet total genuinely grows with the ring). Running the
+  // per-node share through the same mechanics gets every regime right; the
+  // sub-run is cheaper than the main one (a node flushes 1/nodes as often) and,
+  // with skew stripped, recurses no further.
+  const nodes = config.skew?.nodes ?? 1;
+  if (nodes > 1) {
+    const perNode = simulate({
+      ...config,
+      writeRatePerSec: writeRatePerSec / nodes,
+      deleteRatePerSec: deleteRatePerSec / nodes,
+      skew: undefined,
+    });
+    for (let i = 0; i < snapshots.length; i++) {
+      snapshots[i].sstableCount = perNode.snapshots[i].sstableCount * nodes;
+    }
+  }
+
   // The model handed back describes the horizon, not the start: promotions
   // move shares, replica sets and shard counts as the run goes on.
   const finalSkew = skew && sharder ? { ...skew, ...sharder.finalModel() } : skew;

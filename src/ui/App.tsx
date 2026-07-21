@@ -125,17 +125,17 @@ export function App() {
             label="SSTables"
             value={last ? formatCount(last.sstableCount) : '—'}
             sub={
-              scenario.compaction === 'stcs'
-                ? 'STCS compaction'
+              (scenario.compaction === 'stcs'
+                ? 'STCS'
                 : scenario.compaction === 'twcs'
-                  ? `TWCS ${scenario.twcsWindowDays}d windows`
-                  : 'no compaction'
+                  ? `TWCS ${scenario.twcsWindowDays}d`
+                  : 'no compaction') + ` · across ${scenario.nodes} nodes`
             }
           />
           <StatTile
             label="Read amplification"
             value={last ? formatCount(last.readSstables) : '—'}
-            sub={`SSTables per read, last ${formatQueryWindow(scenario.queryWindowHours)}`}
+            sub={`per replica, per read · last ${formatQueryWindow(scenario.queryWindowHours)}`}
           />
           <StatTile
             label="Widest partition"
