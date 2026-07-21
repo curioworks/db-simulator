@@ -48,15 +48,24 @@ otherwise — is read. What stands in for data is two independent abstractions:
 ### 2.1 The schema is a size, not a shape
 
 You describe columns by their **average encoded byte cost**, not by type or
-content. The Schema panel collapses to a single scalar:
+content. Each column is one of two kinds. A regular column is a *cell*: a value
+plus per-cell metadata overhead (timestamp, flags, cell path — ~8 B bare, up to
+~25 B with TTL). A column ticked **Key** is part of the **clustering key**
+instead — stored once as the row's clustering prefix, so it carries value bytes
+only and no per-cell overhead. (This is why the two are modelled separately:
+they are stored differently, and only the clustering key survives into a row
+tombstone.)
 
 ```
-rawRowBytes    = Σ(valueBytes + cellOverheadBytes) + clusteringKeyBytes + rowOverheadBytes
+keyBytes       = Σ_key(valueBytes)                      ← clustering prefix, no cell overhead
+cellBytes      = Σ_regular(valueBytes + cellOverheadBytes)
+rawRowBytes    = cellBytes + keyBytes + rowOverheadBytes
 compressedRow  = rawRowBytes × (1 − compressionRatio)
 onDiskRowBytes = compressedRow × replicationFactor
 ```
 
-The baseline preset works out to `(8+12) + (20+12) + 8 + 10 = 70 B` raw
+The baseline preset works out to `(8+12) + (20+12) + 8 + 10 = 70 B` raw — two
+data cells, one 8 B clustering-key column (value only), 10 B row overhead
 → 35 B compressed → **105 B on disk** at RF 3. Every single row in the
 simulation costs exactly that. There is no size distribution, no variance, no
 outlier row, no null handling and no wide-vs-narrow row mix. If your real rows
@@ -64,11 +73,11 @@ vary a lot in size, feed in the mean and know that the model will not show you
 the tail.
 
 Row-deletion tombstones get their own cost, which is deliberately *not* the row
-cost — a tombstone is a marker, not data, so it carries the key and overhead but
-no cell values:
+cost — a tombstone is a marker, not data, so it carries the clustering key and
+overhead but no cell values:
 
 ```
-tombstoneRowBytes = (clusteringKeyBytes + rowOverheadBytes + 12) × (1 − compressionRatio) × RF
+tombstoneRowBytes = (keyBytes + rowOverheadBytes + 12) × (1 − compressionRatio) × RF
 ```
 
 ### 2.2 Partitions are a count and a curve, not keys
@@ -175,11 +184,13 @@ from a hand-edited share link, so no setting can make the engine throw.
 
 ### 3.4 Schema
 
-Up to 32 columns, each with a name, an average `valueBytes` (0 – 1M) and a
-`cellOverheadBytes` (0 – 100, default 12). Cassandra 3.x+ per-cell metadata runs
-about 8 B for a bare cell to ~25 B with TTL and a complex path. Plus
-`clusteringKeyBytes` (combined average of all clustering columns) and an
-optional `rowOverheadBytes` (default 10).
+Up to 32 columns, each with a name and an average `valueBytes` (0 – 1M). A
+regular column also has a `cellOverheadBytes` (0 – 100, default 12) — Cassandra
+3.x+ per-cell metadata runs about 8 B for a bare cell to ~25 B with TTL and a
+complex path. Tick **Key** to make a column part of the clustering key instead:
+it then contributes value bytes only (no per-cell overhead), and it is the only
+part of a row a deletion tombstone still names. One optional `rowOverheadBytes`
+(default 10) applies to the whole row.
 
 Note the partition key's own bytes are **not** an input. Cassandra stores the
 partition key once per partition, not per row, so at any realistic row count it
@@ -222,7 +233,7 @@ stops the partition growing and never shrinks it. That is the correct answer.
 | Disk at horizon | bytes | Includes the memtable. |
 | Dead at horizon | bytes | expired + tombstones — bytes you are paying for and cannot read. |
 | SSTables | count **across the cluster** | A fleet total — every node compacts its own share, so this is the per-node structure × node count, and never less than the node count. See [§8](#8-model-limits). |
-| Read amplification | count **per replica** | SSTables a single query over the trailing window touches on one replica — the count that drives read latency, which is why it does not scale with the ring the way the fleet SSTable total does. |
+| Read amplification | count **per replica** | SSTables a single read of the trailing window touches on **one replica** (a read hits one replica's local store, not the ring), so it is computed per node — the count that drives read latency. Under TWCS/STCS it is structural (windows/tiers) and barely moves with the ring; without compaction it is volume-driven and *falls* as you add nodes, since each node then holds fewer SSTables. See [§8](#8-model-limits). |
 | **Widest partition** | bytes **per replica** | The widest single *sub-shard* when sub-sharding is on — which is what Cassandra actually materializes. |
 | **Fullest node** | bytes **per node** | With its ratio to the cluster average. |
 
@@ -480,16 +491,17 @@ from this line. Validates the size model by hand before any policy runs.
 **The M2 lesson.** A 7-day TTL "keeps the table small" — live bytes plateau at
 29.5 GB after a week, exactly as promised. Disk climbs to **388 GB** anyway.
 Ratio **13.15×**. Nothing is ever dropped because nothing ever compacts, and
-reads pay too: ~69 SSTables touched per day-long query.
+reads pay too: a day-long query touches ~11 SSTables on the replica that serves
+it (~69 across the 6-node fleet).
 
 ### 3. TTL 7d + STCS (late, lumpy reclaim)
 *same workload, STCS on*
 
 Disk finally comes down — but late and in lumps: horizon **92.4 GB**, peak
 **310 GB**. Small tiers reclaim a slice every few days while the big tier holds
-weeks of expired data hostage until its 4-table merge fires. Read amp 69 → 3.
-The horizon value is 3.3× better than the peak, which is the whole argument for
-deciding verdicts on peaks.
+weeks of expired data hostage until its 4-table merge fires. Read amp (per
+replica) 11 → 5. The horizon value is 3.3× better than the peak, which is the
+whole argument for deciding verdicts on peaks.
 
 ### 4. TTL 7d + TWCS 30d window (window ≫ TTL)
 *TWCS, 30-day windows*
@@ -536,28 +548,31 @@ This is a schema change, not a capacity one — the same bytes, differently
 addressed.
 
 ### 8. Compaction throttled (backlog never drains)
-*2 KB events · 3,500 rows/s · 890 GB/day · STCS · 8 MiB/s cap*
+*2 KB events · 3,500 rows/s · 890 GB/day · STCS · 7 MiB/s cap*
 
 **The M7 lesson.** `compaction_throughput` throttled to protect read latency, on
 a workload that can never catch up. Each node takes 1.8 MB/s of new data; STCS
-rewrites every byte ~5× over its life, so each node owes ~9.7 MB/s against an
-8 MiB/s cap. **ρ = 1.15**, and a queue with ρ > 1 has no steady state — the
-backlog passes 8 TB and would keep going.
+rewrites every byte ~4.5× over its life, so each node owes ~7.9 MiB/s against a
+7 MiB/s cap. **ρ = 1.13**, and a queue with ρ > 1 has no steady state — the
+backlog passes 6.2 TB and would keep going. (The bill is measured *per node* —
+each node compacts its own share — not on the whole cluster's data at once: a
+store six times larger carries an extra STCS tier and would overstate it. See
+[§8](#8-model-limits).)
 
 The disk line is the trap. Per node it reads as a comfortable **1.25 TB at the
-horizon — 42% of a 3 TB disk** — while the STCS sawtooth swings it to **2.5 TB,
-83%**, every single cycle. Note this verdict is *not* firing on node-to-node
-asymmetry: with 10M keys at Zipf 0.3 the ring is essentially even. It fires
-purely on the sawtooth over time, which is exactly why the verdict is decided on
-the peak. Alert on the horizon value and you never see it.
+horizon — 42% of the 3 TB disk** — while the STCS sawtooth swings it to
+**2.5 TB, 83%**, every single cycle. Note this verdict is *not* firing on
+node-to-node asymmetry: with 10M keys at Zipf 0.3 the ring is essentially even.
+It fires purely on the sawtooth over time, which is exactly why the verdict is
+decided on the peak. Alert on the horizon value and you never see it.
 
 No single slider fixes both, which is the lesson:
 
 | Move | Effect |
 |---|---|
-| TWCS windows sized to the TTL | compaction bill 9.2 → 6.4 MiB/s, halves disk, clears the disk verdict — but ρ 0.80 is still a warning |
-| Cap → 64 MiB/s (stock) | ρ → 0.14, disk peak **unchanged** |
-| Ring 6 → 12 nodes | ρ 0.57, peak 42% — **clears both** |
+| TWCS windows sized to the TTL | drops whole expired windows, clears the disk verdict (peak → 34%) — but the current window still runs STCS, so the compaction bill does not fall and ρ stays **1.21, fatal** |
+| Cap → 64 MiB/s (stock) | ρ → 0.12, disk peak **unchanged** |
+| Ring 6 → 12 nodes | ρ 0.56, peak 42% — **clears both** |
 
 Only the last one divides the per-node *load* rather than the per-node *work*.
 
@@ -584,38 +599,47 @@ What this tool does not know, so you do not read a verdict it cannot support.
 - Compaction is instantaneous and infinitely parallel; the throughput cap only
   feeds the shadow queue.
 
-**Compaction domains and the SSTable count**
+**Compaction domains: byte totals vs. structural counts**
 - The **byte engine is one aggregate compaction domain**: it accumulates the
   whole cluster's ingest (RF folded in) into one memtable, flushes and compacts
-  it once, and every byte figure — disk, live, expired, read amp — comes from
+  it once, and the byte *totals* — disk, live, expired, tombstones — come from
   that single stream. It does *not* run a separate memtable and compactor per
-  node. This is a deliberate simplification: the disk growth story is what the
-  tool is about, and total disk is additive across nodes regardless of how the
-  ring is sliced.
-- The **SSTable count is the exception, reconstructed as a fleet total.** A real
-  cluster has one compaction domain *per node*, so the minimum table count once
-  every node has flushed is the node count — which the aggregate stream, being a
-  single domain, cannot show. The count is instead computed by compacting one
-  average node's share and scaling by the node count. That is exact for TWCS
-  (windows are time-structural, so every node keeps the same set), collapses
-  back to the aggregate without compaction (the count is volume-driven there, so
-  it stays node-independent), and is a close approximation under STCS (a node
-  with 1/N the data has slightly fewer tiers). It is why the SSTable count grows
-  with the ring while read amplification does not — see below.
-- Residual approximations here: the per-node share is taken as uniform (the
-  average node), so skew does not make one node's *table count* higher than
-  another's, only its *bytes* (which the fullest-node metric already tracks);
-  and the STCS per-node tier count is read off that average node rather than
-  each node individually.
+  node. This is a deliberate simplification: total disk is additive across nodes
+  regardless of how the ring is sliced, and the disk growth story is what the
+  tool is about.
+- The three **structural** figures — SSTable count, read amplification and
+  compaction (write-amp) bytes — describe the *shape* of a store, not a byte
+  total, and a real cluster has one store *per node*. Each is reconstructed by
+  running one average node's 1/N share through the same mechanics: the **SSTable
+  count** is a fleet total (per-node × N, so never below the node count once all
+  have flushed); **read amplification** is the per-node figure itself (a read
+  hits one replica's store); **compaction bytes** are a fleet total (per-node ×
+  N — each node compacts its share with its *own* write amplification, which
+  drives the saturation backlog).
+- This is not a flat × N. Without compaction the structure is **volume-driven**,
+  so a single store's figure is node-independent: the reconstruction collapses
+  back to the aggregate, the fleet count grows with N, and read amp *falls* with
+  N (each node holds fewer SSTables). Under **TWCS** it is **time-structural** —
+  every node keeps the same windows — so it is exact. Under **STCS** it is a
+  close approximation: a node with 1/N the data has slightly fewer tiers, which
+  is precisely why the count *and* the compaction bill must not be read off the
+  aggregate stream — a store N× larger carries an extra tier and would overstate
+  both (and, before this was fixed, inflated the saturation verdict from a true
+  ρ ≈ 0.99 to a false ρ ≈ 1.15).
+- Residual approximations: the per-node share is taken as uniform (the average
+  node), so skew moves a node's *bytes* (tracked by the fullest-node metric) but
+  not its *table count* or *write-amp*; the hot node's backlog scales the fleet
+  compaction by that node's disk share rather than re-deriving its slightly
+  higher tier count individually.
 
 **Reads**
 - Read amplification is a **per-replica** count: the SSTables one replica must
-  touch for a query over the trailing window. That is the quantity that drives
-  read latency, and it is a structural figure (tiers under STCS, live windows
-  under TWCS) that barely depends on data volume — which is exactly why it does
-  *not* scale with the node count the way the fleet SSTable total does. It does
-  not model bloom filters, key/row cache, partition index granularity, or
-  latency of any kind.
+  touch for a read over the trailing window — a read hits one replica's local
+  store, not the ring, so it is computed per node (see above). Under TWCS/STCS it
+  is structural (live windows / tiers) and barely moves with the ring; without
+  compaction it is volume-driven and *falls* as nodes are added. It does not
+  model bloom filters, key/row cache, partition index granularity, or latency of
+  any kind.
 - The **read fan-out cost of sub-sharding is stated in the verdict copy, not
   folded into the read-amp metric** — a sub-sharded key scatters every read
   across all its shards, but that is a different quantity from "SSTables one

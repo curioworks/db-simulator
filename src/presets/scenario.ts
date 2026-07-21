@@ -1,4 +1,4 @@
-import type { SchemaProfile } from '../engine/profiler/types.ts';
+import type { ColumnSpec, SchemaProfile } from '../engine/profiler/types.ts';
 import type { SimConfig } from '../engine/types.ts';
 
 export const HOUR_MS = 3_600_000;
@@ -67,6 +67,22 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
   const num = (v: number, lo: number, hi: number, fallback: number) =>
     Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : fallback;
   const replicationFactor = Math.round(num(s.replicationFactor, 1, 10, 3));
+
+  // Schema is one unified column list; clustering-key columns (`key`) carry
+  // value bytes only, regular columns keep their per-cell overhead.
+  const columns: ColumnSpec[] = s.schema.columns.map((c, i) => {
+    const col: ColumnSpec = { name: c.name || `col_${i + 1}`, valueBytes: num(c.valueBytes, 0, 1_000_000, 8) };
+    if (c.key) col.key = true;
+    else if (c.cellOverheadBytes !== undefined) col.cellOverheadBytes = num(c.cellOverheadBytes, 0, 100, 12);
+    return col;
+  });
+  // Pre-unification links carried the clustering key as a scalar; fold it into
+  // the column list as a key column so old #c=… links still resolve.
+  const legacyClustering = (s.schema as { clusteringKeyBytes?: unknown }).clusteringKeyBytes;
+  if (!columns.some((c) => c.key) && typeof legacyClustering === 'number' && legacyClustering > 0) {
+    columns.push({ name: 'clustering_key', valueBytes: num(legacyClustering, 0, 100_000, 8), key: true });
+  }
+
   return {
     ...s,
     name: s.name || 'Custom scenario',
@@ -102,13 +118,7 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
     compactionMiBPerSec: Math.round(num(s.compactionMiBPerSec, 1, 1024, 64)),
     seed: Math.round(num(s.seed, 0, 2 ** 31, 42)),
     schema: {
-      columns: s.schema.columns.slice(0, 32).map((c, i) => ({
-        name: c.name || `col_${i + 1}`,
-        valueBytes: num(c.valueBytes, 0, 1_000_000, 8),
-        cellOverheadBytes:
-          c.cellOverheadBytes === undefined ? undefined : num(c.cellOverheadBytes, 0, 100, 12),
-      })),
-      clusteringKeyBytes: num(s.schema.clusteringKeyBytes, 0, 100_000, 8),
+      columns: columns.slice(0, 32),
       rowOverheadBytes:
         s.schema.rowOverheadBytes === undefined
           ? undefined

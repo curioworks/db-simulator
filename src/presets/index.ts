@@ -4,8 +4,8 @@ const sensorSchema: ScenarioConfig['schema'] = {
   columns: [
     { name: 'sensor_value', valueBytes: 8, cellOverheadBytes: 12 },
     { name: 'status', valueBytes: 20, cellOverheadBytes: 12 },
+    { name: 'ts', valueBytes: 8, key: true },
   ],
-  clusteringKeyBytes: 8,
   rowOverheadBytes: 10,
 };
 
@@ -41,8 +41,9 @@ export const sensorBaseline: ScenarioConfig = {
  * The M2 classic mistake: a 7-day TTL "keeps the table small" — but without
  * compaction nothing is ever dropped. Live bytes plateau after a week while
  * the disk line keeps climbing. Expired ≠ deleted. Reads hurt too (M5): at
- * ~69 flushes/day, a day-long query has to touch ~70 SSTables — the same
- * read touches at most 9 once any compaction strategy is on.
+ * ~69 flushes/day cluster-wide — ~11 on each of the 6 nodes — a day-long query
+ * touches ~11 SSTables on the replica that serves it; the same read touches at
+ * most 5 once any compaction strategy is on.
  */
 export const ttlNoCompaction: ScenarioConfig = {
   name: 'TTL 7d, no compaction (expired ≠ deleted)',
@@ -156,24 +157,27 @@ export const subSharded: ScenarioConfig = {
 /**
  * The M7 mistake: compaction_throughput throttled to protect read latency,
  * on a workload big enough that it can never catch up. 2 KB events at 3,500
- * rows/s put 1.8 MB/s of new data on each node; STCS rewrites every byte ~5
- * times over its life, so each node owes ~9.7 MB/s of compaction against an
- * 8 MiB/s cap. ρ = 1.15, and a queue with ρ > 1 has no steady state — the
- * backlog passes 8 TB by the horizon and would keep going.
+ * rows/s put 1.8 MB/s of new data on each node; STCS rewrites every byte ~4.5
+ * times over its life, so each node owes ~7.9 MiB/s of compaction against a
+ * 7 MiB/s cap. ρ = 1.13, and a queue with ρ > 1 has no steady state — the
+ * backlog passes 6.2 TB by the horizon and would keep going. (The bill is
+ * measured per node — each node compacts its own share — not on the whole
+ * cluster's data at once: a store six times larger carries an extra STCS tier
+ * and would overstate the write amplification.)
  *
  * The disk line is the trap. It reads as a healthy 1.25 TB per node at the
- * horizon, but STCS's lumpy reclaim swings it to 2.5 TB — 83% of the disk —
- * every cycle, while the cluster average sits at 42%. Alert on the horizon
- * value and you never see it; alert on the peak and you do.
+ * horizon (42%), but STCS's lumpy reclaim swings it to 2.5 TB — 83% of the
+ * disk — every cycle. Alert on the horizon value and you never see it; alert
+ * on the peak and you do.
  *
  * No single slider fixes both, which is the lesson. TWCS windows sized to the
- * TTL drop whole windows instead of rewriting them and cut the compaction
- * bill from 9.2 to 6.4 MiB/s — but that is still ρ 0.80, a warning, even
- * though it halves the disk to 3.48 TB and clears the disk verdict. Raising
- * the cap to Cassandra's stock 64 MiB/s takes ρ to 0.14 and leaves the disk
- * peak exactly where it was. Doubling the ring to 12 nodes is the only single
- * move that clears both (ρ 0.57, peak 42%), because it is the only one that
- * divides the per-node load rather than the per-node work.
+ * TTL drop whole expired windows instead of rewriting them, which clears the
+ * disk verdict outright (the peak falls to 34%) — but the current window still
+ * compacts with STCS, so the compaction bill does not fall and ρ stays fatal
+ * at 1.21. Raising the cap to Cassandra's stock 64 MiB/s takes ρ to 0.12 and
+ * leaves the disk peak exactly where it was. Doubling the ring to 12 nodes is
+ * the only single move that clears both (ρ 0.56, peak 42%), because it is the
+ * only one that divides the per-node load rather than the per-node work.
  */
 export const compactionThrottled: ScenarioConfig = {
   name: 'Compaction throttled (backlog never drains)',
@@ -181,8 +185,8 @@ export const compactionThrottled: ScenarioConfig = {
     columns: [
       { name: 'event_id', valueBytes: 16, cellOverheadBytes: 12 },
       { name: 'payload', valueBytes: 2048, cellOverheadBytes: 12 },
+      { name: 'ts', valueBytes: 8, key: true },
     ],
-    clusteringKeyBytes: 8,
     rowOverheadBytes: 10,
   },
   compressionRatio: 0.5,
@@ -206,7 +210,7 @@ export const compactionThrottled: ScenarioConfig = {
   nodes: 6,
   maxSubShards: 1,
   diskPerNodeGiB: 3072,
-  compactionMiBPerSec: 8,
+  compactionMiBPerSec: 7,
   seed: 42,
 };
 

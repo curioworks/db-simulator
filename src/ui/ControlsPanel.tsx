@@ -215,6 +215,7 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           <span>Column</span>
           <span>Value B</span>
           <span>Cell ovh</span>
+          <span>Key</span>
           <span />
         </div>
         {scenario.schema.columns.map((col, i) => (
@@ -236,9 +237,21 @@ export function ControlsPanel({ scenario, onChange }: Props) {
               type="number"
               min={0}
               max={100}
-              value={col.cellOverheadBytes ?? 12}
+              value={col.key ? '' : col.cellOverheadBytes ?? 12}
+              disabled={!!col.key}
               aria-label={`Column ${i + 1} cell overhead bytes`}
+              title={col.key ? 'Clustering-key columns have no per-cell overhead' : undefined}
               onChange={(e) => setColumn(i, { cellOverheadBytes: Number(e.target.value) })}
+            />
+            <input
+              type="checkbox"
+              className="schema-key"
+              checked={!!col.key}
+              aria-label={`Column ${i + 1} is part of the clustering key`}
+              title="Part of the clustering key: stored as the row's clustering prefix — no per-cell overhead, and the only field a row tombstone carries"
+              onChange={(e) =>
+                setColumn(i, { key: e.target.checked || undefined, cellOverheadBytes: undefined })
+              }
             />
             <button
               type="button"
@@ -267,15 +280,11 @@ export function ControlsPanel({ scenario, onChange }: Props) {
         >
           + Add column
         </button>
-        <label className="field">
-          <span className="field-label">Clustering key bytes</span>
-          <input
-            type="number"
-            min={0}
-            value={scenario.schema.clusteringKeyBytes}
-            onChange={(e) => setSchema({ clusteringKeyBytes: Number(e.target.value) })}
-          />
-        </label>
+        <p className="schema-note">
+          Tick <strong>Key</strong> to make a column part of the clustering key: it is stored
+          as the row's clustering prefix — no per-cell overhead — and is the only field a
+          row-deletion tombstone still has to carry.
+        </p>
       </section>
     </div>
   );

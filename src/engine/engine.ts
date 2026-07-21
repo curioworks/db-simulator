@@ -129,6 +129,10 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     tickCompactionBytes += bytes;
   };
   const snapshots: MetricsSnapshot[] = [];
+  // The hot node's share of disk each tick, kept so the saturation backlog can
+  // be rebuilt against the fleet compaction total (per-node write-amp × nodes)
+  // once the sub-run below has measured it. See the fleet block after the loop.
+  const hotFracs: number[] = [];
 
   for (let i = 0; i < ticks; i++) {
     const tickStart = startTime + i * tickMs;
@@ -236,6 +240,7 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     if (capPerTick > 0) {
       backlogBytes = Math.max(0, backlogBytes + shard.hotNodeFrac * tickCompactionBytes - capPerTick);
     }
+    hotFracs.push(shard.hotNodeFrac);
 
     snapshots.push({
       t: tickEnd,
@@ -255,21 +260,30 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     });
   }
 
-  // SSTable count is a *fleet* total. Every node runs its own compaction on its
-  // own share of the writes, so the cluster holds `nodes` independent stores and
-  // the minimum table count once every node has flushed is the node count. The
-  // aggregate loop above is one compaction domain — its bytes are cluster-wide
-  // (RF folded in) but its table count is a single store's, which is what a
-  // query touches (read amp) but not what the cluster holds.
-  //
-  // Recover the fleet count by compacting one average node's share and scaling
-  // by the node count. This is not a flat × nodes: the count of a single store
-  // is volume-driven without compaction (so the fleet total is node-independent
-  // and this collapses back to the aggregate) but structure-driven under
-  // TWCS/STCS (so the fleet total genuinely grows with the ring). Running the
+  // Three of the per-tick metrics are *structural* — they describe the shape of
+  // a store, not a byte total — and the aggregate loop above is a single
+  // cluster-wide store, not a real node. Every node runs its own compaction on
+  // its own 1/nodes share of the writes, so the honest per-node figures come
+  // from compacting one average node's share and scaling by the node count.
+  // This is not a flat × nodes: without compaction the structure is
+  // volume-driven (so a single store's figure is node-independent and this
+  // collapses back to the aggregate) while under TWCS/STCS it is structure-
+  // driven (so it genuinely grows with, or is set by, the ring). Running the
   // per-node share through the same mechanics gets every regime right; the
   // sub-run is cheaper than the main one (a node flushes 1/nodes as often) and,
   // with skew stripped, recurses no further.
+  //
+  //  - sstableCount   is a *fleet* total: per-node table count × nodes (the
+  //    cluster holds `nodes` independent stores, so ≥ nodes once all have flushed).
+  //  - readSstables   is *per replica*: the tables one replica touches for a
+  //    time-bounded read, which is the per-node figure itself (a read hits one
+  //    replica's local store, not the whole ring). Structural strategies leave
+  //    it ≈ the aggregate; without compaction it is the aggregate ÷ nodes.
+  //  - compactionBytes is a *fleet* total: each node compacts its own share with
+  //    its own (per-node) write amplification, so cluster compaction volume is
+  //    per-node × nodes — not the aggregate domain's, whose larger single store
+  //    inflates size-driven write-amp (STCS) and would overstate the saturation
+  //    backlog. TWCS is structural, so this is a near-no-op there.
   const nodes = config.skew?.nodes ?? 1;
   if (nodes > 1) {
     const perNode = simulate({
@@ -278,8 +292,21 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
       deleteRatePerSec: deleteRatePerSec / nodes,
       skew: undefined,
     });
+    let backlog = 0;
     for (let i = 0; i < snapshots.length; i++) {
-      snapshots[i].sstableCount = perNode.snapshots[i].sstableCount * nodes;
+      const s = snapshots[i];
+      const pn = perNode.snapshots[i];
+      s.sstableCount = pn.sstableCount * nodes;
+      s.readSstables = pn.readSstables;
+      s.compactionBytes = pn.compactionBytes * nodes;
+      // Rebuild the shadow backlog against the corrected (fleet) arrival rate:
+      // the hot node's share of the cluster's real compaction work, drained at
+      // the per-node cap. Verdicts read these snapshots, so this must land
+      // before computeVerdicts below.
+      if (capPerTick > 0) {
+        backlog = Math.max(0, backlog + hotFracs[i] * s.compactionBytes - capPerTick);
+        s.compactionBacklogBytes = backlog;
+      }
     }
   }
 

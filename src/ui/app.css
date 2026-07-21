@@ -135,7 +135,7 @@ body {
 .schema-head,
 .schema-row {
   display: grid;
-  grid-template-columns: 1fr 58px 58px 24px;
+  grid-template-columns: 1fr 58px 58px 30px 24px;
   gap: 6px;
   align-items: center;
   margin-bottom: 6px;
@@ -147,8 +147,30 @@ body {
   margin-bottom: 4px;
 }
 
+.schema-head span:nth-child(4) {
+  text-align: center;
+}
+
 .schema-row input[type='number'] {
   font-variant-numeric: tabular-nums;
+}
+
+.schema-row input[type='number']:disabled {
+  opacity: 0.45;
+}
+
+.schema-row .schema-key {
+  justify-self: center;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.schema-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
 }
 
 .icon-btn {

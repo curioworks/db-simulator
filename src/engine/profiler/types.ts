@@ -1,4 +1,10 @@
-/** One regular (non-key) column in the table schema. */
+/**
+ * One column in the table schema. Regular columns are *cells*: value payload
+ * plus per-cell metadata (`cellOverheadBytes`). Set `key: true` to mark a
+ * column as part of the clustering key instead — stored once as the row's
+ * clustering prefix, so it carries no per-cell overhead, and it is the only
+ * part of a row that a row-deletion tombstone still has to name.
+ */
 export interface ColumnSpec {
   name: string;
   /** Average encoded size in bytes of the value payload. */
@@ -6,14 +12,20 @@ export interface ColumnSpec {
   /**
    * Per-cell metadata overhead (timestamp, flags, cell path). Cassandra 3.x+
    * storage engine: ~8B for a bare cell up to ~25B with TTL + complex path.
+   * Ignored for clustering-key columns (`key: true`), which are not cells.
    */
   cellOverheadBytes?: number;
+  /**
+   * True if this column is part of the clustering key: a clustering-prefix
+   * component, not a cell — no per-cell timestamp/flags, and counted into the
+   * row tombstone. Absent/false = a regular data cell.
+   */
+  key?: boolean;
 }
 
 export interface SchemaProfile {
+  /** Every column, regular and clustering-key alike (`ColumnSpec.key`). */
   columns: ColumnSpec[];
-  /** Combined average encoded size of all clustering key columns. */
-  clusteringKeyBytes: number;
   /** Fixed per-row overhead (flags, liveness info, row body header). */
   rowOverheadBytes?: number;
 }

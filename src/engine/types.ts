@@ -188,7 +188,14 @@ export interface MetricsSnapshot {
    * which is one aggregate compaction domain used for the byte accounting.
    */
   sstableCount: number;
-  /** SSTables whose time span overlaps the trailing query window (M5 read amp). */
+  /**
+   * Read amplification: SSTables one replica must touch for a read of the
+   * trailing query window (M5) — those whose [minTs, maxTs] overlaps it. A
+   * *per-replica* figure, since a read hits one replica's local store, not the
+   * whole ring: it is the per-node structure, not the aggregate domain's.
+   * Structural strategies (TWCS/STCS) leave it ≈ the aggregate; without
+   * compaction it is the aggregate ÷ nodes and so falls as the ring grows.
+   */
   readSstables: number;
   /**
    * Per-replica on-disk bytes of the widest single partition (M6) — of the
@@ -209,7 +216,13 @@ export interface MetricsSnapshot {
    * its first promotion, and always 1 with the mitigation off.
    */
   hotPartitionShards: number;
-  /** Bytes compaction wrote this tick, cluster-wide (M7). 0 without compaction. */
+  /**
+   * Bytes compaction wrote this tick, cluster-wide (M7) — a *fleet* total:
+   * per-node compaction × nodes. Each node compacts its own ~1/nodes share with
+   * its own write amplification, which for size-driven STCS is smaller than the
+   * aggregate domain's (a store `nodes`× larger carries an extra tier or two).
+   * 0 without compaction; drives the saturation backlog and verdict.
+   */
   compactionBytes: number;
   /**
    * Compaction the fullest node owes but the throughput cap has not paid off
