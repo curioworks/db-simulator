@@ -192,9 +192,16 @@ it then contributes value bytes only (no per-cell overhead), and it is the only
 part of a row a deletion tombstone still names. One optional `rowOverheadBytes`
 (default 10) applies to the whole row.
 
-Note the partition key's own bytes are **not** an input. Cassandra stores the
-partition key once per partition, not per row, so at any realistic row count it
-is noise against the row body.
+One optional **Partition key** bytes field feeds the partition key, but it is
+handled apart from the row. Cassandra stores the partition key **once per
+partition**, not per row, so its cost is a flat `partitionCount × partitionKeyBytes
+× (1 − compression) × RF` added to the disk line — never multiplied by the row
+count. Because the partition count is static (it does not grow with ingestion),
+this term is a fixed constant: it lifts the baseline and then sits still while
+the row bodies grow past it. At any realistic row count it is below the noise
+floor (e.g. 500 keys × 16 B ≈ 12 KB; 10M keys × 16 B ≈ 240 MB against a 1.25 TB
+disk), which is why it defaults to off. Folding it into the per-row size instead
+would over-count it by the rows-per-partition factor — millions, on a coarse key.
 
 ### 3.5 Sub-sharding (the mitigation)
 

@@ -285,6 +285,24 @@ export function ControlsPanel({ scenario, onChange }: Props) {
           as the row's clustering prefix — no per-cell overhead — and is the only field a
           row-deletion tombstone still has to carry.
         </p>
+        <label className="field">
+          <span className="field-label">
+            Partition key
+            <span className="field-value">{scenario.schema.partitionKeyBytes ?? 0} B</span>
+          </span>
+          <input
+            type="number"
+            min={0}
+            value={scenario.schema.partitionKeyBytes ?? 0}
+            aria-label="Partition key bytes"
+            onChange={(e) => setSchema({ partitionKeyBytes: Number(e.target.value) || undefined })}
+          />
+        </label>
+        <p className="schema-note">
+          Charged <strong>once per partition</strong> — {formatPartitionCount(scenario.partitionCount)}{' '}
+          × this, a flat term on the disk line — not per row. Static partition count means it
+          doesn't grow with writes, so at any real row count it's below the noise floor.
+        </p>
       </section>
     </div>
   );

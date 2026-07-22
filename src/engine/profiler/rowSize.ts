@@ -18,6 +18,11 @@ export const TOMBSTONE_MARKER_BYTES = 12;
  * A row-deletion tombstone names the clustering key but carries no cell values,
  * so it costs keyBytes + rowOverhead + marker.
  *
+ * The partition key is handled apart from the row: it is stored once per
+ * partition, so its per-partition on-disk cost is returned separately and the
+ * engine charges it as `partitionCount × partitionKeyOnDiskBytes` — a flat
+ * term, never folded into onDiskRowBytes (which is per row).
+ *
  * (A sampling-based profiler over CSV/JSON rows lands later; it must produce
  * the same SizeModel shape.)
  */
@@ -52,5 +57,11 @@ export function buildSizeModel(input: SizeModelInput): SizeModel {
   const rawTombstoneBytes = keyBytes + rowOverhead + TOMBSTONE_MARKER_BYTES;
   const tombstoneRowBytes = rawTombstoneBytes * (1 - compressionRatio) * replicationFactor;
 
-  return { rawRowBytes, compressedRowBytes, onDiskRowBytes, tombstoneRowBytes };
+  const partitionKeyBytes = schema.partitionKeyBytes ?? 0;
+  if (partitionKeyBytes < 0) {
+    throw new RangeError(`partitionKeyBytes must be ≥ 0, got ${partitionKeyBytes}`);
+  }
+  const partitionKeyOnDiskBytes = partitionKeyBytes * (1 - compressionRatio) * replicationFactor;
+
+  return { rawRowBytes, compressedRowBytes, onDiskRowBytes, tombstoneRowBytes, partitionKeyOnDiskBytes };
 }

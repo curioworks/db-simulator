@@ -123,13 +123,19 @@ export function clampScenario(s: ScenarioConfig): ScenarioConfig {
         s.schema.rowOverheadBytes === undefined
           ? undefined
           : num(s.schema.rowOverheadBytes, 0, 1000, 10),
+      // Partition key charged once per partition, so no per-row scale — a wide
+      // ceiling is fine. Absent stays absent (feature off).
+      partitionKeyBytes:
+        s.schema.partitionKeyBytes === undefined
+          ? undefined
+          : num(s.schema.partitionKeyBytes, 0, 100_000, 0),
     },
   };
 }
 
 export function toSimConfig(
   s: ScenarioConfig,
-  sizeModel: { onDiskRowBytes: number; tombstoneRowBytes: number },
+  sizeModel: { onDiskRowBytes: number; tombstoneRowBytes: number; partitionKeyOnDiskBytes?: number },
 ): SimConfig {
   return {
     seed: s.seed,
@@ -154,6 +160,9 @@ export function toSimConfig(
     },
     diskPerNodeBytes: s.diskPerNodeGiB * 1024 * MiB,
     compactionThroughputBytesPerSec: s.compactionMiBPerSec * MiB,
+    // Partition key stored once per partition → a flat term, count × per-key
+    // on-disk cost. Zero unless the schema sets partitionKeyBytes.
+    partitionOverheadBytes: (sizeModel.partitionKeyOnDiskBytes ?? 0) * s.partitionCount,
     compaction:
       s.compaction === 'twcs'
         ? { strategy: 'twcs', windowMs: s.twcsWindowDays * DAY_MS }

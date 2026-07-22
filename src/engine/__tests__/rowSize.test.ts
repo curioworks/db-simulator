@@ -40,6 +40,22 @@ describe('buildSizeModel', () => {
     });
     expect(m.rawRowBytes).toBe(30);
     expect(m.onDiskRowBytes).toBe(30);
+    // No partition key set → no flat term.
+    expect(m.partitionKeyOnDiskBytes).toBe(0);
+  });
+
+  it('charges the partition key once per partition, apart from the row', () => {
+    const m = buildSizeModel({
+      schema: { columns: [{ name: 'v', valueBytes: 8 }], partitionKeyBytes: 16 },
+      compressionRatio: 0.5,
+      replicationFactor: 3,
+    });
+    // The row body is untouched by the partition key: 8 + 12 + 10 = 30 raw.
+    expect(m.rawRowBytes).toBe(30);
+    expect(m.onDiskRowBytes).toBe(45); // 30 × 0.5 × 3
+    // Partition key is its own per-partition cost: 16 × 0.5 × 3 = 24, never
+    // folded into the row.
+    expect(m.partitionKeyOnDiskBytes).toBe(24);
   });
 
   it('treats key columns as clustering prefix: value only, and drives tombstone size', () => {
@@ -70,6 +86,13 @@ describe('buildSizeModel', () => {
     expect(() =>
       buildSizeModel({
         schema: { columns: [{ name: 'v', valueBytes: -1 }] },
+        compressionRatio: 0,
+        replicationFactor: 1,
+      }),
+    ).toThrow(RangeError);
+    expect(() =>
+      buildSizeModel({
+        schema: { columns: [{ name: 'v', valueBytes: 8 }], partitionKeyBytes: -1 },
         compressionRatio: 0,
         replicationFactor: 1,
       }),

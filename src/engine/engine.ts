@@ -31,6 +31,9 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   const gcGraceMs = config.gcGraceMs ?? 0;
   const queryWindowMs = config.queryWindowMs ?? 86_400_000;
   const compactionCapPerSec = config.compactionThroughputBytesPerSec ?? 0;
+  // Partition-key storage: charged once per partition (see SimConfig), so a flat
+  // constant on the disk line, applied only while the table holds data.
+  const partitionOverheadBytes = config.partitionOverheadBytes ?? 0;
   // An explicit strategy argument (tests, custom strategies) wins over the
   // serializable spec that arrives through the worker boundary.
   strategy ??=
@@ -59,6 +62,9 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
   }
   if ((config.diskPerNodeBytes ?? 0) < 0) {
     throw new RangeError(`diskPerNodeBytes must be ≥ 0, got ${config.diskPerNodeBytes}`);
+  }
+  if (partitionOverheadBytes < 0) {
+    throw new RangeError(`partitionOverheadBytes must be ≥ 0, got ${partitionOverheadBytes}`);
   }
 
   const rng = mulberry32(config.seed);
@@ -242,12 +248,19 @@ export function simulate(config: SimConfig, strategy?: CompactionStrategy): SimR
     }
     hotFracs.push(shard.hotNodeFrac);
 
+    // The partition-key overhead is a flat constant that exists only while the
+    // table holds data. It rides on the live band (partition keys don't expire
+    // while their partition has rows), keeping diskBytes = live + expired +
+    // tombstone in the snapshot. The internal totals above stay pure so the
+    // sharder and aging see real row bytes, not this metadata offset.
+    const partOverhead = diskBytes > 0 ? partitionOverheadBytes : 0;
+
     snapshots.push({
       t: tickEnd,
-      liveBytes,
+      liveBytes: liveBytes + partOverhead,
       expiredBytes,
       tombstoneBytes,
-      diskBytes,
+      diskBytes: diskBytes + partOverhead,
       memtableBytes,
       sstableCount: sstables.length,
       readSstables: maxTsSorted.length - queryPtr,

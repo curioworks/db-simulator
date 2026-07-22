@@ -28,6 +28,15 @@ export interface SchemaProfile {
   columns: ColumnSpec[];
   /** Fixed per-row overhead (flags, liveness info, row body header). */
   rowOverheadBytes?: number;
+  /**
+   * Partition-key size in bytes, stored **once per partition** — not per row.
+   * Cassandra writes the partition key into each SSTable's partition header, so
+   * its cost is `partitionCount × this` (a flat term), never multiplied by the
+   * row count. Deliberately separate from the per-row clustering columns
+   * (`ColumnSpec.key`), which are stored as the clustering prefix of every row.
+   * 0 or absent = not modelled.
+   */
+  partitionKeyBytes?: number;
 }
 
 export interface SizeModelInput {
@@ -54,4 +63,11 @@ export interface SizeModel {
    * tombstone is a marker, not data.
    */
   tombstoneRowBytes: number;
+  /**
+   * Cluster-wide on-disk bytes of the partition key for **one** partition:
+   * partitionKeyBytes × (1 − compression) × RF. Stored once per partition, so
+   * the engine multiplies it by the partition count into a single flat term —
+   * it is never part of `onDiskRowBytes`. 0 when no partition key is set.
+   */
+  partitionKeyOnDiskBytes: number;
 }

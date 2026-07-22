@@ -81,6 +81,16 @@ export interface SimConfig {
    * Absent or 0 = unbounded, verdict always ok.
    */
   diskPerNodeBytes?: number;
+  /**
+   * Flat partition-key overhead for the whole table, bytes: the partition key
+   * is stored once per partition, so this is `partitionCount × per-partition key
+   * bytes` (already compressed × RF). Added as a constant to the live/disk line
+   * once the table is non-empty — it does not grow with ingestion, because the
+   * partition count is fixed. Deliberately *not* folded into `onDiskRowBytes`,
+   * which is per row: one partition key fronts up to millions of rows. 0 or
+   * absent = not modelled.
+   */
+  partitionOverheadBytes?: number;
 }
 
 /**
